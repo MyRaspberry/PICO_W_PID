@@ -38,7 +38,7 @@ by: kll engineering</br>
 lic: CC-BY-SA 4.0</br>
 date: 11.12.23</br>
 place: CNX</br>
-blog: http://kll.byethost7.com/kllfusion01/infusions/articles/articles.php?article_id=227
+blog: [myBlog PICO_W PID artcle](http://kll.byethost7.com/kllfusion01/infusions/articles/articles.php?article_id=227)
 
 _______________________________
 
@@ -46,7 +46,7 @@ _______________________________
 
 -1-</br>
 get a PICO W board with WIFI 6$ and HEADERS ( if you not want to solder 7$ )</br>
-https://www.raspberrypi.com/products/raspberry-pi-pico/?variant=raspberry-pi-pico-wh
+[PICO W board](https://www.raspberrypi.com/products/raspberry-pi-pico/?variant=raspberry-pi-pico-wh)
 
 -2-</br>
 connect it with a USB cable ( USB A to Micro-USB-B cable ) to a PC USB port</br>
@@ -95,7 +95,7 @@ open any browser ( inside your LAN ) http://192.168.1.215 and test operation ( O
 ( see also MU-REPL for diagnostic prints "www ...." )
 
 -9-</br>
-if website operation checked and coding work finished ( incl backup )</br> 
-you can disconnect the USB cable from PC and use a USB charger to power the board ( place anywhere inside your LANs WIFI )
+after website operation checked and coding work finished ( incl backup )</br> 
+you can disconnect the USB cable from PC and use a USB charger to power the board ( place anywhere inside your LANs WIFI area)
 
 _______________________________
