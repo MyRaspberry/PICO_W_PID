@@ -40,6 +40,8 @@ HTML_STYLE = """
     display:inline-block; margin: 0px auto; text-align: center;}
     h1{color: deeppink; width: 200; word-wrap: break-word; padding: 2vh; font-size: 35px;}
     p{font-size: 1.5rem; width: 200; word-wrap: break-word;}
+    form{font-size: 2rem; }
+    input[type=number]{font-size: 2rem;}
     .button{font-family: {font_family};display: inline-block;
     background-color: black; border: none;
     border-radius: 4px; color: white; padding: 16px 40px;
@@ -60,7 +62,7 @@ def html_pid_faceplate_svg():
     svg +=  "<tr><td>\n"
     scopew = 640
     svgw = scopew+20
-    scopeh = 470
+    scopeh = 450
     svgh = scopeh+30
     svg += "<svg width=\"{:d}\" height=\"{:d}\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\">".format(svgw, svgh)
     svg += "<desc>show PID faceplate </desc>"
@@ -68,7 +70,7 @@ def html_pid_faceplate_svg():
     svg += "<rect x=\"1\" y=\"1\" width=\"{:d}\" height=\"{:d}\"  stroke=\"#000088\" stroke-width=\"1\" />".format(svgw, svgh)
     svg += "<rect x=\"2\" y=\"2\" width=\"{:d}\" height=\"{:d}\"  stroke=\"#0000aa\" stroke-width=\"1\" />".format((svgw-4),(svgh-4))
     svg += "<rect x=\"3\" y=\"3\" width=\"{:d}\" height=\"{:d}\"  fill=\"#FFF8DC\" stroke=\"#0000ff\" stroke-width=\"1\" />".format((svgw-6),(svgh-6))
-    svg += ("<g id=\"faceplate\" style=\"visibility:visible; stroke-width:2; \" > ")
+    svg += ("<g id=\"faceplate\" style=\"visibility:visible; stroke-width:2; stroke=\"#000000\"; font-family=\"Verdana\"; font-size=\"16\";\" > ")
     # bar graph
     #svg += ("<!-- cyan OUTPUT bar-->");
     svg += ("<rect x=\"50\" y=\"40\" width=\"40\" stroke=\"#000000\" fill=\"#00ffff\" height=\"402\"/>")
@@ -76,12 +78,12 @@ def html_pid_faceplate_svg():
     svg += str(400 - int(4*isOUT))
     svg += ("\"/>")
 
-    #svg += ("<!-- OUT value + EGU --> ")
+    #svg += ("<!-- OUT value + EGU --> ") #font-family=\"Verdana\" font-size=\"14\" stroke=\"#000000\"
     svg += ("<rect x=\"100\" y=\"61\" width=\"93\"  height=\"38\" stroke=\"#ffffff\" fill=\"#ffffff\" />")
-    svg += ("<text x=\"150\" y=\"76\" font-family=\"Verdana\" font-size=\"14\" stroke=\"#000000\" text-anchor=\"middle\">")
+    svg += ("<text x=\"150\" y=\"76\"  text-anchor=\"middle\">")
     svg += f"OUT: {isOUT:,.1f}"
     svg += ("</text>")
-    svg += ("<text x=\"150\" y=\"91\" font-family=\"Verdana\" font-size=\"14\" text-anchor=\"middle\">[ pct ]</text>")
+    svg += ("<text x=\"150\" y=\"91\" text-anchor=\"middle\">[ pct ]</text>")
 
     #svg += ("<!-- yellow PV bar-->")
     svg += ("<rect x=\"200\" y=\"40\" width=\"40\" stroke=\"#000000\" fill=\"#ffff00\" height=\"402\"/>")
@@ -91,10 +93,10 @@ def html_pid_faceplate_svg():
 
     #svg += ("<!-- PV value + EGU --> ")
     svg += ("<rect x=\"250\" y=\"61\" width=\"93\"  height=\"38\" stroke=\"#ffffff\" fill=\"#ffffff\" />  <!-- PV text background rectangle -->")  # use PV in EGU
-    svg += ("<text x=\"300\" y=\"76\" font-family=\"Verdana\" font-size=\"14\" stroke=\"#000000\" text-anchor=\"middle\">")
+    svg += ("<text x=\"300\" y=\"76\" text-anchor=\"middle\">")
     svg += f"PV: {isPV:,.1f}"
     svg += ("</text>")
-    svg += ("<text x=\"300\" y=\"91\" font-family=\"Verdana\" font-size=\"14\" text-anchor=\"middle\">[ pct ]</text>")
+    svg += ("<text x=\"300\" y=\"91\" text-anchor=\"middle\">[ pct ]</text>")
 
     #svg += ("<!-- white SP bar-->");
     svg += ("<rect x=\"350\" y=\"40\" width=\"40\" stroke=\"#000000\" fill=\"#ffffff\" height=\"402\"/>")
@@ -105,17 +107,17 @@ def html_pid_faceplate_svg():
     #svg += ("<!-- SP value + EGU --> ")
     svg += ("<rect x=\"400\" y=\"61\" width=\"93\"  height=\"38\" stroke=\"#ffffff\" fill=\"#ffffff\" />")
     #<!-- PV text background rectangle -->
-    svg += ("<text x=\"450\" y=\"76\" font-family=\"Verdana\" font-size=\"14\" stroke=\"#000000\" text-anchor=\"middle\">")
+    svg += ("<text x=\"450\" y=\"76\" text-anchor=\"middle\">")
     svg += f"SP: {isSP:,.1f}"
     svg += ("</text>")
-    svg += ("<text x=\"450\" y=\"91\" font-family=\"Verdana\" font-size=\"14\" text-anchor=\"middle\">[ pct ]</text>")
+    svg += ("<text x=\"450\" y=\"91\" text-anchor=\"middle\">[ pct ]</text>")
 
     #svg += ("<!-- MODE --> ")
     svg += ("<rect x=\"500\" y=\"161\" width=\"93\"  height=\"38\" stroke=\"#ffffff\" fill=\"#ffffff\" />")
     #<!-- PV text background rectangle -->
-    svg += ("<text x=\"550\" y=\"176\" font-family=\"Verdana\" font-size=\"14\" stroke=\"#000000\" text-anchor=\"middle\">")
+    svg += ("<text x=\"550\" y=\"176\" text-anchor=\"middle\">")
     svg += ("MODE:</text>")
-    svg += ("<text x=\"550\" y=\"191\" font-family=\"Verdana\" font-size=\"14\" stroke=\"#000000\" text-anchor=\"middle\">")
+    svg += ("<text x=\"550\" y=\"191\" font-size=\"18\" text-anchor=\"middle\">")
 
     if isMODE :
         svg += ("AUTO")
@@ -145,24 +147,57 @@ HTML_INDEX = """
         <H2>{pids}</H2>
         <p>{get_pid_details}</p>
         {SVG_FACE}
-        <p>page auto refresh 30sec</p><hr>
-        <H2>operation:</H2>
+        <hr>
 
-        <form action="/form/SP" method="post">
-            SP: <input type=number value={isSP:,.2f} step=0.1 id="SP" name="SP" min="0" max="100" />
-        </form>
-        <p>and use AUTO MODE</p>
+        <table style="width:100%">
+            <tr>
+                <th><H2>operation:</H2></th>
+                <th><H2>PID</H2></th>
+            </tr>
+            <tr>
+                <td>
+                    <form action="/form/OUT" method="post">
+                        OUT: <input type=number value={isOUT:,.2f} step=0.1 id="OUT" size="8" name="OUT" min="0" max="100" />
+                    </form>
+                </td>
+                <td>
+                    <form action="/form/SP" method="post">
+                        SP: <input type=number value={isSP:,.2f} step=0.1 id="SP" name="SP" size="8" min="0" max="100" />
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>and use MANUAL MODE</p>
+                </td>
+                <td>
+                    <p>and use AUTO MODE</p>
+                </td>
+            </tr>
+        </table>
+
         <hr>
-        <form action="/form/OUT" method="post">
-            OUT: <input type=number value={isOUT:,.2f} step=0.1 id="OUT" name="OUT" min="0" max="100" />
-        </form>
-        <p>and use MANUAL MODE</p>
-        <hr>
-        <p>
-            <a href="http://kll.byethost7.com/kllfusion01/infusions/articles/articles.php?article_id=227" target="_blank" >
-                <b>kll engineering blog</b>
-            </a>
-            rev: {THIS_REVISION}
+        <table style="width:100%">
+            <tr>
+                <th>
+                    <p><a href="http://kll.byethost7.com/kllfusion01/infusions/articles/articles.php?article_id=227" target="_blank" >
+                <b>kll engineering blog</b></a></p>
+                </th>
+                <th>
+                    <p>rev: {THIS_REVISION}</p>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <p>page auto refresh 30sec</p>
+                </td>
+                <td>
+                    <p>made 10.12.2023</p>
+                </td>
+            </tr>
+        </table>
+
+
         </p>
     </body></html>
 """

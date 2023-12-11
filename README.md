@@ -3,11 +3,10 @@
 
 webserver / analog in / digital out pwm / PID /
 
-![? image links not work here ?](http://kll.byethost7.com/kllfusion01/downloads/PICOW_dynamic_inline_SVG.png)</br>
-http://kll.byethost7.com/kllfusion01/downloads/PICOW_android_beowser_page.jpg</br>
-http://kll.byethost7.com/kllfusion01/downloads/PICOW_dynamic_inline_SVG.png</br>
+see http://kll.byethost7.com/kllfusion01/downloads/PICOW_android_beowser_page.jpg</br>
+see http://kll.byethost7.com/kllfusion01/downloads/PICOW_PID_V101b.png</br>
 
-v1.0.1
+v1.0.1b
 _______________________________
 
 board: PICO W

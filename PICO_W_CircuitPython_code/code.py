@@ -125,3 +125,5 @@ while True:  # ___________________________________________ MAIN
 # 25.3 sec loopM and empty loop1 and empty loop2
 # 25.5 sec loopM and loop1 ( get 4 Ains set 1 Dout pwm) and empty loop2
 # 26.4 sec loopM and loop1 ( get 4 Ains set 1 Dout pwm + PID ) and empty loop2
+# 26.8 sec with HTML auto refresh 30 sec
+
