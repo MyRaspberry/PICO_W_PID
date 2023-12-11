@@ -26,7 +26,8 @@ Board ID:raspberry_pi_pico_w</br>
 
 ______________________________
 
-the in this project used Python PID code is from:[m-lundberg/simple-pid](https://github.com/m-lundberg/simple-pid)
+the in this project used Python PID code is from:</br>
+[m-lundberg/simple-pid](https://github.com/m-lundberg/simple-pid) </br>
 MIT lic.
 
 _______________________________
@@ -59,6 +60,7 @@ the drive will close and the 'CIRCUITPY' drive will open ( 5sec )</br>
 pls find boot_out.txt and check
 
 -4-</br>
+you can start edit 'code.py' with MU-Editor or for THIS:</br>
 delete empty code.py and settings.toml</br>
 and copy drag new files and /lib/
 
