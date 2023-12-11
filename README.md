@@ -44,28 +44,28 @@ _______________________________
 
 ## HOW TO
 
-- 1
+- 1</br>
 get a PICO W board with WIFI 6$ and HEADERS ( if you not want to solder 7$ )</br>
 [PICO W board](https://www.raspberrypi.com/products/raspberry-pi-pico/?variant=raspberry-pi-pico-wh)
 
-- 2
+- 2</br>
 connect it with a USB cable ( USB A to Micro-USB-B cable ) to a PC USB port</br>
 and see drive content INDEX.HTM, INFO_UF2.TXT ( with bootloader info )</br>
 later you will need to press the [BOOT-SEL] button while connecting to see that drive again
 
-- 3
+- 3</br>
 open 2 file explorer windows and copy like drag / drop</br>
 -a- flash_nuke.uf2 ( required only if you change CPxxx version )</br>
 -b- adafruit-circuitpython-raspberry_pi_pico_w-< LANGUAGE >< DATE >< VERSION >.uf2 to it</br>
 after copy the drive will close and after 5sec drive show up again: 'CIRCUITPY'</br>
 pls find there boot_out.txt and check
 
-- 4
+- 4</br>
 you could start now edit 'code.py' with MU-Editor, but here we</br>
 delete the empty code.py and settings.toml</br>
 and copy / drag our new files and /lib/
 
-- 5
+- 5</br>
 open [MU-Editor](https://codewith.mu/) ( mode circuitpython )( should auto find that drive and open code.py )</br>
 activate the serial TAB aka REPL console ( use [CTRL][c] for stop / [CTRL][d] for reboot )</br>
 now develop code directly on the board</br>
@@ -73,10 +73,11 @@ BUT: can not edit settings.toml on the board! ( reboot failure might happen )</b
 that file only edit on the PC ( like with notepad )( like add your wifi login SSID PASSWORD )</br>
 and copy it to the board
 
- -6
-good project code backup / upload to your PC
+ -6</br>
+good project code backup / upload to your PC</br>
+keep zips for each version
 
-- 7
+- 7</br>
 [System files download](https://circuitpython.org/board/raspberry_pi_pico_w/)</br>
 might want to check if there is a update on the core files,</br>
 download CPxxx.uf2 and adafruit-circuitpython-bundle_lib.zip
@@ -91,13 +92,13 @@ copy / unzip from it new versions of the same libs used in that project</br>
 -f- expect to now find code errors old code .vs. new libs </br>
 and find new lib doc online to fix
 
-- 8
+- 8</br>
 after first edit settings.toml for SSID & SSID password and wanted FIX IP</br>
 open any browser ( inside your LAN ) http://192.168.1.215 and test operation</br>
 ( OUT & SP number or mouse input and [ENTER] as submit )</br> 
 ( see also MU-REPL for diagnostic prints "www ...." )
 
-- 9
+- 9</br>
 after website operation checked and coding work finished ( incl backup )</br> 
 you can disconnect the USB cable from PC and use a USB charger to power the board</br>
 ( place anywhere inside your LANs WIFI area)
