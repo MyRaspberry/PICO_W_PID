@@ -61,14 +61,14 @@ pls find boot_out.txt and check
 
 -4-</br>
 delete empty code.py and settings.toml</br>
-and copy drag new files and /lib/ 
+and copy drag new files and /lib/
 
 -5-</br>
 open MU-Editor ( mode circuitpython )( should auto find that drive and open code.py )</br>
 activate the serial TAB aka REPL console ( use [CTRL][c] for stop / [CTRL][d] for reboot )</br>
 now develop code directly on the board</br>
 BUT: can not edit settings.toml on the board! ( reboot failure might happen )</br>
-that file only edit on the PC and copy it to the board
+that file only edit on the PC ( like with notepad )( like add your wifi login SSID PASSWORD ) and copy it to the board
 
 -6-</br>
 good project code backup to your PC  
