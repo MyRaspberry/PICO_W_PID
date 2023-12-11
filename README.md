@@ -61,12 +61,12 @@ after copy the drive will close and after 5sec drive show up again: 'CIRCUITPY'<
 pls find there boot_out.txt and check
 
 -4-</br>
-you can start edit 'code.py' with MU-Editor but here:</br>
-delete empty code.py and settings.toml</br>
-and copy drag this new files and /lib/
+you could start now edit 'code.py' with MU-Editor, but here we</br>
+delete the empty code.py and settings.toml</br>
+and copy / drag our new files and /lib/
 
 -5-</br>
-open MU-Editor ( mode circuitpython )( should auto find that drive and open code.py )</br>
+open [MU-Editor](https://codewith.mu/) ( mode circuitpython )( should auto find that drive and open code.py )</br>
 activate the serial TAB aka REPL console ( use [CTRL][c] for stop / [CTRL][d] for reboot )</br>
 now develop code directly on the board</br>
 BUT: can not edit settings.toml on the board! ( reboot failure might happen )</br>
@@ -87,8 +87,15 @@ download CPxxx.uf2 and adafruit-circuitpython-bundle_lib.zip
 -e- with the new lib.zip</br>
 copy / unzip from it new versions of the same libs used in that project ( here /adafruit_httpserver/ )</br>
 -f- expect to now find code errors old code .vs. new libs </br>
-and find new lib doc online to fix</br>
- 
-  
+and find new lib doc online to fix
+
+-8-</br>
+after first edit settings.toml for SSID & SSID password and wanted FIX IP</br>
+open any browser ( inside your LAN ) http://192.168.1.215 and test operation ( OUT & SP number or mouse input and [ENTER] as submit )</br> 
+( see also MU-REPL for diagnostic prints "www ...." )
+
+-9-</br>
+if website operation checked and coding work finished ( incl backup )</br> 
+you can disconnect the USB cable from PC and use a USB charger to power the board ( place anywhere inside your LANs WIFI )
 
 _______________________________
