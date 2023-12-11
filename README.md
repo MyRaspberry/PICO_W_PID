@@ -44,11 +44,11 @@ _______________________________
 
 ## HOW TO
 
--1-</br>
+- 1</br>
 get a PICO W board with WIFI 6$ and HEADERS ( if you not want to solder 7$ )</br>
 [PICO W board](https://www.raspberrypi.com/products/raspberry-pi-pico/?variant=raspberry-pi-pico-wh)
 
--2-</br>
+- 2</br>
 connect it with a USB cable ( USB A to Micro-USB-B cable ) to a PC USB port</br>
 and see drive content INDEX.HTM, INFO_UF2.TXT ( with bootloader info )</br>
 later you will need to press the [BOOT-SEL] button while connecting to see that drive again
