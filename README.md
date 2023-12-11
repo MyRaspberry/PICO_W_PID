@@ -71,6 +71,21 @@ BUT: can not edit settings.toml on the board! ( reboot failure might happen )</b
 that file only edit on the PC ( like with notepad )( like add your wifi login SSID PASSWORD ) and copy it to the board
 
 -6-</br>
-good project code backup to your PC  
+good project code backup to your PC
+
+-7-</br>
+https://circuitpython.org/board/raspberry_pi_pico_w/</br>
+might want to check if there is a update on the core files,</br>
+download CPxxx.uf2 and lib.zip
+
+-a- backup all your code</br>
+-b- nuke the board</br>
+-c- flash the board with the new CPxxx.uf2</br>
+-d- copy back your code ( not the /lib/ )</br>
+-e- with the new lib.zip</br>
+copy / unzip from it new versions of the same libs used in that project</br>
+-f- expect to now find code errors old code .vs. new libs and find new lib doc online to fix</br>
+ 
+  
 
 _______________________________
