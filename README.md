@@ -7,29 +7,22 @@ v1.0.1
 _______________________________
 
 board: PICO W
-
-OS: Circuit Python
-
+```OS: Circuit Python
 adafruit-circuitpython-raspberry_pi_pico_w-en_US-20231205-no-branch-156f417.uf2
-
 adafruit-circuitpython-bundle-9.x-mpy-20231205.zip
-
 flash_nuke.uf2
+```
 
 ### read back after nuke & flash:
 
 Adafruit CircuitPython 9.0.0-alpha.5-34-g156f417f70 on 2023-12-05; 
-
 Raspberry Pi Pico W with rp2040
-
 Board ID:raspberry_pi_pico_w
 
-_______________________________
+______________________________
 
 the in this project used Python PID code is from:
-
 https://github.com/m-lundberg/simple-pid
-
 MIT lic.
 
 _______________________________
@@ -37,14 +30,11 @@ _______________________________
 ## maker
 
 by: kll engineering
-
 lic: CC-BY-SA 4.0
-
 date: 11.12.23
-
 place: CNX
-
 blog: http://kll.byethost7.com/kllfusion01/infusions/articles/articles.php?article_id=227
+
 _______________________________
 
 ## HOW TO
