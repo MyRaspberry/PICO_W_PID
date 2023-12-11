@@ -34,6 +34,8 @@ MIT lic.
 
 _______________________________
 
+## maker
+
 by: kll engineering
 
 lic: CC-BY-SA 4.0
@@ -45,6 +47,8 @@ place: CNX
 blog: http://kll.byethost7.com/kllfusion01/infusions/articles/articles.php?article_id=227
 _______________________________
 
+## HOW TO
+
 -1- get a PICO W board with WIFI 6$ and HEADERS ( if you not want to solder 7$ )
 
 https://www.raspberrypi.com/products/raspberry-pi-pico/?variant=raspberry-pi-pico-wh
@@ -55,13 +59,13 @@ and see drive content INDEX.HTM, INFO_UF2.TXT ( with bootloader info )
 
 later you will need to press the [BOOT-SEL] button while connecting to see that drive again
 
--3- open 2 file explorer windows and drag / drop
+-3- open 2 file explorer windows and copy like drag / drop
 
-adafruit-circuitpython-raspberry_pi_pico_w-<LANGUAGE><DATE><VERSION>.uf2 to it
+adafruit-circuitpython-raspberry_pi_pico_w-< LANGUAGE >< DATE >< VERSION >.uf2 to it
 
 the drive will close and the 'CIRCUITPY' drive will open ( 5sec )
 
-find boot_out.txt and check
+pls find boot_out.txt and check
 
 -4- delete empty code.py and settings.toml
 
@@ -73,6 +77,10 @@ activate the serial TAB aka REPL console ( use [CTRL][c] for stop / [CTRL][d] fo
 
 now develop code directly on the board
 
--6- good project code backup to you PC  
+BUT: can not edit settings.toml on the board! ( reboot failure might happen )
+
+that file only edit on the PC and copy it to the board
+
+-6- good project code backup to your PC  
 
 _______________________________
