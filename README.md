@@ -1,8 +1,10 @@
-setup GIT for a
 
 ## PICO_W PID
 
 webserver / analog in / digital out pwm / PID /
+
+v1.0.1
+_______________________________
 
 board: PICO W
 
@@ -30,12 +32,13 @@ https://github.com/m-lundberg/simple-pid
 
 _______________________________
 
-owner: kll engineering
+by: kll engineering
 
 lic: CC-BY-SA
 
-date: 11.12.203
+date: 11.12.23
 
 place: CNX
 
 blog: http://kll.byethost7.com/kllfusion01/infusions/articles/articles.php?article_id=227
+_______________________________
