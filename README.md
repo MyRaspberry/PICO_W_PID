@@ -15,18 +15,16 @@ flash_nuke.uf2
 
 ### read back after nuke & flash:
 
-####boot_out.txt
+see: boot_out.txt
 
-Adafruit CircuitPython 9.0.0-alpha.5-34-g156f417f70 on 2023-12-05;
- 
-Raspberry Pi Pico W with rp2040
-
-Board ID:raspberry_pi_pico_w
+Adafruit CircuitPython 9.0.0-alpha.5-34-g156f417f70 on 2023-12-05;</br>
+Raspberry Pi Pico W with rp2040</br>
+Board ID:raspberry_pi_pico_w</br>
 
 ______________________________
 
-the in this project used Python PID code is from:
-https://github.com/m-lundberg/simple-pid
+the in this project used Python PID code is from:</br>
+https://github.com/m-lundberg/simple-pid</br>
 MIT lic.
 
 _______________________________
