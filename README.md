@@ -3,7 +3,7 @@
 
 webserver / analog in / digital out pwm / PID /
 
-see [browser picture](http://kll.byethost7.com/kllfusion01/downloads/PICOW_android_beowser_page.jpg)</br>
+see [phone browser](http://kll.byethost7.com/kllfusion01/downloads/PICOW_android_beowser_page.jpg)</br>
 see [V101b from PC](http://kll.byethost7.com/kllfusion01/downloads/PICOW_PID_V101b.png)</br>
 
 v1.0.1b
@@ -26,8 +26,7 @@ Board ID:raspberry_pi_pico_w</br>
 
 ______________________________
 
-the in this project used Python PID code is from:</br>
-https://github.com/m-lundberg/simple-pid</br>
+the in this project used Python PID code is from:[m-lundberg/simple-pid](https://github.com/m-lundberg/simple-pid)
 MIT lic.
 
 _______________________________
