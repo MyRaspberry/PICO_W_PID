@@ -3,8 +3,8 @@
 
 webserver / analog in / digital out pwm / PID /
 
-see http://kll.byethost7.com/kllfusion01/downloads/PICOW_android_beowser_page.jpg</br>
-see http://kll.byethost7.com/kllfusion01/downloads/PICOW_PID_V101b.png</br>
+see [browser picture](http://kll.byethost7.com/kllfusion01/downloads/PICOW_android_beowser_page.jpg)</br>
+see [V101b from PC](http://kll.byethost7.com/kllfusion01/downloads/PICOW_PID_V101b.png)</br>
 
 v1.0.1b
 _______________________________
