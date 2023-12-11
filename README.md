@@ -1,7 +1,7 @@
 
 ## PICO_W PID
 
-webserver / analog in / digital out pwm / PID /
+**webserver / analog in / digital out pwm / PID /
 
 see [phone browser](http://kll.byethost7.com/kllfusion01/downloads/PICOW_android_beowser_page.jpg)</br>
 see [V101b from PC](http://kll.byethost7.com/kllfusion01/downloads/PICOW_PID_V101b.png)</br>
@@ -70,7 +70,8 @@ open [MU-Editor](https://codewith.mu/) ( mode circuitpython )( should auto find 
 activate the serial TAB aka REPL console ( use [CTRL][c] for stop / [CTRL][d] for reboot )</br>
 now develop code directly on the board</br>
 BUT: can not edit settings.toml on the board! ( reboot failure might happen )</br>
-that file only edit on the PC ( like with notepad )( like add your wifi login SSID PASSWORD ) and copy it to the board
+that file only edit on the PC ( like with notepad )( like add your wifi login SSID PASSWORD )</br>
+and copy it to the board
 
 -6-</br>
 good project code backup / upload to your PC
@@ -85,17 +86,20 @@ download CPxxx.uf2 and adafruit-circuitpython-bundle_lib.zip
 -c- flash the board with the new CPxxx.uf2</br>
 -d- copy back your code ( not the /lib/ )</br>
 -e- with the new lib.zip</br>
-copy / unzip from it new versions of the same libs used in that project ( here /adafruit_httpserver/ )</br>
+copy / unzip from it new versions of the same libs used in that project</br>
+( here /adafruit_httpserver/ )</br>
 -f- expect to now find code errors old code .vs. new libs </br>
 and find new lib doc online to fix
 
 -8-</br>
 after first edit settings.toml for SSID & SSID password and wanted FIX IP</br>
-open any browser ( inside your LAN ) http://192.168.1.215 and test operation ( OUT & SP number or mouse input and [ENTER] as submit )</br> 
+open any browser ( inside your LAN ) http://192.168.1.215 and test operation</br>
+( OUT & SP number or mouse input and [ENTER] as submit )</br> 
 ( see also MU-REPL for diagnostic prints "www ...." )
 
 -9-</br>
 after website operation checked and coding work finished ( incl backup )</br> 
-you can disconnect the USB cable from PC and use a USB charger to power the board ( place anywhere inside your LANs WIFI area)
+you can disconnect the USB cable from PC and use a USB charger to power the board</br>
+( place anywhere inside your LANs WIFI area)
 
 _______________________________
