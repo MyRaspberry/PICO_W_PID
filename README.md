@@ -3,7 +3,9 @@
 
 webserver / analog in / digital out pwm / PID /
 
-![PID faceplate](http://kll.byethost7.com/kllfusion01/downloads/PICOW_dynamic_inline_SVG.png)
+![? image links not work here ?](http://kll.byethost7.com/kllfusion01/downloads/PICOW_dynamic_inline_SVG.png)
+http://kll.byethost7.com/kllfusion01/downloads/PICOW_android_beowser_page.jpg
+http://kll.byethost7.com/kllfusion01/downloads/PICOW_dynamic_inline_SVG.png
 
 v1.0.1
 _______________________________
