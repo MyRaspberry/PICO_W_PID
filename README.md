@@ -55,14 +55,15 @@ later you will need to press the [BOOT-SEL] button while connecting to see that 
 
 -3-</br>
 open 2 file explorer windows and copy like drag / drop</br>
-adafruit-circuitpython-raspberry_pi_pico_w-< LANGUAGE >< DATE >< VERSION >.uf2 to it</br>
-the drive will close and the 'CIRCUITPY' drive will open ( 5sec )</br>
-pls find boot_out.txt and check
+-a- flash_nuke.uf2 ( required only if you change CPxxx version )</br>
+-b- adafruit-circuitpython-raspberry_pi_pico_w-< LANGUAGE >< DATE >< VERSION >.uf2 to it</br>
+after copy the drive will close and after 5sec drive show up again: 'CIRCUITPY'</br>
+pls find there boot_out.txt and check
 
 -4-</br>
-you can start edit 'code.py' with MU-Editor or for THIS:</br>
+you can start edit 'code.py' with MU-Editor but here:</br>
 delete empty code.py and settings.toml</br>
-and copy drag new files and /lib/
+and copy drag this new files and /lib/
 
 -5-</br>
 open MU-Editor ( mode circuitpython )( should auto find that drive and open code.py )</br>
@@ -72,20 +73,21 @@ BUT: can not edit settings.toml on the board! ( reboot failure might happen )</b
 that file only edit on the PC ( like with notepad )( like add your wifi login SSID PASSWORD ) and copy it to the board
 
 -6-</br>
-good project code backup to your PC
+good project code backup / upload to your PC
 
 -7-</br>
-https://circuitpython.org/board/raspberry_pi_pico_w/</br>
+[System files download](https://circuitpython.org/board/raspberry_pi_pico_w/)</br>
 might want to check if there is a update on the core files,</br>
-download CPxxx.uf2 and lib.zip
+download CPxxx.uf2 and adafruit-circuitpython-bundle_lib.zip
 
 -a- backup all your code</br>
 -b- nuke the board</br>
 -c- flash the board with the new CPxxx.uf2</br>
 -d- copy back your code ( not the /lib/ )</br>
 -e- with the new lib.zip</br>
-copy / unzip from it new versions of the same libs used in that project</br>
--f- expect to now find code errors old code .vs. new libs and find new lib doc online to fix</br>
+copy / unzip from it new versions of the same libs used in that project ( here /adafruit_httpserver/ )</br>
+-f- expect to now find code errors old code .vs. new libs </br>
+and find new lib doc online to fix</br>
  
   
 
