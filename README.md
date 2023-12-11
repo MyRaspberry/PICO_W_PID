@@ -73,7 +73,7 @@ BUT: can not edit settings.toml on the board! ( reboot failure might happen )</b
 that file only edit on the PC ( like with notepad )( like add your wifi login SSID PASSWORD )</br>
 and copy it to the board
 
- -6</br>
+ - 6</br>
 good project code backup / upload to your PC</br>
 keep zips for each version
 
@@ -81,15 +81,14 @@ keep zips for each version
 [System files download](https://circuitpython.org/board/raspberry_pi_pico_w/)</br>
 might want to check if there is a update on the core files,</br>
 download CPxxx.uf2 and adafruit-circuitpython-bundle_lib.zip
-
--a- backup all your code</br>
--b- nuke the board</br>
--c- flash the board with the new CPxxx.uf2</br>
--d- copy back your code ( not the /lib/ )</br>
--e- with the new lib.zip</br>
+- a- backup all your code</br>
+- b- nuke the board</br>
+- c- flash the board with the new CPxxx.uf2</br>
+- d- copy back your code ( not the /lib/ )</br>
+- e- with the new lib.zip</br>
 copy / unzip from it new versions of the same libs used in that project</br>
 ( here /adafruit_httpserver/ )</br>
--f- expect to now find code errors old code .vs. new libs </br>
+- f- expect to now find code errors old code .vs. new libs </br>
 and find new lib doc online to fix
 
 - 8</br>
