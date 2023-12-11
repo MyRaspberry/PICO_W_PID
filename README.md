@@ -15,8 +15,12 @@ flash_nuke.uf2
 
 ### read back after nuke & flash:
 
-Adafruit CircuitPython 9.0.0-alpha.5-34-g156f417f70 on 2023-12-05; 
+####boot_out.txt
+
+Adafruit CircuitPython 9.0.0-alpha.5-34-g156f417f70 on 2023-12-05;
+ 
 Raspberry Pi Pico W with rp2040
+
 Board ID:raspberry_pi_pico_w
 
 ______________________________
@@ -30,9 +34,13 @@ _______________________________
 ## maker
 
 by: kll engineering
+
 lic: CC-BY-SA 4.0
+
 date: 11.12.23
+
 place: CNX
+
 blog: http://kll.byethost7.com/kllfusion01/infusions/articles/articles.php?article_id=227
 
 _______________________________
