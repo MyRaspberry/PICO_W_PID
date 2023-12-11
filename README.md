@@ -3,7 +3,7 @@
 
 webserver / analog in / digital out pwm / PID /
 
-<img src="http://kll.byethost7.com/kllfusion01/downloads/PICOW_android_beowser_page.jpg" >
+<img src="http://kll.byethost7.com/kllfusion01/downloads/PICOW_android_beowser_page.jpg" alt="from phone" title="looks nice on mobile too" >
 
 v1.0.1
 _______________________________
