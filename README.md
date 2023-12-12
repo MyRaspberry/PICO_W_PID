@@ -1,7 +1,10 @@
 
 ## PICO_W PID
 
-### webserver / analog in / digital out pwm / PID /
+- webserver
+- analog in
+- digital out pwm
+- PID
 
 see [phone browser](http://kll.byethost7.com/kllfusion01/downloads/PICOW_android_beowser_page.jpg)</br>
 see [V101b from PC](http://kll.byethost7.com/kllfusion01/downloads/PICOW_PID_V101b.png)</br>
@@ -9,7 +12,8 @@ see [V101b from PC](http://kll.byethost7.com/kllfusion01/downloads/PICOW_PID_V10
 v1.0.2
 _______________________________
 
-board: PICO W
+board: PICO W</br>
+used system files:
 ```OS: Circuit Python
 adafruit-circuitpython-raspberry_pi_pico_w-en_US-20231205-no-branch-156f417.uf2
 adafruit-circuitpython-bundle-9.x-mpy-20231205.zip
@@ -101,5 +105,13 @@ open any browser ( inside your LAN ) http://192.168.1.215 and test operation</br
 after website operation checked and coding work finished ( incl backup )</br> 
 you can disconnect the USB cable from PC and use a USB charger to power the board</br>
 ( place anywhere inside your LANs WIFI area)
+
+- 10</br>
+hardware: PID needs a</br>
+- input for PV: connect a SENSOR on ADC0 </br>
+but you could also use 'linked' sensor boards..</br>
+- output from OUT: here use a LED to see the 'dimmed' control output</br>
+later can connect like a SERVO ... for real process control</br>
+
 
 _______________________________
