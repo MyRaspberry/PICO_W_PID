@@ -8,12 +8,13 @@ import wifi
 from adafruit_httpserver import Server, Request, Response, Redirect, GET, POST
 import micropython
 import gc # micropython garbage collection # use gc.mem_free() # use gc.collect
+import microcontroller # for board reboot
 
 from pico_w_io import get_datas, get_pids, get_PV, get_SP, set_SP, get_OUT, set_OUT, get_pid_details, get_pid_mode
-datas="Ain datas from pico_w_io"
+datas="Ain data from pico_w_io"
 pids="Pid data from pico_w_io"
-isPV=50.0
-isSP=50.0
+isPV=0.0
+isSP=0.0
 isOUT=0.0
 
 
@@ -81,7 +82,7 @@ HTML_INDEX = """
     </head><body>
         <h1>Pico W Web Server</h1>
         <h2> from Circuit Python {THIS_OS} </h2>
-        <img src="https://www.raspberrypi.com/documentation/microcontrollers/images/pico-pinout.svg" >
+        <img src="https://www.raspberrypi.com/documentation/microcontrollers/images/picow-pinout.svg" >
         <hr>
         <H1> Analog I/O </H1>
         <H2>{datas}</H2>
@@ -275,7 +276,9 @@ def run_webserver() :
     try:
         #checkT = time.monotonic()
         server.poll()
-        #dp("\n___ server poll: {:>5.3f} sec ".format((time.monotonic() - checkT)))
+        #dp("\n___ server poll: {:>5.3f} sec ".format((time.monotonic() - checkT))) # 0.000 or 0.004 ?
 
     except OSError:
         print("ERROR server poll")
+        # _________________________________________________ here might later do a reboot
+        #microcontroller.reset()

@@ -54,7 +54,6 @@ def JOB1():
     runPID() # ____________________________________________ PID control
     #DO1ramp() # __________________________________________ from pico_w_io JUST TEST
     run_webserver() # _____________________________________ from web_wifi.py / in main loop it's killing me
-    pass
 
 def JOB2():
     pass
@@ -66,9 +65,9 @@ infos  ="___ Main structure info: endless triple loop: \n___ loopM counts to "
 infos +=f"{updateM:}"
 infos +=" and reports time, \n___ loop1 checks for elapse of "
 infos +=f"{update1:,.2f}"
-infos +="sec and prints a '.' & JOB1 ( Ains, Dout, PID ), \n___ loop2 checks for elapse of "
+infos +=" sec and prints a '.' & JOB1 ( Ains, Dout, PID ), \n___ loop2 checks for elapse of "
 infos +=f"{update2:,.2f}"
-infos +="sec & JOB2 ( future )"
+infos +=" sec & JOB2 ( future )"
 dp(infos)
 
 while True:  # ___________________________________________ MAIN
