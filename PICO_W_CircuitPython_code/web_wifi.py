@@ -64,25 +64,54 @@ def get_MODEs():
 
 # ______________________________ at the HTML STYLE section i had to escape the { , } by {{ , }}
 HTML_INDEX = """
-    <!DOCTYPE html><html><head><title>KLL engineering Pico W</title>
+    <!DOCTYPE html><html><head>
+    <title>KLL engineering Pico W</title>
     <style>
-        html {{font-family: "Times New Roman", Times, serif; background-color: lightgreen;
+        body {{font-family: "Times New Roman", Times, serif; background-color: lightgreen;
         display:inline-block; margin: 0px auto; text-align: center;}}
-        h1{{color: deeppink; width: 200; word-wrap: break-word; padding: 2vh; font-size: 35px;}}
-        p{{font-size: 1.5rem; width: 200; word-wrap: break-word;}}
-        form{{font-size: 2rem; }}
-        input[type=number]{{font-size: 2rem;}}
-        .button{{font-family: {{font_family}};display: inline-block;
-        background-color: black; border: none;
-        border-radius: 4px; color: white; padding: 16px 40px;
-        text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;}}
+        h1 {{color: deeppink; word-wrap: break-word; padding: 1vh; font-size: 30px;}}
+        p {{font-size: 1.5rem; word-wrap: break-word;}}
         p.dotted {{margin: auto; width: 75%; font-size: 25px; text-align: center;}}
+        form {{font-size: 2rem; }}
+        input[type=number] {{font-size: 2rem;}}
+    </style>
+
+    </head><body>
+        <h1>Pico W Web Server from Circuit Python {THIS_OS} </h1>
+        <img src="https://www.raspberrypi.com/documentation/microcontrollers/images/picow-pinout.svg" >
+
+        <hr>
+            <a href="/data" target="_blank" ><b>data</b></a>
+        <hr>
+        <table style="width:100%">
+            <tr>
+                <th>
+                    <p><a href="http://kll.byethost7.com/kllfusion01/infusions/articles/articles.php?article_id=227" target="_blank" >
+                <b>kll engineering blog</b></a></p>
+                </th>
+                <th>
+                    <p>rev: {THIS_REVISION}</p>
+                </th>
+            </tr>
+        </table>
+        <hr>
+    </body></html>
+"""
+
+HTML_PID = """
+    <!DOCTYPE html><html><head>
+    <title>KLL engineering Pico W</title>
+    <style>
+        body {{font-family: "Times New Roman", Times, serif; background-color: lightgreen;
+        display:inline-block; margin: 0px auto; text-align: center;}}
+        h1 {{color: deeppink; word-wrap: break-word; padding: 1vh; font-size: 30px;}}
+        p {{font-size: 1.5rem; word-wrap: break-word;}}
+        p.dotted {{margin: auto; width: 75%; font-size: 25px; text-align: center;}}
+        form {{font-size: 2rem; }}
+        input[type=number] {{font-size: 2rem;}}
     </style>
     <meta http-equiv="refresh" content="30">
     </head><body>
-        <h1>Pico W Web Server</h1>
-        <h2> from Circuit Python {THIS_OS} </h2>
-        <img src="https://www.raspberrypi.com/documentation/microcontrollers/images/picow-pinout.svg" >
         <hr>
         <H1> Analog I/O </H1>
         <H2>{datas}</H2>
@@ -141,17 +170,13 @@ HTML_INDEX = """
 
         <table style="width:100%">
             <tr>
-                <th><H2>operation:</H2></th>
-                <th><H2>PID</H2></th>
-            </tr>
-            <tr>
                 <td>
-                    <form action="/form/OUT" method="post">
+                    <form action="/data/form/OUT" method="post">
                         OUT: <input type=number value={isOUT:,.2f} step=0.1 id="OUT" size="8" name="OUT" min="0" max="100" />
                     </form>
                 </td>
                 <td>
-                    <form action="/form/SP" method="post">
+                    <form action="/data/form/SP" method="post">
                         SP: <input type=number value={isSP:,.2f} step=0.1 id="SP" name="SP" size="8" min="0" max="100" />
                     </form>
                 </td>
@@ -186,9 +211,8 @@ HTML_INDEX = """
                 </td>
             </tr>
         </table>
+        <hr>
 
-
-        </p>
     </body></html>
 """
 
@@ -216,11 +240,19 @@ def setup_webserver() :
         return Response(request,
             HTML_INDEX.format(
                 THIS_OS=THIS_OS,
+                THIS_REVISION=THIS_REVISION,
+                ),
+                content_type='text/html'
+            )
+
+    @server.route("/data")
+    def data(request):  # pylint: disable=unused-argument
+        dp("\nwww served dynamic data.html")
+        return Response(request,
+            HTML_PID.format(
                 datas=get_datas(),
                 pids=get_pids(),
                 get_pid_details=get_pid_details(),
-
-                #SVG_FACE=html_pid_faceplate_svg(), now full INLINE
                 svgw=get_svgw(),
                 svgh=get_svgh(),
                 svgw4=get_svgw()-4,
@@ -241,8 +273,7 @@ def setup_webserver() :
                 content_type='text/html'
             )
 
-
-    @server.route("/form/SP", [GET, POST])
+    @server.route("/data/form/SP", [GET, POST])
     def form(request):
         if request.method == POST:
             posted_SP_value = request.form_data.get("SP")
@@ -253,9 +284,9 @@ def setup_webserver() :
             except ValueError:
                 print("Not a Digit")
 
-        return Redirect(request, "/" ) # _________________ back to index page
+        return Redirect(request, "/data" ) # _________________ back to index page
 
-    @server.route("/form/OUT", [GET, POST])
+    @server.route("/data/form/OUT", [GET, POST])
     def form(request):
         if request.method == POST:
             posted_OUT_value = request.form_data.get("OUT")
@@ -266,7 +297,7 @@ def setup_webserver() :
             except ValueError:
                 print("Not a Digit")
 
-        return Redirect(request, "/" ) # _________________ back to index page
+        return Redirect(request, "/data" ) # _________________ back to index page
 
 
     server.start(str(wifi.radio.ipv4_address)) # _________ startup the server
