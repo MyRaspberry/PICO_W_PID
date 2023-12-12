@@ -33,121 +33,110 @@ WIFI_PASSWORD = os.getenv('WIFI_PASSWORD')
 
 WIFI_IP = os.getenv('WIFI_IP')
 
+# ______________________________ some SVG formatting functions used in HTML_INDEX.format()
+def get_svgw(): # SVG width
+    return (640+20)
 
-HTML_STYLE = """
-<style>
-    html {font-family: "Times New Roman", Times, serif; background-color: lightgreen;
-    display:inline-block; margin: 0px auto; text-align: center;}
-    h1{color: deeppink; width: 200; word-wrap: break-word; padding: 2vh; font-size: 35px;}
-    p{font-size: 1.5rem; width: 200; word-wrap: break-word;}
-    form{font-size: 2rem; }
-    input[type=number]{font-size: 2rem;}
-    .button{font-family: {font_family};display: inline-block;
-    background-color: black; border: none;
-    border-radius: 4px; color: white; padding: 16px 40px;
-    text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;}
-    p.dotted {margin: auto; width: 75%; font-size: 25px; text-align: center;}
-</style>
-"""
+def get_svgh(): # SVG height
+    return (450+30)
 
-def html_pid_faceplate_svg():
-    # use OUT, PV, SP
-    isOUT = get_OUT()
-    isSP = get_SP()
-    isPV = get_PV()
+def get_OUTh():
+    isOUT=get_OUT()
+    return  (400 - int(4*isOUT))
+
+def get_PVh():
+    isPV=get_PV()
+    return (400 - int(4*isPV))
+
+def get_SPh():
+    isSP=get_SP()
+    return (400 - int(4*isSP))
+
+
+def get_MODEs():
     isMODE = get_pid_mode()
-
-    svg  =  "<div><table align=\"center\">"
-    svg  =  "<td width=\"10%\">&nbsp;&nbsp;<br></td><td width=\"10%\">"
-    svg +=  "<tr><td>\n"
-    scopew = 640
-    svgw = scopew+20
-    scopeh = 450
-    svgh = scopeh+30
-    svg += "<svg width=\"{:d}\" height=\"{:d}\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\">".format(svgw, svgh)
-    svg += "<desc>show PID faceplate </desc>"
-    svg += ("<!-- grey box with 3D style blue border-->")
-    svg += "<rect x=\"1\" y=\"1\" width=\"{:d}\" height=\"{:d}\"  stroke=\"#000088\" stroke-width=\"1\" />".format(svgw, svgh)
-    svg += "<rect x=\"2\" y=\"2\" width=\"{:d}\" height=\"{:d}\"  stroke=\"#0000aa\" stroke-width=\"1\" />".format((svgw-4),(svgh-4))
-    svg += "<rect x=\"3\" y=\"3\" width=\"{:d}\" height=\"{:d}\"  fill=\"#FFF8DC\" stroke=\"#0000ff\" stroke-width=\"1\" />".format((svgw-6),(svgh-6))
-    svg += ("<g id=\"faceplate\" style=\"visibility:visible; stroke-width:2; stroke=\"#000000\"; font-family=\"Verdana\"; font-size=\"16\";\" > ")
-    # bar graph
-    #svg += ("<!-- cyan OUTPUT bar-->");
-    svg += ("<rect x=\"50\" y=\"40\" width=\"40\" stroke=\"#000000\" fill=\"#00ffff\" height=\"402\"/>")
-    svg += ("<rect x=\"52\" y=\"42\" width=\"36\" stroke=\"#777777\" fill=\"#777777\" height=\"")
-    svg += str(400 - int(4*isOUT))
-    svg += ("\"/>")
-
-    #svg += ("<!-- OUT value + EGU --> ") #font-family=\"Verdana\" font-size=\"14\" stroke=\"#000000\"
-    svg += ("<rect x=\"100\" y=\"61\" width=\"93\"  height=\"38\" stroke=\"#ffffff\" fill=\"#ffffff\" />")
-    svg += ("<text x=\"150\" y=\"76\"  text-anchor=\"middle\">")
-    svg += f"OUT: {isOUT:,.1f}"
-    svg += ("</text>")
-    svg += ("<text x=\"150\" y=\"91\" text-anchor=\"middle\">[ pct ]</text>")
-
-    #svg += ("<!-- yellow PV bar-->")
-    svg += ("<rect x=\"200\" y=\"40\" width=\"40\" stroke=\"#000000\" fill=\"#ffff00\" height=\"402\"/>")
-    svg += ("<rect x=\"202\" y=\"42\" width=\"36\" stroke=\"#777777\" fill=\"#777777\" height=\"")
-    svg += str(400 - int(4*isPV))
-    svg += ("\"/>")
-
-    #svg += ("<!-- PV value + EGU --> ")
-    svg += ("<rect x=\"250\" y=\"61\" width=\"93\"  height=\"38\" stroke=\"#ffffff\" fill=\"#ffffff\" />  <!-- PV text background rectangle -->")  # use PV in EGU
-    svg += ("<text x=\"300\" y=\"76\" text-anchor=\"middle\">")
-    svg += f"PV: {isPV:,.1f}"
-    svg += ("</text>")
-    svg += ("<text x=\"300\" y=\"91\" text-anchor=\"middle\">[ pct ]</text>")
-
-    #svg += ("<!-- white SP bar-->");
-    svg += ("<rect x=\"350\" y=\"40\" width=\"40\" stroke=\"#000000\" fill=\"#ffffff\" height=\"402\"/>")
-    svg += ("<rect x=\"352\" y=\"42\" width=\"36\" stroke=\"#777777\" fill=\"#777777\" height=\"")
-    svg += str(400 - int(4*isSP))
-    svg += ("\"/>")
-
-    #svg += ("<!-- SP value + EGU --> ")
-    svg += ("<rect x=\"400\" y=\"61\" width=\"93\"  height=\"38\" stroke=\"#ffffff\" fill=\"#ffffff\" />")
-    #<!-- PV text background rectangle -->
-    svg += ("<text x=\"450\" y=\"76\" text-anchor=\"middle\">")
-    svg += f"SP: {isSP:,.1f}"
-    svg += ("</text>")
-    svg += ("<text x=\"450\" y=\"91\" text-anchor=\"middle\">[ pct ]</text>")
-
-    #svg += ("<!-- MODE --> ")
-    svg += ("<rect x=\"500\" y=\"161\" width=\"93\"  height=\"38\" stroke=\"#ffffff\" fill=\"#ffffff\" />")
-    #<!-- PV text background rectangle -->
-    svg += ("<text x=\"550\" y=\"176\" text-anchor=\"middle\">")
-    svg += ("MODE:</text>")
-    svg += ("<text x=\"550\" y=\"191\" font-size=\"18\" text-anchor=\"middle\">")
-
     if isMODE :
-        svg += ("AUTO")
+        return "AUTO"
     else:
-        svg += ("MAN")
+        return "MAN"
 
-    svg += ("</text>")
 
-    svg += ("</g>")
-    svg += ("</svg>\n")
-
-    svg +=  "</td><td width=\"10%\">&nbsp;&nbsp;<br></td><td width=\"10%\"></tr></table></div>\n"
-
-    return svg
-
+# ______________________________ at the HTML STYLE section i had to escape the { , } by {{ , }}
 HTML_INDEX = """
-<!DOCTYPE html><html><head><title>KLL Pico W Web Server</title>
-    {HTML_STYLE}
+    <!DOCTYPE html><html><head><title>KLL engineering Pico W</title>
+    <style>
+        html {{font-family: "Times New Roman", Times, serif; background-color: lightgreen;
+        display:inline-block; margin: 0px auto; text-align: center;}}
+        h1{{color: deeppink; width: 200; word-wrap: break-word; padding: 2vh; font-size: 35px;}}
+        p{{font-size: 1.5rem; width: 200; word-wrap: break-word;}}
+        form{{font-size: 2rem; }}
+        input[type=number]{{font-size: 2rem;}}
+        .button{{font-family: {{font_family}};display: inline-block;
+        background-color: black; border: none;
+        border-radius: 4px; color: white; padding: 16px 40px;
+        text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;}}
+        p.dotted {{margin: auto; width: 75%; font-size: 25px; text-align: center;}}
+    </style>
     <meta http-equiv="refresh" content="30">
     </head><body>
-        <h1>KLL Pico W Web Server</h1>
+        <h1>Pico W Web Server</h1>
         <h2> from Circuit Python {THIS_OS} </h2>
         <img src="https://www.raspberrypi.com/documentation/microcontrollers/images/pico-pinout.svg" >
         <hr>
+        <H1> Analog I/O </H1>
         <H2>{datas}</H2>
-        <hr><p> PID </p>
-        <H2>{pids}</H2>
-        <p>{get_pid_details}</p>
-        {SVG_FACE}
         <hr>
+        <H1> PID </H1>
+        <H2>{pids}</H2>
+        <H3>{get_pid_details}</H3>
+
+        <table align=\"center\" style="width:100%">
+        <tr>
+            <td width=\"10%\"></td>
+            <td>\n
+
+        <svg width=\"{svgw}\" height=\"{svgh}\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\">
+        <desc>show PID faceplate </desc>
+        <!-- grey box with 3D style blue border-->")
+        <rect x=\"1\" y=\"1\" width=\"{svgw}\" height=\"{svgh}\"  stroke=\"#000088\" stroke-width=\"1\" />
+        <rect x=\"2\" y=\"2\" width=\"{svgw4}\" height=\"{svgh4}\"  stroke=\"#0000aa\" stroke-width=\"1\" />
+        <rect x=\"3\" y=\"3\" width=\"{svgw6}\" height=\"{svgh6}\"  fill=\"#FFF8DC\" stroke=\"#0000ff\" stroke-width=\"1\" />
+        <g id=\"faceplate\" style=\"visibility:visible; stroke-width:2; stroke=\"#000000\"; font-family=\"Verdana\"; font-size=\"16\";\" >
+        <!-- cyan OUTPUT bar-->
+        <rect x=\"50\" y=\"40\" width=\"40\" stroke=\"#000000\" fill=\"#00ffff\" height=\"402\"/>
+        <rect x=\"52\" y=\"42\" width=\"36\" stroke=\"#777777\" fill=\"#777777\" height=\"{OUTh}\"/>
+        <rect x=\"100\" y=\"61\" width=\"93\"  height=\"38\" stroke=\"#ffffff\" fill=\"#ffffff\" />
+        <text x=\"150\" y=\"76\"  text-anchor=\"middle\">OUT: {isOUT:,.1f}</text>
+        <text x=\"150\" y=\"91\" text-anchor=\"middle\">[ pct ]</text>
+        <!-- yellow PV bar-->
+        <rect x=\"200\" y=\"40\" width=\"40\" stroke=\"#000000\" fill=\"#ffff00\" height=\"402\"/>
+        <rect x=\"202\" y=\"42\" width=\"36\" stroke=\"#777777\" fill=\"#777777\" height=\"{PVh}\"/>
+        <!-- PV value + EGU -->
+        <rect x=\"250\" y=\"61\" width=\"93\"  height=\"38\" stroke=\"#ffffff\" fill=\"#ffffff\" />
+        <!-- PV text background rectangle -->
+        <text x=\"300\" y=\"76\" text-anchor=\"middle\">PV: {isPV:,.1f}</text>
+        <text x=\"300\" y=\"91\" text-anchor=\"middle\">[ pct ]</text>
+        <!-- white SP bar-->
+        <rect x=\"350\" y=\"40\" width=\"40\" stroke=\"#000000\" fill=\"#ffffff\" height=\"402\"/>
+        <rect x=\"352\" y=\"42\" width=\"36\" stroke=\"#777777\" fill=\"#777777\" height=\"{SPh}\"/>
+        <!-- SP value + EGU -->
+        <rect x=\"400\" y=\"61\" width=\"93\"  height=\"38\" stroke=\"#ffffff\" fill=\"#ffffff\" />
+        <!-- PV text background rectangle -->
+        <text x=\"450\" y=\"76\" text-anchor=\"middle\">SP: {isSP:,.1f}</text>
+        <text x=\"450\" y=\"91\" text-anchor=\"middle\">[ pct ]</text>
+        <!-- MODE -->
+        <rect x=\"500\" y=\"161\" width=\"93\"  height=\"38\" stroke=\"#ffffff\" fill=\"#ffffff\" />
+        <!-- PV text background rectangle -->
+        <text x=\"550\" y=\"176\" text-anchor=\"middle\">
+        "MODE:</text>
+        <text x=\"550\" y=\"191\" font-size=\"18\" text-anchor=\"middle\">{MODEs}</text>
+        </g>
+        </svg>\n
+
+            </td>
+            <td width=\"10%\"></td>
+        </tr>
+        </table>\n
 
         <table style="width:100%">
             <tr>
@@ -168,10 +157,10 @@ HTML_INDEX = """
             </tr>
             <tr>
                 <td>
-                    <p>and use MANUAL MODE</p>
+                    <p>and go MANUAL MODE</p>
                 </td>
                 <td>
-                    <p>and use AUTO MODE</p>
+                    <p>and go AUTO MODE</p>
                 </td>
             </tr>
         </table>
@@ -189,10 +178,10 @@ HTML_INDEX = """
             </tr>
             <tr>
                 <td>
-                    <p>page auto refresh 30sec</p>
+                    <p>made 11.12.2023</p>
                 </td>
                 <td>
-                    <p>made 10.12.2023</p>
+                    <p>page auto refresh 30sec</p>
                 </td>
             </tr>
         </table>
@@ -225,15 +214,28 @@ def setup_webserver() :
         dp("\nwww served dynamic index.html")
         return Response(request,
             HTML_INDEX.format(
-                HTML_STYLE=HTML_STYLE,
                 THIS_OS=THIS_OS,
                 datas=get_datas(),
                 pids=get_pids(),
                 get_pid_details=get_pid_details(),
-                SVG_FACE=html_pid_faceplate_svg(),
+
+                #SVG_FACE=html_pid_faceplate_svg(), now full INLINE
+                svgw=get_svgw(),
+                svgh=get_svgh(),
+                svgw4=get_svgw()-4,
+                svgh4=get_svgh()-4,
+                svgw6=get_svgw()-6,
+                svgh6=get_svgh()-6,
+                isPV=get_PV(),
                 isSP=get_SP(),
                 isOUT=get_OUT(),
-                THIS_REVISION=THIS_REVISION
+                OUTh = get_OUTh(),
+                PVh =get_PVh(),
+                SPh=get_SPh(),
+                isMODE = get_pid_mode(),
+                MODEs=get_MODEs(),
+
+                THIS_REVISION=THIS_REVISION,
                 ),
                 content_type='text/html'
             )

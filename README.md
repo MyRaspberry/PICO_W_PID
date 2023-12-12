@@ -6,7 +6,7 @@
 see [phone browser](http://kll.byethost7.com/kllfusion01/downloads/PICOW_android_beowser_page.jpg)</br>
 see [V101b from PC](http://kll.byethost7.com/kllfusion01/downloads/PICOW_PID_V101b.png)</br>
 
-v1.0.1b
+v1.0.2
 _______________________________
 
 board: PICO W

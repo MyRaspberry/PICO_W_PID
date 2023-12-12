@@ -1,11 +1,12 @@
 # 4.12.2023 V1.0.0 : CP900a5-33 publish BLOG as ZIP
-# 10.12.2023 V1.0.1 : GIT
+# 10.12.2023 V1.0.1b : >> GIT RELEASE
+# 12.12.2023 V1.0.2
 DIAG=1  # __________________________________________ global print diagnostic on off
-THIS_REVISION = "v1.0.1"
+THIS_REVISION = "v1.0.2"
 THIS_OS = " CP900a5++"
 # __________________________________________________ LAN WIFI
-WIFI_SSID = "__SSID__"
-WIFI_PASSWORD = "__PASS__"
+WIFI_SSID = "___SSID___"
+WIFI_PASSWORD = "___PASS___"
 WIFI_IP = "192.168.1.215" # ________________________ LOCAL WEB SERVER & 'data'
 # __________________________________________________ LOCATION TIME ZONE
 useNTP = 1 # _______________________________________ try NTP to RTC update
