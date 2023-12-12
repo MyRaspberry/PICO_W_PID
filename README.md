@@ -107,10 +107,10 @@ you can disconnect the USB cable from PC and use a USB charger to power the boar
 ( place anywhere inside your LANs WIFI area)
 
 - 10</br>
-hardware: PID needs a
-- input for PV: connect a SENSOR on ADC0 </br>
-but you could also use 'linked' sensor boards..
-- output from OUT: here use a LED to see the 'dimmed' control output</br>
+hardware: PID needs a</br>
+* input for PV: connect a SENSOR on ADC0 </br>
+but you could also use 'linked' sensor boards..</br>
+* output from OUT: here use a LED to see the 'dimmed' control output</br>
 later can connect like a SERVO ... for real process control</br>
 
 
