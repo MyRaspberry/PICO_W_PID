@@ -1,7 +1,9 @@
 # wifi
 import os
 import time
-#from adafruit_datetime import  datetime
+from adafruit_datetime import  datetime
+import rtc
+import adafruit_ntp # V1.0.2 b use NTP time to set PICO W RTC
 import socketpool
 from ipaddress import ip_address
 import wifi
@@ -33,6 +35,31 @@ WIFI_SSID = os.getenv('WIFI_SSID')
 WIFI_PASSWORD = os.getenv('WIFI_PASSWORD')
 
 WIFI_IP = os.getenv('WIFI_IP')
+
+TZ_OFFSET = os.getenv('TZ_OFFSET') # for NTP to RTC
+useNTP = os.getenv('useNTP')
+
+def get_network_time():
+    if ( useNTP == 1 ) :
+        try:
+            print("___ get NTP to RTC")
+            ntp = adafruit_ntp.NTP(pool, tz_offset=TZ_OFFSET)
+            rtc.RTC().datetime = ntp.datetime # NOTE: This changes the system time
+        except:
+            print("failed")
+
+def show_time(lDIAG=True):
+    if  (useNTP == 1 ) :
+        #print(time.localtime())
+        tnow = datetime.now()
+        tnows = tnow.isoformat()
+        tnows = tnows.replace("T"," ")
+        if lDIAG:
+            dp(tnows)
+        return tnows
+    else :
+        return " "
+
 
 # ______________________________ some SVG scale and formatting functions used in HTML_PID.format()
 def get_svgw(): # SVG width
@@ -204,7 +231,7 @@ HTML_PID = """
             </tr>
             <tr>
                 <td>
-                    <p>made 11.12.23</p>
+                    <p>{tnows}</p>
                 </td>
                 <td>
                     <p>page auto refresh 30sec</p>
@@ -231,6 +258,10 @@ def setup_webserver() :
     dp("www Listening on http://{:s}:80 ".format(str(wifi.radio.ipv4_address)) )
 
     pool = socketpool.SocketPool(wifi.radio)
+
+    get_network_time() # _________________________________ get network time to RTC
+    show_time()
+
     # ____________________________________________________ make a WEB SERVER
     server = Server(pool) #, debug=True)
 
@@ -267,7 +298,7 @@ def setup_webserver() :
                 SPh=get_SPh(),
                 isMODE = get_pid_mode(),
                 MODEs=get_MODEs(),
-
+                tnows=show_time(False),
                 THIS_REVISION=THIS_REVISION,
                 ),
                 content_type='text/html'
