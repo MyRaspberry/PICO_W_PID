@@ -139,3 +139,5 @@ def set_OUT(newOUT=0.0): # ________________________________ from web_wifi.py
 def get_OUT(): # __________________________________________ to web_wifi.py
     return OUT
 
+def get_T0val(): # ________________________________________ to mqtt.py
+    return T0val

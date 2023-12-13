@@ -19,6 +19,7 @@ isPV=0.0
 isSP=0.0
 isOUT=0.0
 
+from mqtt import mqtt_connect # _______________________________ file mqtt.py
 
 DIAG = True  # False
 DIAG = bool(os.getenv('DIAG')) # ______________________________ now get from settings.toml
@@ -268,6 +269,7 @@ def setup_webserver() :
     @server.route("/")
     def base(request):  # pylint: disable=unused-argument
         dp("\nwww served dynamic index.html")
+        gc.collect()
         return Response(request,
             HTML_INDEX.format(
                 THIS_OS=THIS_OS,
@@ -279,6 +281,7 @@ def setup_webserver() :
     @server.route("/data")
     def data(request):  # pylint: disable=unused-argument
         dp("\nwww served dynamic data.html")
+        gc.collect()
         return Response(request,
             HTML_PID.format(
                 datas=get_datas(),
@@ -306,6 +309,7 @@ def setup_webserver() :
 
     @server.route("/data/form/SP", [GET, POST])
     def form(request):
+        gc.collect()
         if request.method == POST:
             posted_SP_value = request.form_data.get("SP")
             dp(f"\nwww SP input: {posted_SP_value}")
@@ -319,6 +323,7 @@ def setup_webserver() :
 
     @server.route("/data/form/OUT", [GET, POST])
     def form(request):
+        gc.collect()
         if request.method == POST:
             posted_OUT_value = request.form_data.get("OUT")
             dp(f"\nwww OUT input: {posted_OUT_value}")
@@ -333,6 +338,9 @@ def setup_webserver() :
 
     server.start(str(wifi.radio.ipv4_address)) # _________ startup the server
 
+    mqtt_connect(pool) # ______________________________________ above MQTT start
+
+
 def run_webserver() :
     global server
     try:
@@ -343,4 +351,4 @@ def run_webserver() :
     except OSError:
         print("ERROR server poll")
         # _________________________________________________ here might later do a reboot
-        #microcontroller.reset()
+        microcontroller.reset()

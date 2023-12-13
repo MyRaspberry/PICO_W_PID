@@ -18,12 +18,13 @@ dp("___ KLL project 1 sec Ain, Aout as DoutPWM, PID")
 
 import gc  # micropython garbage collection # use gc.mem_free() # use gc.collect()
 
-def check_mem():
-    dp("___ check mem   : {:}".format(gc.mem_free()))
+def check_mem(info=""):
+    dp("___ {:}\n___ check mem   : {:}".format(info,gc.mem_free()))
     gc.collect()
     dp("___ after clear : {:}".format(gc.mem_free()))
 
 from web_wifi import setup_webserver, run_webserver
+from mqtt import mqtt_send
 
 setup_webserver() # ______________________________________ from file web_wifi.py
 
@@ -53,10 +54,12 @@ def JOB1():
     getAins() #____________________________________________ measure every 1sec in pico_w_io.py
     runPID() # ____________________________________________ PID control
     #DO1ramp() # __________________________________________ from pico_w_io JUST TEST
+    gc.collect() # check_mem(" JOB1 prior")
     run_webserver() # _____________________________________ from web_wifi.py / in main loop it's killing me
+    # check_mem(" JOB1 after run_webserver")
 
 def JOB2():
-    pass
+    mqtt_send()
 
 
 check_mem()
@@ -67,7 +70,7 @@ infos +=" and reports time, \n___ loop1 checks for elapse of "
 infos +=f"{update1:,.2f}"
 infos +=" sec and prints a '.' & JOB1 ( Ains, Dout, PID ), \n___ loop2 checks for elapse of "
 infos +=f"{update2:,.2f}"
-infos +=" sec & JOB2 ( future )"
+infos +=" sec & JOB2 ( MQTT )"
 dp(infos)
 
 while True:  # ___________________________________________ MAIN
@@ -125,4 +128,5 @@ while True:  # ___________________________________________ MAIN
 # 25.5 sec loopM and loop1 ( get 4 Ains set 1 Dout pwm) and empty loop2
 # 26.4 sec loopM and loop1 ( get 4 Ains set 1 Dout pwm + PID ) and empty loop2
 # 26.7 sec with HTML ( incl dynamic SVG ) and auto refresh 30 sec, RTC from NTP
-
+# 26.4 sec even with MQTT send to RPI4 BUT check mem: 4600
+# and CRASH memory allocation failed in web_server poll

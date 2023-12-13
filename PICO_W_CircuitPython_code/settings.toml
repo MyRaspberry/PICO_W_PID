@@ -1,15 +1,28 @@
 # 4.12.2023 V1.0.0 : CP900a5-33 publish BLOG as ZIP
 # 10.12.2023 V1.0.1b : >> GIT RELEASE
-# 12.12.2023 V1.0.2
+# 12.12.2023 V1.0.2  : >> GIT RELEASE
+# 13.12.2023 V1.1.0  : add MQTT
 DIAG=1  # __________________________________________ global print diagnostic on off
-THIS_REVISION = "v1.0.2"
+THIS_REVISION = "v1.1.0"
 THIS_OS = " CP900a5++"
 # __________________________________________________ LAN WIFI
-WIFI_SSID = "___SSID___"
-WIFI_PASSWORD = "___PASS___"
+WIFI_SSID = "kll-wlan_2.4G"
+WIFI_PASSWORD = "WELOVEKOH-SAMUI"
 WIFI_IP = "192.168.1.215" # ________________________ LOCAL WEB SERVER & 'data'
 # __________________________________________________ LOCATION TIME ZONE
 useNTP = 1 # _______________________________________ try NTP to RTC update
 TZ_OFFSET = 7 # ____________________________________ LOCATION TIME ZONE
+
+useMQTT=1 # ________________________________________ mqtt: enable
+# __________________________________________________ local RPI4 as broker
+MQTT_broker="192.168.1.104"
+MQTT_port = 1883
+MQTT_user = "uPICOW"
+MQTT_pass = "pPICOW"
+MQTT_TLS = "n" # ___________________________________ local mosquitto TLS no "n"
+
+# __________________________________________________ TOPIC publish to RPI4:
+MQTT_mtopic="PICOW"
+MQTT_dtopic="PID/P215"
 
 
