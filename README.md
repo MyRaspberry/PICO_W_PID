@@ -7,7 +7,7 @@
 - PID
 
 see [phone browser](http://kll.byethost7.com/kllfusion01/downloads/PICOW_android_beowser_page.jpg)</br>
-see [V101b from PC](http://kll.byethost7.com/kllfusion01/downloads/PICOW_PID_V101b.png)</br>
+see [V102 from PC](http://kll.byethost7.com/kllfusion01/downloads/PICOW_PID_datapage.png)</br>
 
 v1.0.2
 _______________________________
