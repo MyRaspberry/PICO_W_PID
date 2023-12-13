@@ -12,7 +12,7 @@ see [V102 from PC](http://kll.byethost7.com/kllfusion01/downloads/PICOW_PID_data
 
 - v1.0.1b PreRelease
 - v1.0.2b Release
-- v1.1.0 now work on get MQTT running together with web-server
+- v1.1.0 now work on get MQTT running together with web-server [FAILED] ( in hold )
 
 _______________________________
 
