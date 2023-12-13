@@ -10,9 +10,9 @@
 see [phone browser](http://kll.byethost7.com/kllfusion01/downloads/PICOW_android_beowser_page.jpg)</br>
 see [V102 from PC](http://kll.byethost7.com/kllfusion01/downloads/PICOW_PID_datapage.png)</br>
 
-v1.0.1b PreRelease
-v1.0.2b Release
-v1.1.0 now work on get MQTT running together with web-server
+- v1.0.1b PreRelease
+- v1.0.2b Release
+- v1.1.0 now work on get MQTT running together with web-server
 
 _______________________________
 
