@@ -6,8 +6,8 @@ DIAG=1  # __________________________________________ global print diagnostic on 
 THIS_REVISION = "v1.1.0"
 THIS_OS = " CP900a5++"
 # __________________________________________________ LAN WIFI
-WIFI_SSID = "kll-wlan_2.4G"
-WIFI_PASSWORD = "WELOVEKOH-SAMUI"
+WIFI_SSID = "___SSID___"
+WIFI_PASSWORD = "___PASS___"
 WIFI_IP = "192.168.1.215" # ________________________ LOCAL WEB SERVER & 'data'
 # __________________________________________________ LOCATION TIME ZONE
 useNTP = 1 # _______________________________________ try NTP to RTC update
