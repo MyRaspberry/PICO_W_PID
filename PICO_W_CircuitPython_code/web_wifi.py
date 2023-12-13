@@ -34,7 +34,7 @@ WIFI_PASSWORD = os.getenv('WIFI_PASSWORD')
 
 WIFI_IP = os.getenv('WIFI_IP')
 
-# ______________________________ some SVG formatting functions used in HTML_INDEX.format()
+# ______________________________ some SVG scale and formatting functions used in HTML_PID.format()
 def get_svgw(): # SVG width
     return (640+20)
 
@@ -204,7 +204,7 @@ HTML_PID = """
             </tr>
             <tr>
                 <td>
-                    <p>made 11.12.2023</p>
+                    <p>made 11.12.23</p>
                 </td>
                 <td>
                     <p>page auto refresh 30sec</p>
