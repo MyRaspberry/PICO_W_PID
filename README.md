@@ -85,14 +85,14 @@ keep zips for each version
 [System files download](https://circuitpython.org/board/raspberry_pi_pico_w/)</br>
 might want to check if there is a update on the core files,</br>
 download CPxxx.uf2 and adafruit-circuitpython-bundle_lib.zip
-- a- backup all your code</br>
-- b- nuke the board</br>
-- c- flash the board with the new CPxxx.uf2</br>
-- d- copy back your code ( not the /lib/ )</br>
-- e- with the new lib.zip</br>
+- 7a- backup all your code</br>
+- 7b- nuke the board</br>
+- 7c- flash the board with the new CPxxx.uf2</br>
+- 7d- copy back your code ( not the /lib/ )</br>
+- 7e- with the new lib.zip</br>
 copy / unzip from it new versions of the same libs used in that project</br>
 ( here /adafruit_httpserver/ )</br>
-- f- expect to now find code errors old code .vs. new libs </br>
+- 7f- expect to now find code errors old code .vs. new libs </br>
 and find new lib doc online to fix
 
 - 8</br>
