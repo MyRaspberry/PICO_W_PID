@@ -1,5 +1,5 @@
 
-## PICO_W PID
+## PICO_W PID-project
 
 - webserver ( RTC from NTP )
 - analog in
@@ -7,7 +7,13 @@
 - PID
 - MQTT to local broker
 
-## RPI4: MQTT broker & Node-Red & SQLite for Current and Hist Trend ) 
+## RPI4: MQTT broker & Node-Red & SQLite for Current and Hist Trend
+
+- fix IP 192.168.1.4 on ethernet port / cable
+- Mosquitto MQTT broker ( no TLS / password protected ) ( v2.0.11 )
+- SQLite3 ( v3.40.1 )
+- Node ( v20.10.0 )
+- Node-Red ( v3.1.0 )
 
 see [phone browser](http://kll.byethost7.com/kllfusion01/downloads/PICOW_android_beowser_page.jpg)</br>
 see [V102 from PC](http://kll.byethost7.com/kllfusion01/downloads/PICOW_PID_datapage.png)</br>
@@ -15,7 +21,7 @@ see [V110 NR&wwww](http://kll.byethost7.com/kllfusion01/downloads/PICOW_PID_WWW_
 
 - v1.0.1b PreRelease
 - v1.0.2b Release
-- v1.1.0 MQTT ( no TLS )
+- v1.1.0 MQTT ( no TLS ) in work, just take the ZIP from here
 
 _______________________________
 
