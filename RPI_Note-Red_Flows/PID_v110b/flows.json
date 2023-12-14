@@ -1,0 +1,3849 @@
+[
+    {
+        "id": "63b42b57abbc06ef",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0121c9144ace1df5",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b106bdd077681861",
+        "type": "tab",
+        "label": "Flow 5",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e18dc59e77aa9122",
+        "type": "group",
+        "z": "63b42b57abbc06ef",
+        "name": "MQTT to HISTORIC DATABASE for Site1",
+        "style": {
+            "stroke": "#92d04f",
+            "fill": "#c8e7a7",
+            "label": true,
+            "color": "#b797cf"
+        },
+        "nodes": [
+            "86d4720a45461e31",
+            "c08c6cb4bc2abb19",
+            "ab30fb7cdd2a54df",
+            "e89db7a4ca47f4df",
+            "13b75f8e3ff6c137",
+            "08a6d30efe73d117",
+            "6caaaa9edb7639d6",
+            "6d333bbe23d64f00",
+            "b74e7cb68c09558d",
+            "ef0f83543faa4ec9",
+            "e92c875a8e9dae52",
+            "7e89c8b8902ccd7f",
+            "cb065ac178465fcc",
+            "2867cf8ec5f6261b",
+            "569d0c6dc6d5a930",
+            "7fdf92baf67c8e68",
+            "195f45ee84d29c0e"
+        ],
+        "x": 14,
+        "y": 19,
+        "w": 1562,
+        "h": 482
+    },
+    {
+        "id": "04920bd3ea560914",
+        "type": "group",
+        "z": "63b42b57abbc06ef",
+        "name": "MQTT selected PICO_W to UI",
+        "style": {
+            "stroke": "#ffff00",
+            "fill": "#ffffbf",
+            "label": true,
+            "color": "#b797cf"
+        },
+        "nodes": [
+            "095744d73ebf2c53",
+            "6441e115fff98d4e",
+            "fec92a4f83d421d8",
+            "a3b0988d925558e8",
+            "eb80031ef2387b12",
+            "a5c6f8236adb81b3",
+            "0dc67c2562c14e42",
+            "2dc87f708a7d3899",
+            "be81b74c2b8d2a7b",
+            "c17452205718e6da",
+            "6e6213917ddcd530",
+            "dc1ea3b22dfadf30",
+            "13a8e565734fa70a",
+            "4e1e6eb8ef2cf874",
+            "b15f97af7192e963",
+            "963c899586caad39",
+            "c1f444ef707e79cd"
+        ],
+        "x": 234,
+        "y": 839,
+        "w": 1012,
+        "h": 542
+    },
+    {
+        "id": "bd21b947aa0a7c9c",
+        "type": "group",
+        "z": "0121c9144ace1df5",
+        "name": "HIST LIST db to UI",
+        "style": {
+            "stroke": "#ffC000",
+            "fill": "#ffdf7f",
+            "label": true,
+            "color": "#9363b7"
+        },
+        "nodes": [
+            "80393f1fa3795c08",
+            "0ad4aeaecd70e882",
+            "1ac44fef7e6afae3",
+            "07a5b34468aa6dd2",
+            "a59c90dc6d499201",
+            "968700c4036f0b76",
+            "cb7265a6dc1ae3e3",
+            "ec373eafc9b7916c",
+            "a7fcd9130032bbb8",
+            "0646b5bc1353ffed",
+            "c9b704889489d3f7",
+            "7bcb96c2d68e52bb",
+            "35e1eef7c82e141d"
+        ],
+        "x": 14,
+        "y": 19,
+        "w": 1072,
+        "h": 382
+    },
+    {
+        "id": "3e040d8f53059179",
+        "type": "group",
+        "z": "0121c9144ace1df5",
+        "name": "HIST TREND : SQL time range UI",
+        "style": {
+            "label": true,
+            "stroke": "#0070c0",
+            "fill": "#7fb7df",
+            "color": "#9363b7"
+        },
+        "nodes": [
+            "ee2c98e97de6a228",
+            "6b9e2dbeb60113c1",
+            "d391dbfbc5e5081b",
+            "9550106d0192cf7a",
+            "eeeecfd247716668",
+            "622b4afc4e36cafd",
+            "617c07a0e5aa220d",
+            "68efa9aad30cdce6",
+            "fd4101bef1a5f8e2",
+            "add99950135f44f1",
+            "aa11d8ec68e18532",
+            "6a290a41c64fe212",
+            "de1a52fa88fde7d6",
+            "69e043b5a8d3c3de",
+            "55d4814dc732f34c",
+            "b70f0502b39eaa88",
+            "23c5524650b790a0",
+            "9cc68cc0e30a4865",
+            "06a103525eb3df6c",
+            "6f7b574a74e2775e",
+            "bfff4b5ebe1a99c9",
+            "f53b92411d2c9237",
+            "cba6d41025bca636",
+            "6809646912729a3d"
+        ],
+        "x": 34,
+        "y": 699,
+        "w": 1072,
+        "h": 742
+    },
+    {
+        "id": "30e65a96b22bc31b",
+        "type": "group",
+        "z": "b106bdd077681861",
+        "name": "local project database CRUD UI",
+        "style": {
+            "stroke": "#92d04f",
+            "fill": "#c8e7a7",
+            "label": true,
+            "color": "#9363b7"
+        },
+        "nodes": [
+            "44a9da7df03d3173",
+            "c743b748dcc0e8f2",
+            "4272b4d1cae9bd3d",
+            "709b9e8fa3a09d1d",
+            "50f4ddd0278a6965",
+            "3ba9e005b0005285",
+            "0f35ef85c979b466",
+            "60118b1f71641000",
+            "b2f7ee858dd3b701",
+            "5114c5bb95ebb6f6",
+            "311a7e58b7bc616c",
+            "f6f6063742bc0660",
+            "8c4b78babdd5f324",
+            "e147acb595675e7d",
+            "76e27952cdcd7ff4",
+            "5d1a7fc0ec2af378",
+            "6f11944e88febdb0",
+            "2feedd9284351187",
+            "448e1ae912be9293",
+            "6d61ae39206e0bc9",
+            "b3c66f97f8c5734c",
+            "6893e84eb7d4eb41",
+            "d49b9fc1831a7c8c",
+            "794c0e0355ef6b0d",
+            "e123fc26a6634c96",
+            "f21b23c30b836422",
+            "1f9ee507160a1809",
+            "0cd0afcef89f7fb3",
+            "f4d4f5cbc1f0b8a4",
+            "4a1113b4088eed03",
+            "bf4cb60205da4105",
+            "16714f7baa920a46",
+            "d12633cbe9f5f918",
+            "98d1bc0586d13c27",
+            "a9ba0e1c52ac1922",
+            "a7abbed32180e84f",
+            "8ac56f70a5ed38c3",
+            "469e536eb3777892"
+        ],
+        "x": 14,
+        "y": 39,
+        "w": 1412,
+        "h": 962
+    },
+    {
+        "id": "e60a1eb5baedb5d9",
+        "type": "group",
+        "z": "0121c9144ace1df5",
+        "name": "HIST TREND : PS SELECT",
+        "style": {
+            "stroke": "#92d04f",
+            "fill": "#c8e7a7",
+            "label": true,
+            "color": "#9363b7"
+        },
+        "nodes": [
+            "e8197cf659c8cf77",
+            "67ac45b6e1840433",
+            "9d4004e52aca9f68",
+            "89abd9064fcf1313",
+            "03f0396c2bfe1e1c",
+            "d25c3d68e68c5621",
+            "ce3238ee71e56666",
+            "3b12540a45ce6395",
+            "8819dbbe14208b17",
+            "ef6518cbf3bf57ef"
+        ],
+        "x": 34,
+        "y": 419,
+        "w": 1102,
+        "h": 242
+    },
+    {
+        "id": "c8370d2a61525019",
+        "type": "group",
+        "z": "63b42b57abbc06ef",
+        "name": "Current TREND : device SELECT",
+        "style": {
+            "stroke": "#92d04f",
+            "fill": "#c8e7a7",
+            "label": true,
+            "color": "#9363b7"
+        },
+        "nodes": [
+            "ab57760e2d5252d4",
+            "7fd3a85d9d97b94f",
+            "5781f2ec10f97f50",
+            "ea7c8c9bdd9b2f21",
+            "1468524c2728f41e",
+            "eacca90919514c17",
+            "4a3713c7ee81ef84",
+            "d03a91c2e0362b0c",
+            "d1b96e5c571ed7ee",
+            "26a0a40b76da911c",
+            "14937b5b4babc05d"
+        ],
+        "x": 14,
+        "y": 539,
+        "w": 1112,
+        "h": 242
+    },
+    {
+        "id": "9422eb1513b24cbf",
+        "type": "group",
+        "z": "63b42b57abbc06ef",
+        "name": "TEST mqtt OUT IN",
+        "style": {
+            "fill": "#ff0000",
+            "label": true
+        },
+        "nodes": [
+            "e76df410f693afa1",
+            "c8a45a96b3d305b2",
+            "9cf4c427566b8498",
+            "59f78648c0454842"
+        ],
+        "x": 34,
+        "y": 1439,
+        "w": 732,
+        "h": 142
+    },
+    {
+        "id": "08df03d71c01ebb8",
+        "type": "ui_group",
+        "name": "get",
+        "tab": "5c6ea4918d8e4220",
+        "order": 1,
+        "disp": true,
+        "width": 20,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5e87a48b484227da",
+        "type": "ui_group",
+        "name": "PID",
+        "tab": "5c6ea4918d8e4220",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "bc30993a608ada52",
+        "type": "sqlitedb",
+        "db": "/home/pi/projects/PICO_W/data.sqlite3",
+        "mode": "RWC"
+    },
+    {
+        "id": "f66dd0dc3411a0fa",
+        "type": "ui_group",
+        "name": "records",
+        "tab": "5c6ea4918d8e4220",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f1c647cf32cf5b04",
+        "type": "ui_group",
+        "name": "Temp",
+        "tab": "5c6ea4918d8e4220",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5c6ea4918d8e4220",
+        "type": "ui_tab",
+        "name": "PICOW",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "0fe9bccd51f0464d",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "4defaab2c5f124cf",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.1.104",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "b8184ae1f70349d0",
+        "type": "ui_spacer",
+        "z": "0121c9144ace1df5",
+        "name": "spacer",
+        "group": "1d73b486082014dd",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "46622fcdeb08ea54",
+        "type": "ui_spacer",
+        "z": "0121c9144ace1df5",
+        "name": "spacer",
+        "group": "1d73b486082014dd",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "abbf4934845aff3c",
+        "type": "ui_spacer",
+        "z": "0121c9144ace1df5",
+        "name": "spacer",
+        "group": "1d73b486082014dd",
+        "order": 6,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "72bb5266a4b09a8c",
+        "type": "ui_spacer",
+        "z": "0121c9144ace1df5",
+        "name": "spacer",
+        "group": "e9485037ae7c93de",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "b9afc3146684dff4",
+        "type": "ui_spacer",
+        "z": "0121c9144ace1df5",
+        "name": "spacer",
+        "group": "e9485037ae7c93de",
+        "order": 4,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "102947fa331021ab",
+        "type": "ui_spacer",
+        "z": "0121c9144ace1df5",
+        "name": "spacer",
+        "group": "e9485037ae7c93de",
+        "order": 6,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "d6d42dc7fd0ab10e",
+        "type": "ui_spacer",
+        "z": "0121c9144ace1df5",
+        "name": "spacer",
+        "group": "e9485037ae7c93de",
+        "order": 8,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "0037306153301824",
+        "type": "ui_spacer",
+        "z": "0121c9144ace1df5",
+        "name": "spacer",
+        "group": "e9485037ae7c93de",
+        "order": 10,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "670fa1e7090527b5",
+        "type": "ui_spacer",
+        "z": "0121c9144ace1df5",
+        "name": "spacer",
+        "group": "e9485037ae7c93de",
+        "order": 12,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "b36bfc0404bd0cfc",
+        "type": "ui_spacer",
+        "z": "0121c9144ace1df5",
+        "name": "spacer",
+        "group": "e9485037ae7c93de",
+        "order": 14,
+        "width": 7,
+        "height": 1
+    },
+    {
+        "id": "96efef8d7a18a849",
+        "type": "ui_spacer",
+        "z": "0121c9144ace1df5",
+        "name": "spacer",
+        "group": "e9485037ae7c93de",
+        "order": 16,
+        "width": 25,
+        "height": 1
+    },
+    {
+        "id": "6c86be82ab9a9a9e",
+        "type": "ui_spacer",
+        "z": "0121c9144ace1df5",
+        "name": "spacer",
+        "group": "e9485037ae7c93de",
+        "order": 18,
+        "width": 25,
+        "height": 1
+    },
+    {
+        "id": "1d73b486082014dd",
+        "type": "ui_group",
+        "name": "SQLread",
+        "tab": "53c421cdcdd1513a",
+        "order": 5,
+        "disp": true,
+        "width": 24,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e9485037ae7c93de",
+        "type": "ui_group",
+        "name": "SQLtrend",
+        "tab": "390a91898cc06ef2",
+        "order": 2,
+        "disp": true,
+        "width": 25,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "7515dbbfdb63d14b",
+        "type": "sqlitedb",
+        "db": "/home/pi/projects/PICO_W/data.sqlite3",
+        "mode": "RWC"
+    },
+    {
+        "id": "9fe4063dabd3273c",
+        "type": "ui_group",
+        "name": "PID select",
+        "tab": "390a91898cc06ef2",
+        "order": 1,
+        "disp": true,
+        "width": "9",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "53c421cdcdd1513a",
+        "type": "ui_tab",
+        "name": "HIST_LIST",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "390a91898cc06ef2",
+        "type": "ui_tab",
+        "name": "HIST_TREND",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d3207720e7e67520",
+        "type": "ui_spacer",
+        "z": "b106bdd077681861",
+        "name": "spacer",
+        "group": "14b958c051e6e7e2",
+        "order": 2,
+        "width": 22,
+        "height": 1
+    },
+    {
+        "id": "72b9c93ba0e55528",
+        "type": "ui_spacer",
+        "z": "b106bdd077681861",
+        "name": "spacer",
+        "group": "14b958c051e6e7e2",
+        "order": 7,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "372c545c252702e8",
+        "type": "ui_spacer",
+        "z": "b106bdd077681861",
+        "name": "spacer",
+        "group": "14b958c051e6e7e2",
+        "order": 9,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "e8414162784c622a",
+        "type": "ui_spacer",
+        "z": "b106bdd077681861",
+        "name": "spacer",
+        "group": "14b958c051e6e7e2",
+        "order": 11,
+        "width": 11,
+        "height": 1
+    },
+    {
+        "id": "1055eacaa2e844cd",
+        "type": "sqlitedb",
+        "db": "/home/pi/projects/PICO_W/data.sqlite3",
+        "mode": "RWC"
+    },
+    {
+        "id": "56cdc64180b206fb",
+        "type": "ui_group",
+        "name": "list",
+        "tab": "1fc6691b64e13b7c",
+        "order": 1,
+        "disp": true,
+        "width": 25,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "14b958c051e6e7e2",
+        "type": "ui_group",
+        "name": "edit",
+        "tab": "1fc6691b64e13b7c",
+        "order": 2,
+        "disp": true,
+        "width": 25,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1fc6691b64e13b7c",
+        "type": "ui_tab",
+        "name": "local_PID_List",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "095744d73ebf2c53",
+        "type": "debug",
+        "z": "63b42b57abbc06ef",
+        "g": "04920bd3ea560914",
+        "name": "selected from mqtt stream for UI",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "86d4720a45461e31",
+        "type": "comment",
+        "z": "63b42b57abbc06ef",
+        "g": "e18dc59e77aa9122",
+        "name": "RPI MQTT local broker",
+        "info": "",
+        "x": 140,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "6441e115fff98d4e",
+        "type": "ui_text",
+        "z": "63b42b57abbc06ef",
+        "g": "04920bd3ea560914",
+        "group": "08df03d71c01ebb8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "from MQTT: {{msg.topic}}",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 670,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "fec92a4f83d421d8",
+        "type": "function",
+        "z": "63b42b57abbc06ef",
+        "g": "04920bd3ea560914",
+        "name": "get count",
+        "func": "msg.payload = msg.payload.id;\nmsg.topic= \"count\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1000,
+        "wires": [
+            [
+                "c17452205718e6da",
+                "6e6213917ddcd530"
+            ]
+        ]
+    },
+    {
+        "id": "a3b0988d925558e8",
+        "type": "function",
+        "z": "63b42b57abbc06ef",
+        "g": "04920bd3ea560914",
+        "name": "get PID_PV",
+        "func": "msg.payload = msg.payload.PID_PV;\nmsg.topic= \"PID_PV\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1160,
+        "wires": [
+            [
+                "eb80031ef2387b12"
+            ]
+        ]
+    },
+    {
+        "id": "eb80031ef2387b12",
+        "type": "ui_chart",
+        "z": "63b42b57abbc06ef",
+        "g": "04920bd3ea560914",
+        "name": "",
+        "group": "5e87a48b484227da",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "PID_PV",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "YY-MM-DD HH:mm",
+        "interpolate": "linear",
+        "nodata": "waiting",
+        "dot": true,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 670,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a5c6f8236adb81b3",
+        "type": "function",
+        "z": "63b42b57abbc06ef",
+        "g": "04920bd3ea560914",
+        "name": "get PID_SP",
+        "func": "msg.payload = msg.payload.PID_SP;\nmsg.topic= \"PID_SP\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1220,
+        "wires": [
+            [
+                "0dc67c2562c14e42"
+            ]
+        ]
+    },
+    {
+        "id": "0dc67c2562c14e42",
+        "type": "ui_chart",
+        "z": "63b42b57abbc06ef",
+        "g": "04920bd3ea560914",
+        "name": "",
+        "group": "5e87a48b484227da",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "PID_SP",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "YY-MM-DD HH:mm",
+        "interpolate": "linear",
+        "nodata": "waiting",
+        "dot": true,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 660,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2dc87f708a7d3899",
+        "type": "function",
+        "z": "63b42b57abbc06ef",
+        "g": "04920bd3ea560914",
+        "name": "get PID_OUT",
+        "func": "msg.payload = msg.payload.PID_OUT;\nmsg.topic = \"PID_OUT\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 1280,
+        "wires": [
+            [
+                "be81b74c2b8d2a7b"
+            ]
+        ]
+    },
+    {
+        "id": "be81b74c2b8d2a7b",
+        "type": "ui_chart",
+        "z": "63b42b57abbc06ef",
+        "g": "04920bd3ea560914",
+        "name": "",
+        "group": "5e87a48b484227da",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "PID_OUT",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "YY-MM-DD HH:mm",
+        "interpolate": "linear",
+        "nodata": "waiting",
+        "dot": true,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 670,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c08c6cb4bc2abb19",
+        "type": "sqlite",
+        "z": "63b42b57abbc06ef",
+        "g": "e18dc59e77aa9122",
+        "mydb": "bc30993a608ada52",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 1080,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ab30fb7cdd2a54df",
+        "type": "function",
+        "z": "63b42b57abbc06ef",
+        "g": "e18dc59e77aa9122",
+        "name": "save to DB",
+        "func": "// v1.1.2 PICO W mqtt back from ' use \" again\nconst sqlI = \"INSERT INTO mqtt_pid_in (timedate,timedates,topic,payloads,PS_Temp,PID_PV,PID_SP,PID_OUT,PID_MODE) VALUES \";\nvar sql = \"\";\n\nvar now = new Date();\nvar epoch = now.getTime();\n//const nows = (new Date()).toISOString().slice(0, 19).replace(/-/g, \"/\").replace(\"T\", \" \");\nconst nows = (new Date(epoch)).toUTCString().slice(5, 25).replace(/-/g, \"/\").replace(\"T\", \" \");\n\nvar UTC_nows = now.toISOString().slice(0, 19).replace(/-/g, \"-\").replace(\"T\", \" \");\n\n//node.warn(nows);\n\n// get some content we want save optionally to additional db columns\n// utils\nvar PICOW_id = msg.payload.id;\nvar Device = msg.payload.dev;\nvar PS_Temp = msg.payload.PS_Temp;\n// netto data\nvar PID_PV = msg.payload.PID_PV;\nvar PID_SP = msg.payload.PID_SP;\nvar PID_OUT = msg.payload.PID_OUT;\nvar PID_MODE = msg.payload.PID_MODE;\n\n// as now payload is JSON must go back to string and from \" to ' to save payload in a db string\nvar payloads = JSON.stringify(msg.payload);   // JSON to string\npayloads=payloads.replace(/\"/g, \"\\'\");        // \" to ' or get SQL error\n\nsql = sqlI;\nsql += \"(\" + epoch;\n//sql += \",\\\"\" + nows + \"\\\"\";  // waste of space but makes it readable\nsql += \",\\\"\" + UTC_nows + \"\\\"\";  // waste of space but makes it readable\nsql += \",\\\"\"+msg.topic+ \"\\\"\";\nsql += \",\\\"\" + payloads + \"\\\"\";\n// add 5 columns T PV SP OUT MODE\nsql += \",\" + PS_Temp;\nsql += \",\" + PID_PV;\nsql += \",\" + PID_SP;\nsql += \",\" + PID_OUT;\nsql += \",\" + PID_MODE;\n\nsql += \" )\";\nmsg.topic = sql;\nmsg.payload = \"save to DB\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 400,
+        "wires": [
+            [
+                "2867cf8ec5f6261b"
+            ]
+        ]
+    },
+    {
+        "id": "e89db7a4ca47f4df",
+        "type": "debug",
+        "z": "63b42b57abbc06ef",
+        "g": "e18dc59e77aa9122",
+        "name": "debug sql insert",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "c17452205718e6da",
+        "type": "ui_text",
+        "z": "63b42b57abbc06ef",
+        "g": "04920bd3ea560914",
+        "group": "f66dd0dc3411a0fa",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "count",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 660,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "13b75f8e3ff6c137",
+        "type": "inject",
+        "z": "63b42b57abbc06ef",
+        "g": "e18dc59e77aa9122",
+        "name": "mqtt_pid_in\" ( \"id\" INTEGER, \"timedate\" INTEGER, \"timedates\" TEXT, \"topic\" TEXT, \"payloads\" TEXT, \"PS_Temp\" REAL,\"PID_PV\" REAL, \"PID_SP\" REAL, \"PID_OUT\" REAL, \"PID_MODE\" REAL, and even database file",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "CREATE TABLE  IF NOT EXISTS \"mqtt_pid_in\" ( \"id\" INTEGER, \"timedate\" INTEGER, \"timedates\" TEXT, \"topic\" TEXT, \"payloads\" TEXT, \"PS_Temp\" REAL,\"PID_PV\" REAL, \"PID_SP\" REAL, \"PID_OUT\" REAL, \"PID_MODE\" REAL,  PRIMARY KEY(\"id\" AUTOINCREMENT)  );",
+        "payload": "",
+        "payloadType": "date",
+        "x": 820,
+        "y": 140,
+        "wires": [
+            [
+                "2867cf8ec5f6261b"
+            ]
+        ]
+    },
+    {
+        "id": "08a6d30efe73d117",
+        "type": "inject",
+        "z": "63b42b57abbc06ef",
+        "g": "e18dc59e77aa9122",
+        "name": "delete table",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "DROP TABLE \"mqtt_pid_in\";",
+        "payload": "",
+        "payloadType": "date",
+        "x": 710,
+        "y": 180,
+        "wires": [
+            [
+                "2867cf8ec5f6261b"
+            ]
+        ]
+    },
+    {
+        "id": "6caaaa9edb7639d6",
+        "type": "inject",
+        "z": "63b42b57abbc06ef",
+        "g": "e18dc59e77aa9122",
+        "name": "enter record",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "INSERT INTO mqtt_pid_in (timedate,topic,payloads) VALUES (1661067181402,\"P213/P01\",\"{  'id': 0, 'dev':'P01', 'Temp': 25.27, 'INA_Volt': 0.89, 'INA_Amp': -0.00, 'INA_Watt': 0.00 }\" );",
+        "payload": "",
+        "payloadType": "date",
+        "x": 710,
+        "y": 260,
+        "wires": [
+            [
+                "2867cf8ec5f6261b"
+            ]
+        ]
+    },
+    {
+        "id": "6d333bbe23d64f00",
+        "type": "inject",
+        "z": "63b42b57abbc06ef",
+        "g": "e18dc59e77aa9122",
+        "name": "empty table",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "DELETE FROM \"mqtt_pid_in\";",
+        "payload": "",
+        "payloadType": "date",
+        "x": 710,
+        "y": 220,
+        "wires": [
+            [
+                "2867cf8ec5f6261b"
+            ]
+        ]
+    },
+    {
+        "id": "b74e7cb68c09558d",
+        "type": "comment",
+        "z": "63b42b57abbc06ef",
+        "g": "e18dc59e77aa9122",
+        "name": "SETUP: manual database operation / create file & table mqtt_pid_in",
+        "info": "",
+        "x": 320,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "ef0f83543faa4ec9",
+        "type": "comment",
+        "z": "63b42b57abbc06ef",
+        "g": "e18dc59e77aa9122",
+        "name": "optional / manual database operation / delete table mqtt_pid_in",
+        "info": "",
+        "x": 310,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "e92c875a8e9dae52",
+        "type": "comment",
+        "z": "63b42b57abbc06ef",
+        "g": "e18dc59e77aa9122",
+        "name": "optional / manual database operation / empty table mqtt_pid_in",
+        "info": "",
+        "x": 310,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "7e89c8b8902ccd7f",
+        "type": "comment",
+        "z": "63b42b57abbc06ef",
+        "g": "e18dc59e77aa9122",
+        "name": "optional / manual database operation / test record into table mqtt_pid_in",
+        "info": "",
+        "x": 330,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "cb065ac178465fcc",
+        "type": "comment",
+        "z": "63b42b57abbc06ef",
+        "g": "e18dc59e77aa9122",
+        "name": "RPI SQLite3 db",
+        "info": "",
+        "x": 120,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "6e6213917ddcd530",
+        "type": "ui_chart",
+        "z": "63b42b57abbc06ef",
+        "g": "04920bd3ea560914",
+        "name": "",
+        "group": "f66dd0dc3411a0fa",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "recs from boot",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "waiting",
+        "dot": true,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 690,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dc1ea3b22dfadf30",
+        "type": "function",
+        "z": "63b42b57abbc06ef",
+        "g": "04920bd3ea560914",
+        "name": "get CPU Temp",
+        "func": "msg.payload = msg.payload.PS_Temp;\nmsg.topic= \"Cpu_Temp\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1100,
+        "wires": [
+            [
+                "4e1e6eb8ef2cf874"
+            ]
+        ]
+    },
+    {
+        "id": "2867cf8ec5f6261b",
+        "type": "function",
+        "z": "63b42b57abbc06ef",
+        "g": "e18dc59e77aa9122",
+        "name": "add",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 400,
+        "wires": [
+            [
+                "c08c6cb4bc2abb19",
+                "e89db7a4ca47f4df"
+            ]
+        ]
+    },
+    {
+        "id": "569d0c6dc6d5a930",
+        "type": "comment",
+        "z": "63b42b57abbc06ef",
+        "g": "e18dc59e77aa9122",
+        "name": "/run/shm/data.sqlite3",
+        "info": "",
+        "x": 1020,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "13a8e565734fa70a",
+        "type": "comment",
+        "z": "63b42b57abbc06ef",
+        "g": "04920bd3ea560914",
+        "name": "Current Trend use LOCAL TIME not UTC",
+        "info": "",
+        "x": 760,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "4e1e6eb8ef2cf874",
+        "type": "ui_chart",
+        "z": "63b42b57abbc06ef",
+        "g": "04920bd3ea560914",
+        "name": "",
+        "group": "f1c647cf32cf5b04",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "PS_Temp",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "waiting",
+        "dot": true,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 670,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7fdf92baf67c8e68",
+        "type": "mqtt in",
+        "z": "63b42b57abbc06ef",
+        "g": "e18dc59e77aa9122",
+        "name": "",
+        "topic": "PICOW/PID/#",
+        "qos": "1",
+        "datatype": "auto-detect",
+        "broker": "4defaab2c5f124cf",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 400,
+        "wires": [
+            [
+                "ab30fb7cdd2a54df",
+                "c1f444ef707e79cd"
+            ]
+        ]
+    },
+    {
+        "id": "195f45ee84d29c0e",
+        "type": "comment",
+        "z": "63b42b57abbc06ef",
+        "g": "e18dc59e77aa9122",
+        "name": "now save ALL PICO_W PIS's (P213 P214.. ) to db",
+        "info": "",
+        "x": 260,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "b15f97af7192e963",
+        "type": "function",
+        "z": "63b42b57abbc06ef",
+        "g": "04920bd3ea560914",
+        "name": "get PID_MODE",
+        "func": "msg.payload = msg.payload.PID_MODE;\nmsg.topic = \"PID_MODE\"\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1340,
+        "wires": [
+            [
+                "963c899586caad39"
+            ]
+        ]
+    },
+    {
+        "id": "963c899586caad39",
+        "type": "ui_chart",
+        "z": "63b42b57abbc06ef",
+        "g": "04920bd3ea560914",
+        "name": "",
+        "group": "5e87a48b484227da",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "PID_MODE",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "YY-MM-DD HH:mm",
+        "interpolate": "linear",
+        "nodata": "waiting",
+        "dot": true,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 670,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ab57760e2d5252d4",
+        "type": "inject",
+        "z": "63b42b57abbc06ef",
+        "g": "c8370d2a61525019",
+        "name": "run at boot",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.2",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 130,
+        "y": 620,
+        "wires": [
+            [
+                "7fd3a85d9d97b94f"
+            ]
+        ]
+    },
+    {
+        "id": "7fd3a85d9d97b94f",
+        "type": "function",
+        "z": "63b42b57abbc06ef",
+        "g": "c8370d2a61525019",
+        "name": "list PID_projects",
+        "func": "\nmsg.topic = \"SELECT * from local_PID_projectlist;\";\nmsg.payload = \"get list from DB\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 620,
+        "wires": [
+            [
+                "5781f2ec10f97f50"
+            ]
+        ]
+    },
+    {
+        "id": "5781f2ec10f97f50",
+        "type": "sqlite",
+        "z": "63b42b57abbc06ef",
+        "g": "c8370d2a61525019",
+        "mydb": "7515dbbfdb63d14b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 620,
+        "y": 620,
+        "wires": [
+            [
+                "ea7c8c9bdd9b2f21",
+                "1468524c2728f41e"
+            ]
+        ]
+    },
+    {
+        "id": "ea7c8c9bdd9b2f21",
+        "type": "debug",
+        "z": "63b42b57abbc06ef",
+        "g": "c8370d2a61525019",
+        "name": "SQL out",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "1468524c2728f41e",
+        "type": "function",
+        "z": "63b42b57abbc06ef",
+        "g": "c8370d2a61525019",
+        "name": "projects TOPIC array",
+        "func": "// output goes to a UI DROPDOWN selctor:\n\n// The Options may be configured by inputting msg.options containing an array.\n// If just text then the value will be the same as the label, \n// otherwise you can specify both by using an object of \"label\": \"value\" pairs:\n// [\"Choice 1\", \"Choice 2\", { \"Choice 3\": \"3\" }]\n\nif (msg.payload.length > 0) {\n    var data = \"[\";\n\n    for (var i = 0; i < msg.payload.length; i++) {  // take the dbrecord appart\n\n        //var p_id = msg.payload[i].id;\n        var p_name = msg.payload[i].p_name;\n        var p_topic = msg.payload[i].p_topic;\n        //var p_rem = msg.payload[i].p_rem;\n\n\n        data += \"{ \";\n        //data += \"\\\"id\\\":\\\"\" + p_id + \"\\\"\";\n        //data += \" \\\"name\\\":\\\"\" + p_name + \"\\\"\";\n        //data += \" \\\"topic\\\":\\\"\" + p_topic + \"\\\"\";\n        //data += \", \\\"remark\\\":\\\"\" + p_rem + \"\\\"\";\n\n        data += \"\\\"\" + p_name + \", \"+p_topic+\"\\\":\\\"\" + p_topic + \"\\\"\";\n\n        data += \" }\";\n        if (i < (msg.payload.length - 1)) {\n            data += \",\"\n        } else {\n            data += \"]\"\n        }\n    }\n\n    var jsondata = JSON.parse(data);\n\n    msg.options = jsondata;\n    msg.topic=\"valid topics\";\n    msg.payload = \"\";\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 680,
+        "wires": [
+            [
+                "eacca90919514c17",
+                "4a3713c7ee81ef84"
+            ]
+        ]
+    },
+    {
+        "id": "eacca90919514c17",
+        "type": "debug",
+        "z": "63b42b57abbc06ef",
+        "g": "c8370d2a61525019",
+        "name": "OPTIONS out",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 990,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "4a3713c7ee81ef84",
+        "type": "ui_dropdown",
+        "z": "63b42b57abbc06ef",
+        "g": "c8370d2a61525019",
+        "name": "",
+        "label": "Site/Device",
+        "tooltip": "",
+        "place": "\"PICOW/PID/P215\"",
+        "group": "08df03d71c01ebb8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 790,
+        "y": 680,
+        "wires": [
+            [
+                "d1b96e5c571ed7ee"
+            ]
+        ]
+    },
+    {
+        "id": "d03a91c2e0362b0c",
+        "type": "comment",
+        "z": "63b42b57abbc06ef",
+        "g": "c8370d2a61525019",
+        "name": "UI SELECTOR SITE / TOPIC table: local_PID_projectlist",
+        "info": "",
+        "x": 250,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "d1b96e5c571ed7ee",
+        "type": "function",
+        "z": "63b42b57abbc06ef",
+        "g": "c8370d2a61525019",
+        "name": "set flow variable: getPID and send event",
+        "func": "var getPID = flow.get('getPID');\nvar oldPID = getPID;\ngetPID = msg.payload;\nflow.set('getPID', getPID); // save back to global\nvar newPID = getPID;\nmsg.topic = \"select\";\nmsg.payload=\"refresh\"; // \"old: \"+oldSite+\",\\nnew: \"+newSite;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nvar getPID = flow.get('getPID') || \"PICOW/PID/P215\";\nflow.set('getPID', getPID); // save back to global\n",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 740,
+        "wires": [
+            [
+                "c1f444ef707e79cd",
+                "14937b5b4babc05d"
+            ]
+        ]
+    },
+    {
+        "id": "26a0a40b76da911c",
+        "type": "ui_button",
+        "z": "63b42b57abbc06ef",
+        "g": "c8370d2a61525019",
+        "name": "",
+        "group": "08df03d71c01ebb8",
+        "order": 1,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "refresh",
+        "tooltip": "only needed if PS list / TOPICS changed",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 120,
+        "y": 700,
+        "wires": [
+            [
+                "7fd3a85d9d97b94f"
+            ]
+        ]
+    },
+    {
+        "id": "c1f444ef707e79cd",
+        "type": "function",
+        "z": "63b42b57abbc06ef",
+        "g": "04920bd3ea560914",
+        "name": "filter",
+        "func": "var getPID = flow.get('getPID');\nif ( msg.payload == \"refresh\" ) {\n    getPID = flow.get('getPID'); // changed selection\n    node.warn(\"FILTER: \" + getPID);\n}\n//node.warn(\"TOPIC: \"+msg.topic);\n//node.warn(\"PAYLOAD: \"+msg.payload);\n//node.warn(\"FILTER: \"+getPID);\n\nif (msg.topic == getPID ) { // filtered\n    return msg;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nvar getPID = \"PICOW/PID/P215\"",
+        "finalize": "",
+        "libs": [],
+        "x": 310,
+        "y": 880,
+        "wires": [
+            [
+                "095744d73ebf2c53",
+                "6441e115fff98d4e",
+                "fec92a4f83d421d8",
+                "dc1ea3b22dfadf30",
+                "a3b0988d925558e8",
+                "a5c6f8236adb81b3",
+                "2dc87f708a7d3899",
+                "b15f97af7192e963"
+            ]
+        ],
+        "inputLabels": [
+            "mqtt stream"
+        ],
+        "outputLabels": [
+            "filtered mqtt stream"
+        ]
+    },
+    {
+        "id": "14937b5b4babc05d",
+        "type": "debug",
+        "z": "63b42b57abbc06ef",
+        "g": "c8370d2a61525019",
+        "name": "event on selected",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 990,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "e76df410f693afa1",
+        "type": "inject",
+        "z": "63b42b57abbc06ef",
+        "g": "9422eb1513b24cbf",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "PICOW/PID/P216",
+        "payload": "{ test }",
+        "payloadType": "str",
+        "x": 190,
+        "y": 1480,
+        "wires": [
+            [
+                "c8a45a96b3d305b2",
+                "9cf4c427566b8498"
+            ]
+        ]
+    },
+    {
+        "id": "c8a45a96b3d305b2",
+        "type": "mqtt out",
+        "z": "63b42b57abbc06ef",
+        "g": "9422eb1513b24cbf",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "4defaab2c5f124cf",
+        "x": 650,
+        "y": 1480,
+        "wires": []
+    },
+    {
+        "id": "9cf4c427566b8498",
+        "type": "debug",
+        "z": "63b42b57abbc06ef",
+        "g": "9422eb1513b24cbf",
+        "name": "test send",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "59f78648c0454842",
+        "type": "inject",
+        "z": "63b42b57abbc06ef",
+        "g": "9422eb1513b24cbf",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "PICOW/PID/P215",
+        "payload": "{ test }",
+        "payloadType": "str",
+        "x": 190,
+        "y": 1540,
+        "wires": [
+            [
+                "c8a45a96b3d305b2",
+                "9cf4c427566b8498"
+            ]
+        ]
+    },
+    {
+        "id": "80393f1fa3795c08",
+        "type": "sqlite",
+        "z": "0121c9144ace1df5",
+        "g": "bd21b947aa0a7c9c",
+        "mydb": "bc30993a608ada52",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 480,
+        "y": 360,
+        "wires": [
+            [
+                "cb7265a6dc1ae3e3",
+                "c9b704889489d3f7"
+            ]
+        ]
+    },
+    {
+        "id": "0ad4aeaecd70e882",
+        "type": "ui_template",
+        "z": "0121c9144ace1df5",
+        "g": "bd21b947aa0a7c9c",
+        "group": "1d73b486082014dd",
+        "name": "Hist LIST",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "format": "<table style=\"width:100%; background-color:#202020\">\n  <tr style=\"background-color:#405010; border:5px;\">\n    <th>Time UTC</th>\n    <th>Topic</th>\n    <th>Payload</th>\n  </tr>\n  \n  <tr ng-repeat=\"x in msg.payload | limitTo:100\"   style=\"background-color:#005010; border:5px;\">\n    <td>{{msg.payload[$index].timedates}}</td>\n    <td>{{msg.payload[$index].topic}}</td>\n    <td>{{msg.payload[$index].payloads}}</td>\n  </tr>\n</table>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 980,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1ac44fef7e6afae3",
+        "type": "ui_button",
+        "z": "0121c9144ace1df5",
+        "g": "bd21b947aa0a7c9c",
+        "name": "",
+        "group": "1d73b486082014dd",
+        "order": 5,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "+ h",
+        "tooltip": "next hour",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "up",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 220,
+        "wires": [
+            [
+                "a59c90dc6d499201"
+            ]
+        ]
+    },
+    {
+        "id": "07a5b34468aa6dd2",
+        "type": "ui_button",
+        "z": "0121c9144ace1df5",
+        "g": "bd21b947aa0a7c9c",
+        "name": "",
+        "group": "1d73b486082014dd",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "- h",
+        "tooltip": "one hour back",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "down",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 110,
+        "y": 180,
+        "wires": [
+            [
+                "a59c90dc6d499201"
+            ]
+        ]
+    },
+    {
+        "id": "a59c90dc6d499201",
+        "type": "function",
+        "z": "0121c9144ace1df5",
+        "g": "bd21b947aa0a7c9c",
+        "name": "datarange LIST",
+        "func": "var now = new Date();\nvar epoch = now.getTime(); // in millis\nvar hmillis = 3600000; // one hour \nvar getrecs = context.get('getrecs')||epoch;\nif (msg.payload == 'up') getrecs += hmillis;\nif (msg.payload == 'down') getrecs -= hmillis;\nif (msg.payload == 'init') getrecs = epoch;\nif ( getrecs < 0 ) getrecs = 0;\nif ( getrecs > epoch ) getrecs = epoch; // limit to now\ncontext.set('getrecs',getrecs); // save back to global\n\nvar hend = getrecs;\nvar hstart = hend - hmillis; // one hour back from now\n\nmsg.topic = \"SELECT * FROM mqtt_PID_in WHERE timedate BETWEEN \"+hstart+\" AND \"+hend+\" ;\"\n\nconst hstarts = (new Date(hstart)).toUTCString().slice(5, 25).replace(/-/g, \"/\").replace(\"T\", \" \");\nconst hends = (new Date(hend)).toUTCString().slice(5, 25).replace(/-/g, \"/\").replace(\"T\", \" \");\n\n\nmsg.payload = \"from \"+hstarts+\" to \"+hends+\" UTC\"; // for debug only\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "var now = new Date();\nvar epoch = now.getTime(); // in millis\n\nvar getrecs = context.get('getrecs') || epoch;\n\ncontext.set('getrecs', getrecs); // save back to global\n",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 180,
+        "wires": [
+            [
+                "968700c4036f0b76",
+                "80393f1fa3795c08",
+                "7bcb96c2d68e52bb"
+            ]
+        ]
+    },
+    {
+        "id": "968700c4036f0b76",
+        "type": "debug",
+        "z": "0121c9144ace1df5",
+        "g": "bd21b947aa0a7c9c",
+        "name": "SQL",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "ee2c98e97de6a228",
+        "type": "ui_chart",
+        "z": "0121c9144ace1df5",
+        "g": "3e040d8f53059179",
+        "name": "",
+        "group": "e9485037ae7c93de",
+        "order": 15,
+        "width": 0,
+        "height": 0,
+        "label": "PID_PV",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "YY-MM-DD HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": true,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1000,
+        "y": 1160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6b9e2dbeb60113c1",
+        "type": "ui_chart",
+        "z": "0121c9144ace1df5",
+        "g": "3e040d8f53059179",
+        "name": "",
+        "group": "e9485037ae7c93de",
+        "order": 17,
+        "width": 0,
+        "height": 0,
+        "label": "PID_SP",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "YY-MM-DD HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": true,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1000,
+        "y": 1220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d391dbfbc5e5081b",
+        "type": "function",
+        "z": "0121c9144ace1df5",
+        "g": "3e040d8f53059179",
+        "name": "format data PID_SP",
+        "func": "msg.topic = \"PID_SP\"\n\n\n//  \n// Create a data variable   \n//  \nvar series = [\"PID_SP\"];  \nvar labels = [\"Data\"];  \nvar data = \"[[\";  \n\nif (msg.payload.length > 0) {\n  for (var i = 0; i < msg.payload.length; i++) {\n\n    data += '{ \"x\":' + msg.payload[i].timedate + ', \"y\":' + msg.payload[i].PID_SP + '}';\n    if (i < (msg.payload.length - 1)) {\n      data += \",\"\n    } else {\n      data += \"]]\"\n    }\n  }\n\n  var jsondata = JSON.parse(data);\n\n  msg.payload = [{ \"series\": series, \"data\": jsondata, \"labels\": labels }];  \n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 1220,
+        "wires": [
+            [
+                "6b9e2dbeb60113c1"
+            ]
+        ]
+    },
+    {
+        "id": "9550106d0192cf7a",
+        "type": "ui_chart",
+        "z": "0121c9144ace1df5",
+        "g": "3e040d8f53059179",
+        "name": "",
+        "group": "e9485037ae7c93de",
+        "order": 19,
+        "width": 0,
+        "height": 0,
+        "label": "PID_OUT",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "YY-MM-DD HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": true,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1000,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eeeecfd247716668",
+        "type": "function",
+        "z": "0121c9144ace1df5",
+        "g": "3e040d8f53059179",
+        "name": "format data PID_OUT",
+        "func": "msg.topic = \"PID_OUT\"\n\n//  \n// Create a data variable   \n//  \nvar series = [\"PID_OUT\"];  \nvar labels = [\"Data\"];  \nvar data = \"[[\";  \n\nif (msg.payload.length > 0) {\n  for (var i = 0; i < msg.payload.length; i++) {\n\n    data += '{ \"x\":' + msg.payload[i].timedate + ', \"y\":' + msg.payload[i].PID_OUT + '}';\n    if (i < (msg.payload.length - 1)) {\n      data += \",\"\n    } else {\n      data += \"]]\"\n    }\n  }\n\n  var jsondata = JSON.parse(data);\n\n  msg.payload = [{ \"series\": series, \"data\": jsondata, \"labels\": labels }];  \n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 1280,
+        "wires": [
+            [
+                "9550106d0192cf7a"
+            ]
+        ]
+    },
+    {
+        "id": "cb7265a6dc1ae3e3",
+        "type": "debug",
+        "z": "0121c9144ace1df5",
+        "g": "bd21b947aa0a7c9c",
+        "name": "records",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "ec373eafc9b7916c",
+        "type": "debug",
+        "z": "0121c9144ace1df5",
+        "g": "bd21b947aa0a7c9c",
+        "name": "LIST",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 970,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "a7fcd9130032bbb8",
+        "type": "comment",
+        "z": "0121c9144ace1df5",
+        "g": "bd21b947aa0a7c9c",
+        "name": "ui HIST time is UTC",
+        "info": "",
+        "x": 150,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "0646b5bc1353ffed",
+        "type": "comment",
+        "z": "0121c9144ace1df5",
+        "g": "bd21b947aa0a7c9c",
+        "name": "ui HIST_LIST function: one hour from DB",
+        "info": "",
+        "x": 220,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "c9b704889489d3f7",
+        "type": "function",
+        "z": "0121c9144ace1df5",
+        "g": "bd21b947aa0a7c9c",
+        "name": "format HTML table",
+        "func": "\nif (msg.payload.length > 0) {\n  var data = \"[\";\n\n  for (var i = 0; i < msg.payload.length; i++) {  // take the dbrecord appart\n\n    var timedates = msg.payload[i].timedates;\n    var topic = msg.payload[i].topic;\n    var payloads = msg.payload[i].payloads;\n\n\n    data += \"{ \";\n    data += \"\\\"timedates\\\":\\\"\" + timedates + \"\\\"\";\n    data += \", \\\"topic\\\":\\\"\" + topic + \"\\\"\";\n    data += \", \\\"payloads\\\":\\\"\" + payloads + \"\\\"\";\n    data += \" }\";\n    if (i < (msg.payload.length - 1)) {\n      data += \",\"\n    } else {\n      data += \"]\"\n    }\n  }\n\n  var jsondata = JSON.parse(data);\n\n  msg.payload = jsondata;  \n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 360,
+        "wires": [
+            [
+                "0ad4aeaecd70e882",
+                "ec373eafc9b7916c"
+            ]
+        ]
+    },
+    {
+        "id": "622b4afc4e36cafd",
+        "type": "function",
+        "z": "0121c9144ace1df5",
+        "g": "3e040d8f53059179",
+        "name": "format data PID_PV",
+        "func": "msg.topic = \"PID_PV\"\n// Create a data variable   \n//  \nvar series = [\"PID_PV\"];  \nvar labels = [\"Data\"];  \nvar data = \"[[\";  \n\nif (msg.payload.length > 0) {\n  for (var i = 0; i < msg.payload.length; i++) {\n    data += '{ \"x\":' + msg.payload[i].timedate + ', \"y\":' + msg.payload[i].PID_PV + '}';\n    if (i < (msg.payload.length - 1)) {\n      data += \",\"\n    } else {\n      data += \"]]\"\n    }\n  }\n\n  var jsondata = JSON.parse(data);\n\n  msg.payload = [{ \"series\": series, \"data\": jsondata, \"labels\": labels }];  \n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 1160,
+        "wires": [
+            [
+                "ee2c98e97de6a228"
+            ]
+        ]
+    },
+    {
+        "id": "617c07a0e5aa220d",
+        "type": "sqlite",
+        "z": "0121c9144ace1df5",
+        "g": "3e040d8f53059179",
+        "mydb": "bc30993a608ada52",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 280,
+        "y": 1260,
+        "wires": [
+            [
+                "aa11d8ec68e18532",
+                "622b4afc4e36cafd",
+                "d391dbfbc5e5081b",
+                "eeeecfd247716668",
+                "55d4814dc732f34c",
+                "bfff4b5ebe1a99c9",
+                "cba6d41025bca636"
+            ]
+        ]
+    },
+    {
+        "id": "68efa9aad30cdce6",
+        "type": "ui_button",
+        "z": "0121c9144ace1df5",
+        "g": "3e040d8f53059179",
+        "name": "",
+        "group": "e9485037ae7c93de",
+        "order": 9,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "+ h",
+        "tooltip": "next hour",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "up",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 130,
+        "y": 980,
+        "wires": [
+            [
+                "6809646912729a3d"
+            ]
+        ]
+    },
+    {
+        "id": "fd4101bef1a5f8e2",
+        "type": "ui_button",
+        "z": "0121c9144ace1df5",
+        "g": "3e040d8f53059179",
+        "name": "",
+        "group": "e9485037ae7c93de",
+        "order": 3,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "- h",
+        "tooltip": "one hour back",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "down",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 130,
+        "y": 860,
+        "wires": [
+            [
+                "6809646912729a3d"
+            ]
+        ]
+    },
+    {
+        "id": "add99950135f44f1",
+        "type": "debug",
+        "z": "0121c9144ace1df5",
+        "g": "3e040d8f53059179",
+        "name": "SQL",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "aa11d8ec68e18532",
+        "type": "debug",
+        "z": "0121c9144ace1df5",
+        "g": "3e040d8f53059179",
+        "name": "records",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "6a290a41c64fe212",
+        "type": "ui_button",
+        "z": "0121c9144ace1df5",
+        "g": "3e040d8f53059179",
+        "name": "",
+        "group": "e9485037ae7c93de",
+        "order": 11,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "+ d",
+        "tooltip": "next day",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "upd",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 130,
+        "y": 1020,
+        "wires": [
+            [
+                "6809646912729a3d"
+            ]
+        ]
+    },
+    {
+        "id": "de1a52fa88fde7d6",
+        "type": "ui_button",
+        "z": "0121c9144ace1df5",
+        "g": "3e040d8f53059179",
+        "name": "",
+        "group": "e9485037ae7c93de",
+        "order": 1,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "- d",
+        "tooltip": "one day back",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "downd",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 130,
+        "y": 820,
+        "wires": [
+            [
+                "6809646912729a3d"
+            ]
+        ]
+    },
+    {
+        "id": "69e043b5a8d3c3de",
+        "type": "comment",
+        "z": "0121c9144ace1df5",
+        "g": "3e040d8f53059179",
+        "name": "ui HIST_TREND function hour or day from DB",
+        "info": "",
+        "x": 260,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "55d4814dc732f34c",
+        "type": "function",
+        "z": "0121c9144ace1df5",
+        "g": "3e040d8f53059179",
+        "name": "time range",
+        "func": "var lastr = msg.payload.length -1;\n\n// try to compare that to LOCAL time\n\nfunction formatDate(date) { // somehow it changes time to LOCAL TIME ??\n    return (\n        [\n            date.getFullYear(),\n            (date.getMonth() + 1).toString().padStart(2, '0'),\n            (date.getDate()).toString().padStart(2, '0'),\n        ].join('-') +\n        ' ' +\n        [\n            (date.getHours()).toString().padStart(2, '0'),\n            (date.getMinutes()).toString().padStart(2, '0'),\n            (date.getSeconds()).toString().padStart(2, '0'),\n        ].join(':')\n    );\n}\n\nvar now = new Date();\nvar UTC_nows = now.toISOString().slice(0, 19).replace(/-/g, \"-\").replace(\"T\", \" \");\nvar LOC_nows = formatDate(now);\n\nif ( msg.payload.length > 0 ) {\n    // from inject timestamp get a older UTC number\n    var lastt = msg.payload[lastr].timedate;\n    var firstt = msg.payload[0].timedate;\n\n    var first = new Date(firstt);\n    var LOC_firsts = formatDate(first);\n    var last = new Date(lastt);\n    var LOC_lasts = formatDate(last);\n\n    var lastts = msg.payload[lastr].timedates;\n    var firstts = msg.payload[0].timedates;\n\n    msg.payload = \"UTCdb from \" + firstts + \" until \" + lastts + \"</br>LOCAL from \" + LOC_firsts + \" until \" + LOC_lasts + \"<br>  here it's now \" + LOC_nows;\n}\nelse{\n    msg.payload = \"NO DATA\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 1100,
+        "wires": [
+            [
+                "b70f0502b39eaa88"
+            ]
+        ]
+    },
+    {
+        "id": "b70f0502b39eaa88",
+        "type": "ui_text",
+        "z": "0121c9144ace1df5",
+        "g": "3e040d8f53059179",
+        "group": "e9485037ae7c93de",
+        "order": 13,
+        "width": 11,
+        "height": 1,
+        "name": "",
+        "label": "time range",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1000,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "23c5524650b790a0",
+        "type": "ui_date_picker",
+        "z": "0121c9144ace1df5",
+        "g": "3e040d8f53059179",
+        "name": "",
+        "label": "day",
+        "group": "e9485037ae7c93de",
+        "order": 5,
+        "width": 4,
+        "height": 1,
+        "passthru": true,
+        "topic": "day",
+        "topicType": "str",
+        "className": "",
+        "x": 130,
+        "y": 900,
+        "wires": [
+            [
+                "6809646912729a3d"
+            ]
+        ]
+    },
+    {
+        "id": "9cc68cc0e30a4865",
+        "type": "ui_button",
+        "z": "0121c9144ace1df5",
+        "g": "3e040d8f53059179",
+        "name": "",
+        "group": "e9485037ae7c93de",
+        "order": 7,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "h-ome",
+        "tooltip": "last hour",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "lasthour",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 130,
+        "y": 940,
+        "wires": [
+            [
+                "6809646912729a3d"
+            ]
+        ]
+    },
+    {
+        "id": "7bcb96c2d68e52bb",
+        "type": "ui_text",
+        "z": "0121c9144ace1df5",
+        "g": "bd21b947aa0a7c9c",
+        "group": "1d73b486082014dd",
+        "order": 3,
+        "width": 10,
+        "height": 1,
+        "name": "",
+        "label": "time range",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 990,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "35e1eef7c82e141d",
+        "type": "inject",
+        "z": "0121c9144ace1df5",
+        "g": "bd21b947aa0a7c9c",
+        "name": "INIT SQL",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.5",
+        "topic": "start",
+        "payload": "init",
+        "payloadType": "str",
+        "x": 120,
+        "y": 140,
+        "wires": [
+            [
+                "a59c90dc6d499201"
+            ]
+        ]
+    },
+    {
+        "id": "06a103525eb3df6c",
+        "type": "inject",
+        "z": "0121c9144ace1df5",
+        "g": "3e040d8f53059179",
+        "name": "INIT SQL",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.5",
+        "topic": "start",
+        "payload": "init",
+        "payloadType": "str",
+        "x": 140,
+        "y": 780,
+        "wires": [
+            [
+                "6809646912729a3d"
+            ]
+        ]
+    },
+    {
+        "id": "6f7b574a74e2775e",
+        "type": "ui_chart",
+        "z": "0121c9144ace1df5",
+        "g": "3e040d8f53059179",
+        "name": "",
+        "group": "e9485037ae7c93de",
+        "order": 20,
+        "width": 0,
+        "height": 0,
+        "label": "PS_Temp",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "YY-MM-DD HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": true,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1000,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "bfff4b5ebe1a99c9",
+        "type": "function",
+        "z": "0121c9144ace1df5",
+        "g": "3e040d8f53059179",
+        "name": "format data PS_Temp",
+        "func": "msg.topic = \"Temp\"\n\n//  \n// Create a data variable   \n//  \nvar series = [\"Temp\"];  \nvar labels = [\"Data\"];  \nvar data = \"[[\";  \n\nif (msg.payload.length > 0) {\n  for (var i = 0; i < msg.payload.length; i++) {\n\n    data += '{ \"x\":' + msg.payload[i].timedate + ', \"y\":' + msg.payload[i].PS_Temp + '}';\n    if (i < (msg.payload.length - 1)) {\n      data += \",\"\n    } else {\n      data += \"]]\"\n    }\n  }\n\n  var jsondata = JSON.parse(data);\n\n  msg.payload = [{ \"series\": series, \"data\": jsondata, \"labels\": labels }];  \n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 1400,
+        "wires": [
+            [
+                "6f7b574a74e2775e"
+            ]
+        ]
+    },
+    {
+        "id": "f53b92411d2c9237",
+        "type": "ui_chart",
+        "z": "0121c9144ace1df5",
+        "g": "3e040d8f53059179",
+        "name": "",
+        "group": "e9485037ae7c93de",
+        "order": 19,
+        "width": 0,
+        "height": 0,
+        "label": "PID_MODE",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "YY-MM-DD HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": true,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1010,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cba6d41025bca636",
+        "type": "function",
+        "z": "0121c9144ace1df5",
+        "g": "3e040d8f53059179",
+        "name": "format data PID_MODE",
+        "func": "msg.topic = \"PID_OUT\"\n\n//  \n// Create a data variable   \n//  \nvar series = [\"PID_MODE\"];  \nvar labels = [\"Data\"];  \nvar data = \"[[\";  \n\nif (msg.payload.length > 0) {\n  for (var i = 0; i < msg.payload.length; i++) {\n\n    data += '{ \"x\":' + msg.payload[i].timedate + ', \"y\":' + msg.payload[i].PID_MODE + '}';\n    if (i < (msg.payload.length - 1)) {\n      data += \",\"\n    } else {\n      data += \"]]\"\n    }\n  }\n\n  var jsondata = JSON.parse(data);\n\n  msg.payload = [{ \"series\": series, \"data\": jsondata, \"labels\": labels }];  \n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 1340,
+        "wires": [
+            [
+                "f53b92411d2c9237"
+            ]
+        ]
+    },
+    {
+        "id": "e8197cf659c8cf77",
+        "type": "inject",
+        "z": "0121c9144ace1df5",
+        "g": "e60a1eb5baedb5d9",
+        "name": "run at boot",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.2",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 150,
+        "y": 500,
+        "wires": [
+            [
+                "67ac45b6e1840433"
+            ]
+        ]
+    },
+    {
+        "id": "67ac45b6e1840433",
+        "type": "function",
+        "z": "0121c9144ace1df5",
+        "g": "e60a1eb5baedb5d9",
+        "name": "list PID_projects",
+        "func": "\nmsg.topic = \"SELECT * from local_PID_projectlist;\";\nmsg.payload = \"get list from DB\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 500,
+        "wires": [
+            [
+                "9d4004e52aca9f68"
+            ]
+        ]
+    },
+    {
+        "id": "9d4004e52aca9f68",
+        "type": "sqlite",
+        "z": "0121c9144ace1df5",
+        "g": "e60a1eb5baedb5d9",
+        "mydb": "7515dbbfdb63d14b",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 610,
+        "y": 500,
+        "wires": [
+            [
+                "89abd9064fcf1313",
+                "03f0396c2bfe1e1c"
+            ]
+        ]
+    },
+    {
+        "id": "89abd9064fcf1313",
+        "type": "debug",
+        "z": "0121c9144ace1df5",
+        "g": "e60a1eb5baedb5d9",
+        "name": "SQL out",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "03f0396c2bfe1e1c",
+        "type": "function",
+        "z": "0121c9144ace1df5",
+        "g": "e60a1eb5baedb5d9",
+        "name": "projects TOPIC array",
+        "func": "// output goes to a UI DROPDOWN selctor:\n\n// The Options may be configured by inputting msg.options containing an array.\n// If just text then the value will be the same as the label, \n// otherwise you can specify both by using an object of \"label\": \"value\" pairs:\n// [\"Choice 1\", \"Choice 2\", { \"Choice 3\": \"3\" }]\n\nif (msg.payload.length > 0) {\n    var data = \"[\";\n\n    for (var i = 0; i < msg.payload.length; i++) {  // take the dbrecord appart\n\n        //var p_id = msg.payload[i].id;\n        var p_name = msg.payload[i].p_name;\n        var p_topic = msg.payload[i].p_topic;\n        //var p_rem = msg.payload[i].p_rem;\n\n\n        data += \"{ \";\n        //data += \"\\\"id\\\":\\\"\" + p_id + \"\\\"\";\n        //data += \" \\\"name\\\":\\\"\" + p_name + \"\\\"\";\n        //data += \" \\\"topic\\\":\\\"\" + p_topic + \"\\\"\";\n        //data += \", \\\"remark\\\":\\\"\" + p_rem + \"\\\"\";\n\n        data += \"\\\"\" + p_name + \", \"+p_topic+\"\\\":\\\"\" + p_topic + \"\\\"\";\n\n        data += \" }\";\n        if (i < (msg.payload.length - 1)) {\n            data += \",\"\n        } else {\n            data += \"]\"\n        }\n    }\n\n    var jsondata = JSON.parse(data);\n\n    msg.options = jsondata;\n    msg.topic=\"valid topics\";\n    msg.payload = \"\";\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 560,
+        "wires": [
+            [
+                "d25c3d68e68c5621",
+                "ce3238ee71e56666"
+            ]
+        ]
+    },
+    {
+        "id": "d25c3d68e68c5621",
+        "type": "debug",
+        "z": "0121c9144ace1df5",
+        "g": "e60a1eb5baedb5d9",
+        "name": "OPTIONS out",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1010,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "ce3238ee71e56666",
+        "type": "ui_dropdown",
+        "z": "0121c9144ace1df5",
+        "g": "e60a1eb5baedb5d9",
+        "name": "",
+        "label": "Site/Device",
+        "tooltip": "",
+        "place": "\"PICOW/PID/P215\"",
+        "group": "9fe4063dabd3273c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 810,
+        "y": 560,
+        "wires": [
+            [
+                "8819dbbe14208b17"
+            ]
+        ]
+    },
+    {
+        "id": "3b12540a45ce6395",
+        "type": "comment",
+        "z": "0121c9144ace1df5",
+        "g": "e60a1eb5baedb5d9",
+        "name": "UI SELECTOR SITE / TOPIC table: local_projectlist",
+        "info": "",
+        "x": 260,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "8819dbbe14208b17",
+        "type": "function",
+        "z": "0121c9144ace1df5",
+        "g": "e60a1eb5baedb5d9",
+        "name": "set flow variable: getSite",
+        "func": "var getSite = flow.get('getSite');\nvar oldSite = getSite;\ngetSite = msg.payload;\nflow.set('getSite', getSite); // save back to global\nvar newSite = getSite;\nmsg.topic = \"select\";\nmsg.payload=\"refresh\"; // \"old: \"+oldSite+\",\\nnew: \"+newSite;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nvar getSite = flow.get('getSite') || \"PICOW/PID/P215\";\nflow.set('getSite', getSite); // save back to global\n",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 620,
+        "wires": [
+            [
+                "6809646912729a3d"
+            ]
+        ]
+    },
+    {
+        "id": "ef6518cbf3bf57ef",
+        "type": "ui_button",
+        "z": "0121c9144ace1df5",
+        "g": "e60a1eb5baedb5d9",
+        "name": "",
+        "group": "9fe4063dabd3273c",
+        "order": 1,
+        "width": "2",
+        "height": "1",
+        "passthru": false,
+        "label": "refresh",
+        "tooltip": "only needed if PS list / TOPICS changed",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 140,
+        "y": 580,
+        "wires": [
+            [
+                "67ac45b6e1840433"
+            ]
+        ]
+    },
+    {
+        "id": "6809646912729a3d",
+        "type": "function",
+        "z": "0121c9144ace1df5",
+        "g": "3e040d8f53059179",
+        "name": "datarange TREND",
+        "func": "\nvar now = new Date();\nvar epoch = now.getTime(); // in millis\nvar hmillis = 3600000; // one hour\nvar getrecs = context.get('getrecs') || epoch;\nvar hend = getrecs;\nvar hstart = hend - hmillis; // one hour back from now\n\n\nif (msg.payload == 'up') \n{\n    getrecs += hmillis;\n    hend = getrecs;\n    hstart = hend - hmillis; // one hour back\n}\nif (msg.payload == 'down')\n{\n    getrecs -= hmillis;\n    hend = getrecs;\n    hstart = hend - hmillis; // one hour back\n}\nif (msg.payload == 'upd') {\n    getrecs += hmillis*24;\n    hend = getrecs;\n    hstart = hend - hmillis*24; // one day back\n}\n\nif (msg.payload == 'downd') {\n    getrecs -= hmillis*24;\n    hend = getrecs;\n    hstart = hend - hmillis*24; // one day back\n}\n\nif ((msg.payload == 'init') || (msg.payload == 'lasthour') || (msg.payload == 'refresh') ) // see last hour\n{\n    getrecs = epoch;\n    hend = getrecs;\n    hstart = hend - hmillis; // one hour back\n}\n// day select\nif (msg.topic == 'day' ) {\n    hstart = msg.payload;\n    hend = hstart + hmillis*24; // one day\n    getrecs = hend; // remember in case next press is +-h +-d\n}\n\nif (getrecs < 0) getrecs = 0;\nif (getrecs > epoch) getrecs = epoch; // limit to now\ncontext.set('getrecs', getrecs); // save back to global\n\nif ( false ) {\n    node.warn(msg.topic);\n    node.warn(msg.payload);\n    node.warn(hstart)\n    node.warn(getrecs)\n}\n\nvar getSite = flow.get('getSite'); // here find the selected PS ( topic) ( by dropdown list select ) from the local Site\n\nmsg.topic = \"SELECT * FROM mqtt_PID_in WHERE topic = \\\"\" + getSite +\"\\\" AND timedate BETWEEN \" + hstart + \" AND \" + hend + \" ;\"\n\nconst hstarts = (new Date(hstart)).toUTCString().slice(5, 25).replace(/-/g, \"/\").replace(\"T\", \" \");\nconst hends = (new Date(hend)).toUTCString().slice(5, 25).replace(/-/g, \"/\").replace(\"T\", \" \");\nmsg.payload = \"from \" + hstarts + \" to \" + hends + \" UTC\"; // for debug only\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nif (context.get(\"getrecs\") === undefined) {\n    context.set(\"getrecs\", 0)\n}",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 840,
+        "wires": [
+            [
+                "617c07a0e5aa220d",
+                "add99950135f44f1"
+            ]
+        ]
+    },
+    {
+        "id": "44a9da7df03d3173",
+        "type": "comment",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "local project database",
+        "info": "",
+        "x": 140,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "c743b748dcc0e8f2",
+        "type": "inject",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "create table \"local_PID_projectlist\"   (id, p_name, p_topic, p_rem ) and even database file",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "CREATE TABLE  IF NOT EXISTS \"local_PID_projectlist\" ( \"id\" INTEGER, \"p_name\" TEXT, \"p_topic\" TEXT,\"p_rem\" TEXT , PRIMARY KEY(\"id\" AUTOINCREMENT)  );",
+        "payload": "",
+        "payloadType": "date",
+        "x": 390,
+        "y": 160,
+        "wires": [
+            [
+                "5114c5bb95ebb6f6"
+            ]
+        ]
+    },
+    {
+        "id": "4272b4d1cae9bd3d",
+        "type": "inject",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "delete table",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "DROP TABLE \"local_projectlist\";",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 240,
+        "wires": [
+            [
+                "5114c5bb95ebb6f6"
+            ]
+        ]
+    },
+    {
+        "id": "709b9e8fa3a09d1d",
+        "type": "inject",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "empty table",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "DELETE FROM \"local_projectlist\";",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 320,
+        "wires": [
+            [
+                "5114c5bb95ebb6f6"
+            ]
+        ]
+    },
+    {
+        "id": "50f4ddd0278a6965",
+        "type": "comment",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "optional / manual database operation / create file & table local_PID_projectlist / run at boot",
+        "info": "",
+        "x": 360,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "3ba9e005b0005285",
+        "type": "comment",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "optional / manual database operation / delete table local_projectlist",
+        "info": "",
+        "x": 290,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "0f35ef85c979b466",
+        "type": "comment",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "optional / manual database operation / empty table local_projectlist",
+        "info": "",
+        "x": 290,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "60118b1f71641000",
+        "type": "sqlite",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "mydb": "1055eacaa2e844cd",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 1240,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b2f7ee858dd3b701",
+        "type": "debug",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "SQL LOG",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1260,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "5114c5bb95ebb6f6",
+        "type": "function",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "add",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 360,
+        "wires": [
+            [
+                "60118b1f71641000",
+                "b2f7ee858dd3b701"
+            ]
+        ]
+    },
+    {
+        "id": "311a7e58b7bc616c",
+        "type": "function",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "add project to DB by CODE",
+        "func": "const sqlI = \"INSERT INTO local_PID_projectlist ( p_name, p_topic, p_rem ) VALUES \";\nvar sql = \"\";\n\nsql = sqlI;\nsql += \"(\";\n\n\n//sql += \"\\\"PID1\\\"\";\n//sql += \", \\\"PICOW/PID/P215\\\"\";\n//sql += \", \\\"is a PICO_W with PID\\\"\";\n\nsql += \" )\";\n\nmsg.topic = sql;\nmsg.payload = \"save to DB\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 400,
+        "wires": [
+            [
+                "5114c5bb95ebb6f6"
+            ]
+        ]
+    },
+    {
+        "id": "f6f6063742bc0660",
+        "type": "inject",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "\" \"",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 95,
+        "y": 400,
+        "wires": [
+            [
+                "311a7e58b7bc616c"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "8c4b78babdd5f324",
+        "type": "inject",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "run at boot",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 150,
+        "y": 500,
+        "wires": [
+            [
+                "e147acb595675e7d"
+            ]
+        ]
+    },
+    {
+        "id": "e147acb595675e7d",
+        "type": "function",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "list projects",
+        "func": "\nmsg.topic = \"SELECT * from local_PID_projectlist;\";\nmsg.payload = \"get list from DB\";\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 500,
+        "wires": [
+            [
+                "76e27952cdcd7ff4"
+            ]
+        ]
+    },
+    {
+        "id": "76e27952cdcd7ff4",
+        "type": "sqlite",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "mydb": "1055eacaa2e844cd",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 720,
+        "y": 500,
+        "wires": [
+            [
+                "5d1a7fc0ec2af378"
+            ]
+        ]
+    },
+    {
+        "id": "5d1a7fc0ec2af378",
+        "type": "function",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "UI table",
+        "func": "\nif (msg.payload.length > 0) {\n    var data = \"[\";\n\n    for (var i = 0; i < msg.payload.length; i++) {  // take the dbrecord appart\n\n        var p_id = msg.payload[i].id;\n        var p_name = msg.payload[i].p_name;\n        var p_topic = msg.payload[i].p_topic;\n        var p_rem = msg.payload[i].p_rem;\n\n\n        data += \"{ \";\n        data += \"\\\"id\\\":\\\"\" + p_id + \"\\\"\";\n        data += \", \\\"name\\\":\\\"\" + p_name + \"\\\"\";\n        data += \", \\\"topic\\\":\\\"\" + p_topic + \"\\\"\";\n        data += \", \\\"remark\\\":\\\"\" + p_rem + \"\\\"\";\n        data += \" }\";\n        if (i < (msg.payload.length - 1)) {\n            data += \",\";\n        } else {\n            data += \"]\";\n            flow.set(\"maxrecs\", p_id); // remember max record for pointer\n        }\n    }\n\n    var jsondata = JSON.parse(data);\n\n    msg.payload = jsondata;\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nif (flow.get(\"maxrecs\") === undefined) {\n    flow.set(\"maxrecs\", 0)\n}",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 500,
+        "wires": [
+            [
+                "6f11944e88febdb0"
+            ]
+        ]
+    },
+    {
+        "id": "6f11944e88febdb0",
+        "type": "ui_template",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "group": "56cdc64180b206fb",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<table style=\"width:100%; background-color:#202020\">\n    <tr style=\"background-color:#405010; border:5px;\">\n        <th>id</th>\n        <th>Name</th>\n        <th>Topic</th>\n        <th>Remark</th>\n    </tr>\n\n    <tr ng-repeat=\"x in msg.payload\"  style=\"background-color:#005010; border:5px;\">\n        <td>{{msg.payload[$index].id}}</td>\n        <td>{{msg.payload[$index].name}}</td>\n        <td>{{msg.payload[$index].topic}}</td>\n        <td>{{msg.payload[$index].remark}}</td>\n    </tr>\n</table>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1260,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2feedd9284351187",
+        "type": "ui_text_input",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "",
+        "label": "name",
+        "tooltip": "select /click line, change and press [ENTER]",
+        "group": "14b958c051e6e7e2",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": "0",
+        "topic": "name",
+        "sendOnBlur": false,
+        "className": "",
+        "topicType": "str",
+        "x": 1250,
+        "y": 680,
+        "wires": [
+            [
+                "d12633cbe9f5f918"
+            ]
+        ]
+    },
+    {
+        "id": "448e1ae912be9293",
+        "type": "ui_text_input",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "",
+        "label": "topic",
+        "tooltip": "select /click line, change and press [ENTER]",
+        "group": "14b958c051e6e7e2",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": "0",
+        "topic": "topic",
+        "sendOnBlur": false,
+        "className": "",
+        "topicType": "str",
+        "x": 1250,
+        "y": 720,
+        "wires": [
+            [
+                "d12633cbe9f5f918"
+            ]
+        ]
+    },
+    {
+        "id": "6d61ae39206e0bc9",
+        "type": "ui_text_input",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "",
+        "label": "remark",
+        "tooltip": "select /click line, change and press [ENTER]",
+        "group": "14b958c051e6e7e2",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "mode": "text",
+        "delay": "0",
+        "topic": "remark",
+        "sendOnBlur": false,
+        "className": "",
+        "topicType": "str",
+        "x": 1250,
+        "y": 760,
+        "wires": [
+            [
+                "d12633cbe9f5f918"
+            ]
+        ]
+    },
+    {
+        "id": "b3c66f97f8c5734c",
+        "type": "ui_button",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "",
+        "group": "14b958c051e6e7e2",
+        "order": 6,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "up",
+        "tooltip": "select next record",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "up",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
+        "y": 580,
+        "wires": [
+            [
+                "d49b9fc1831a7c8c"
+            ]
+        ]
+    },
+    {
+        "id": "6893e84eb7d4eb41",
+        "type": "ui_button",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "",
+        "group": "14b958c051e6e7e2",
+        "order": 10,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "down",
+        "tooltip": "select prev. record",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "down",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 170,
+        "y": 620,
+        "wires": [
+            [
+                "d49b9fc1831a7c8c"
+            ]
+        ]
+    },
+    {
+        "id": "d49b9fc1831a7c8c",
+        "type": "function",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "select record",
+        "func": "var getrecs = flow.get('getrecs') || 1;\nvar maxrecs = flow.get(\"maxrecs\") || 0;\n\nif (msg.payload == 'up') {\n    getrecs += 1;\n    if ( getrecs > maxrecs) {\n        getrecs -= 1;\n        //node.warn(\"limit getrecs\");\n    }\n}\nif (msg.payload == 'down') {\n    getrecs -= 1;\n    if ( getrecs < 1 ) {\n        getrecs = 1;\n    }\n}\nflow.set('getrecs', getrecs); // save back to flow memory\n\nmsg.topic = \"SELECT * FROM local_PID_projectlist WHERE id = \" + getrecs + \" ;\"\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nif (flow.get(\"getrecs\") === undefined) {\n    flow.set(\"getrecs\", 1)\n}",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 600,
+        "wires": [
+            [
+                "794c0e0355ef6b0d"
+            ]
+        ]
+    },
+    {
+        "id": "794c0e0355ef6b0d",
+        "type": "sqlite",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "mydb": "1055eacaa2e844cd",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 720,
+        "y": 600,
+        "wires": [
+            [
+                "e123fc26a6634c96",
+                "f21b23c30b836422",
+                "1f9ee507160a1809",
+                "0cd0afcef89f7fb3",
+                "f4d4f5cbc1f0b8a4"
+            ]
+        ]
+    },
+    {
+        "id": "e123fc26a6634c96",
+        "type": "debug",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "one rec or EMPTY",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1290,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "f21b23c30b836422",
+        "type": "function",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "name",
+        "func": "\nif (msg.payload.length > 0) {\n    \n    var p_id = msg.payload[0].id;\n    var p_name = msg.payload[0].p_name;\n    var p_topic = msg.payload[0].p_topic;\n    var p_rem = msg.payload[0].p_rem;\n\n\n    msg.payload = p_name;\n} else {\n    msg.payload = \"! do not edit !\";\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 680,
+        "wires": [
+            [
+                "2feedd9284351187"
+            ]
+        ]
+    },
+    {
+        "id": "1f9ee507160a1809",
+        "type": "function",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "topic",
+        "func": "\nif (msg.payload.length > 0) {\n    \n    var p_id = msg.payload[0].id;\n    var p_name = msg.payload[0].p_name;\n    var p_topic = msg.payload[0].p_topic;\n    var p_rem = msg.payload[0].p_rem;\n\n\n    msg.payload = p_topic;\n} else {\n    msg.payload = \"! do not edit !\";\n}\n\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 720,
+        "wires": [
+            [
+                "448e1ae912be9293"
+            ]
+        ]
+    },
+    {
+        "id": "0cd0afcef89f7fb3",
+        "type": "function",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "remark",
+        "func": "\nif (msg.payload.length > 0) {\n    \n    var p_id = msg.payload[0].id;\n    var p_name = msg.payload[0].p_name;\n    var p_topic = msg.payload[0].p_topic;\n    var p_rem = msg.payload[0].p_rem;\n\n\n    msg.payload = p_rem;\n} else {\n    msg.payload = \"! do not edit !\";\n}\n\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 760,
+        "wires": [
+            [
+                "6d61ae39206e0bc9"
+            ]
+        ]
+    },
+    {
+        "id": "f4d4f5cbc1f0b8a4",
+        "type": "function",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "id",
+        "func": "//var getrecs = flow.get('getrecs') || 0;\n\nif (msg.payload.length > 0) {\n    \n    var p_id = msg.payload[0].id;\n    var p_name = msg.payload[0].p_name;\n    var p_topic = msg.payload[0].p_topic;\n    var p_rem = msg.payload[0].p_rem;\n\n    //msg.payload = getrecs + \":\" + p_id;\n\n    msg.payload = p_id;\n}\nmsg.topic = \"id\"\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 640,
+        "wires": [
+            [
+                "4a1113b4088eed03",
+                "d12633cbe9f5f918"
+            ]
+        ]
+    },
+    {
+        "id": "4a1113b4088eed03",
+        "type": "ui_text",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "group": "14b958c051e6e7e2",
+        "order": 1,
+        "width": 3,
+        "height": 1,
+        "name": "",
+        "label": "id",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 1250,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "bf4cb60205da4105",
+        "type": "function",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "EDIT",
+        "func": "var getid = context.get('getid') || 0;\nvar rEDIT = false;\nvar sql = \"\";\nvar nu_name  = \"\";\nvar nu_topic = \"\";\nvar nu_remark= \"\";\n\n//node.warn(msg.topic);\n//node.warn(msg.payload)\n//node.warn(getid);\n\nif ( msg.topic === \"id\" )\n{\n    if (msg.payload > 0 ) {\n        getid = msg.payload;\n    }\n    else {\n        getid = 0;\n    }\n    context.set('getid', getid); // save back to node memory what id to EDIT\n    //node.warn(getid);\n\n}\nelse\n{\n    // EDIT changes\n    if (getid > 0) {\n        sql = \"\"\n        rEDIT = false;\n\n        if (msg.topic === \"name\") {\n            nu_name = msg.payload;\n            rEDIT = true;\n            sql = \"UPDATE local_PID_projectlist SET 'p_name' = \\\"\" + nu_name + \"\\\" WHERE id = \" + getid + \";\";\n        }\n\n        if (msg.topic === \"topic\") {\n            nu_topic = msg.payload;\n            rEDIT = true;\n            sql = \"UPDATE local_PID_projectlist SET 'p_topic' = \\\"\" + nu_topic + \"\\\" WHERE id = \" + getid + \";\";\n        }\n\n        if (msg.topic === \"remark\") {\n            nu_remark = msg.payload;\n            rEDIT = true;\n            sql = \"UPDATE local_PID_projectlist SET 'p_rem' = \\\"\" + nu_remark + \"\\\" WHERE id = \" + getid + \";\";\n        }\n\n        if (msg.topic === \"delete\") { // ______________ from DEL button\n            rEDIT = true;\n            sql = \"DELETE from local_PID_projectlist WHERE id = \" + getid + \";\";\n        }\n\n\n        if ( rEDIT ) {\n            msg.topic = sql;\n            msg.payload = getid;\n            return msg; // _____________________________ send SQL as TOPIC\n        }\n\n    }\n\n}\n\nif (msg.topic === \"add\") { // ______________ from ADD button\n    sql = \"INSERT INTO local_PID_projectlist(p_name, p_topic, p_rem) VALUES ( \\\"Project new\\\" , \\\"PICOW/PID/Pnew\\\",  \\\" ? \\\" ) ;\";\n    msg.topic = sql;\n    msg.payload = \"new\";\n    return msg; // _____________________________ send SQL as TOPIC\n\n}\n\n\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nif (context.get(\"getid\") === undefined) {\n    context.set(\"getid\", 0)\n}",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 960,
+        "wires": [
+            [
+                "16714f7baa920a46",
+                "a9ba0e1c52ac1922"
+            ]
+        ]
+    },
+    {
+        "id": "16714f7baa920a46",
+        "type": "debug",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "EDIT OUT",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1270,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "d12633cbe9f5f918",
+        "type": "function",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "do changes",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1090,
+        "y": 840,
+        "wires": [
+            [
+                "98d1bc0586d13c27",
+                "bf4cb60205da4105"
+            ]
+        ]
+    },
+    {
+        "id": "98d1bc0586d13c27",
+        "type": "debug",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "EDIT IN",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1260,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "a9ba0e1c52ac1922",
+        "type": "sqlite",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "mydb": "1055eacaa2e844cd",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 700,
+        "y": 960,
+        "wires": [
+            [
+                "e147acb595675e7d"
+            ]
+        ]
+    },
+    {
+        "id": "a7abbed32180e84f",
+        "type": "comment",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "edit / change db AND trigger reread LIST",
+        "info": "",
+        "x": 1070,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "8ac56f70a5ed38c3",
+        "type": "ui_button",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "",
+        "group": "14b958c051e6e7e2",
+        "order": 8,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "del",
+        "tooltip": "delete current record",
+        "color": "",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "",
+        "payload": "delete",
+        "payloadType": "str",
+        "topic": "delete",
+        "topicType": "str",
+        "x": 170,
+        "y": 800,
+        "wires": [
+            [
+                "d12633cbe9f5f918"
+            ]
+        ]
+    },
+    {
+        "id": "469e536eb3777892",
+        "type": "ui_button",
+        "z": "b106bdd077681861",
+        "g": "30e65a96b22bc31b",
+        "name": "",
+        "group": "14b958c051e6e7e2",
+        "order": 12,
+        "width": 2,
+        "height": 1,
+        "passthru": false,
+        "label": "add",
+        "tooltip": "make a new default project",
+        "color": "black",
+        "bgcolor": "yellow",
+        "className": "",
+        "icon": "",
+        "payload": "add",
+        "payloadType": "str",
+        "topic": "add",
+        "topicType": "str",
+        "x": 170,
+        "y": 880,
+        "wires": [
+            [
+                "d12633cbe9f5f918"
+            ]
+        ]
+    }
+]
