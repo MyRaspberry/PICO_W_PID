@@ -129,4 +129,5 @@ while True:  # ___________________________________________ MAIN
 # 26.4 sec loopM and loop1 ( get 4 Ains set 1 Dout pwm + PID ) and empty loop2
 # 26.7 sec with HTML ( incl dynamic SVG ) and auto refresh 30 sec, RTC from NTP
 # 26.4 sec even with MQTT send to RPI4 BUT check mem: 4600
-# and CRASH memory allocation failed in web_server poll
+# and CRASH memory allocation failed in web_server poll ADD 6 gc_collect and:
+# 26.9 sec loopM and loop1 ( get 4 Ains + set 1 Dout pwm + PID ) and loop2 ( mqtt send )

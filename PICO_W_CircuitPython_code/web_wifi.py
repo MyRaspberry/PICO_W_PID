@@ -19,7 +19,7 @@ isPV=0.0
 isSP=0.0
 isOUT=0.0
 
-from mqtt import mqtt_connect # _______________________________ file mqtt.py
+from mqtt import mqtt_connect, get_mqtts # _____________________ file mqtt.py
 
 DIAG = True  # False
 DIAG = bool(os.getenv('DIAG')) # ______________________________ now get from settings.toml
@@ -220,6 +220,9 @@ HTML_PID = """
         </table>
 
         <hr>
+        <H1> last MQTT to broker:</H1>
+        <p>{mqtts}</p>
+        <hr>
         <table style="width:100%">
             <tr>
                 <th>
@@ -302,6 +305,7 @@ def setup_webserver() :
                 isMODE = get_pid_mode(),
                 MODEs=get_MODEs(),
                 tnows=show_time(False),
+                mqtts=get_mqtts(),
                 THIS_REVISION=THIS_REVISION,
                 ),
                 content_type='text/html'

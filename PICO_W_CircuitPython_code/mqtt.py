@@ -17,6 +17,7 @@ def dp(line=" ", ende="\n"):
 
 MQTT_count = 0
 MQTT_counts = '%d' % MQTT_count
+mqtts=""
 
 useMQTT = False  # ___________________________ used to setup MQTT broker connection
 
@@ -112,7 +113,7 @@ MQTT_JSON_string = """
 """
 
 def mqtt_send(): # ________________________________________ from code JOB2
-    global MQTT_count, MQTT_counts, mqtt_client, MQTT_dtopic, mqtt_topic, MQTTok
+    global MQTT_count, MQTT_counts, mqtt_client, MQTT_dtopic, mqtt_topic, MQTTok, mqtts
 
     #dp("mqtt publish last dataset")
     if  (useNTP == 1 ) :
@@ -151,6 +152,8 @@ def mqtt_send(): # ________________________________________ from code JOB2
         mqtt_client.publish(mqtt_topic, mqtts )
     MQTT_count += 1 # for next loop
 
+def get_mqtts(): # ______________________________________________ show also in web page
+    return mqtts
 
 #RPI4 mqttsub see:
 """
