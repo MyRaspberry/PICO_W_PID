@@ -1,4 +1,4 @@
-# TimerCheck Ain Aout CP900a5
+# TimerCheck Ain Aout CP900a5 PID MQTT
 import os
 import time  # ___________________________________________ we use time.monotonic aka seconds in float, to control the loop and NO time.sleep() any more..
 
@@ -131,3 +131,4 @@ while True:  # ___________________________________________ MAIN
 # 26.4 sec even with MQTT send to RPI4 BUT check mem: 4600
 # and CRASH memory allocation failed in web_server poll ADD 6 gc_collect and:
 # 26.9 sec loopM and loop1 ( get 4 Ains + set 1 Dout pwm + PID ) and loop2 ( mqtt send )
+# 27.3 sec with html page open

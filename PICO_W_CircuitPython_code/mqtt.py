@@ -1,5 +1,5 @@
 # expect /lib/adafruit_minimqtt/
-# expect /lib/adafruit_register/ ?
+
 import os
 import time
 from adafruit_datetime import  datetime
@@ -108,9 +108,7 @@ def mqtt_connect(pool) : # ________________________ use pool from web_wifi.py in
 
 
 # ______________________here construct a MQTT JSON like string for the data, escape the { with {{
-MQTT_JSON_string = """
-{{ \"id\": {MQTT_counts}, \"dev\":\"{MQTT_dtopic}\", \"datetimes\": \"{tnows}\", \"PS_Temp\": {MTemps:,.2f}, \"PID_PV\": {PVs:,.2f}, \"PID_SP\": {SPs:,.2f}, \"PID_OUT": {OUTs:,.2f}, \"PID_MODE\": {MODEs} }}
-"""
+MQTT_JSON_string = """{{ \"id\": {MQTT_counts}, \"dev\":\"{MQTT_dtopic}\", \"datetimes\": \"{tnows}\", \"PS_Temp\": {MTemps:,.2f}, \"PID_PV\": {PVs:,.2f}, \"PID_SP\": {SPs:,.2f}, \"PID_OUT": {OUTs:,.2f}, \"PID_MODE\": {MODEs} }}"""
 
 def mqtt_send(): # ________________________________________ from code JOB2
     global MQTT_count, MQTT_counts, mqtt_client, MQTT_dtopic, mqtt_topic, MQTTok, mqtts

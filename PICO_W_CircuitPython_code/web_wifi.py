@@ -92,159 +92,153 @@ def get_MODEs():
 
 # ______________________________ at the HTML STYLE section i had to escape the { , } by {{ , }}
 HTML_INDEX = """
-    <!DOCTYPE html><html><head>
-    <title>KLL engineering Pico W</title>
-    <style>
-        body {{font-family: "Times New Roman", Times, serif; background-color: lightgreen;
-        display:inline-block; margin: 0px auto; text-align: center;}}
-        h1 {{color: deeppink; word-wrap: break-word; padding: 1vh; font-size: 30px;}}
-        p {{font-size: 1.5rem; word-wrap: break-word;}}
-        p.dotted {{margin: auto; width: 75%; font-size: 25px; text-align: center;}}
-        form {{font-size: 2rem; }}
-        input[type=number] {{font-size: 2rem;}}
-    </style>
-
-    </head><body>
-        <h1>Pico W Web Server from Circuit Python {THIS_OS} </h1>
-        <img src="https://www.raspberrypi.com/documentation/microcontrollers/images/picow-pinout.svg" >
-
-        <hr>
-            <a href="/data" target="_blank" ><b>data</b></a>
-        <hr>
-        <table style="width:100%">
-            <tr>
-                <th>
-                    <p><a href="http://kll.byethost7.com/kllfusion01/infusions/articles/articles.php?article_id=227" target="_blank" >
-                <b>kll engineering blog</b></a></p>
-                </th>
-                <th>
-                    <p>rev: {THIS_REVISION}</p>
-                </th>
-            </tr>
-        </table>
-        <hr>
-    </body></html>
+<!DOCTYPE html><html><head>
+<title>KLL engineering Pico W</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<style>
+body {{font-family: "Times New Roman", Times, serif; background-color: lightgreen;
+display:inline-block; margin: 0px auto; text-align: center;}}
+h1 {{color: deeppink; word-wrap: break-word; padding: 1vh; font-size: 30px;}}
+p {{font-size: 1.5rem; word-wrap: break-word;}}
+p.dotted {{margin: auto; width: 75%; font-size: 25px; text-align: center;}}
+form {{font-size: 2rem; }}
+input[type=number] {{font-size: 2rem;}}
+</style>
+</head><body>
+<h1>Pico W Web Server from Circuit Python {THIS_OS} </h1>
+<img src="https://www.raspberrypi.com/documentation/microcontrollers/images/picow-pinout.svg" >
+<hr>
+<a href="/data" target="_blank" ><b>data</b></a>
+<hr>
+<table style="width:100%">
+<tr>
+<th>
+<p><a href="http://kll.byethost7.com/kllfusion01/infusions/articles/articles.php?article_id=227" target="_blank" >
+<b>kll engineering blog</b></a></p>
+</th>
+<th>
+<p>rev: {THIS_REVISION}</p>
+</th>
+</tr>
+</table>
+<hr>
+</body></html>
 """
 
 HTML_PID = """
-    <!DOCTYPE html><html><head>
-    <title>KLL engineering Pico W</title>
-    <style>
-        body {{font-family: "Times New Roman", Times, serif; background-color: lightgreen;
-        display:inline-block; margin: 0px auto; text-align: center;}}
-        h1 {{color: deeppink; word-wrap: break-word; padding: 1vh; font-size: 30px;}}
-        p {{font-size: 1.5rem; word-wrap: break-word;}}
-        p.dotted {{margin: auto; width: 75%; font-size: 25px; text-align: center;}}
-        form {{font-size: 2rem; }}
-        input[type=number] {{font-size: 2rem;}}
-    </style>
-    <meta http-equiv="refresh" content="30">
-    </head><body>
-        <hr>
-        <H1> Analog I/O </H1>
-        <H2>{datas}</H2>
-        <hr>
-        <H1> PID </H1>
-        <H2>{pids}</H2>
-        <H3>{get_pid_details}</H3>
-
-        <table align=\"center\" style="width:100%">
-        <tr>
-            <td width=\"10%\"></td>
-            <td>\n
-
-        <svg width=\"{svgw}\" height=\"{svgh}\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\">
-        <desc>show PID faceplate </desc>
-        <!-- grey box with 3D style blue border-->")
-        <rect x=\"1\" y=\"1\" width=\"{svgw}\" height=\"{svgh}\"  stroke=\"#000088\" stroke-width=\"1\" />
-        <rect x=\"2\" y=\"2\" width=\"{svgw4}\" height=\"{svgh4}\"  stroke=\"#0000aa\" stroke-width=\"1\" />
-        <rect x=\"3\" y=\"3\" width=\"{svgw6}\" height=\"{svgh6}\"  fill=\"#FFF8DC\" stroke=\"#0000ff\" stroke-width=\"1\" />
-        <g id=\"faceplate\" style=\"visibility:visible; stroke-width:2; stroke=\"#000000\"; font-family=\"Verdana\"; font-size=\"16\";\" >
-        <!-- cyan OUTPUT bar-->
-        <rect x=\"50\" y=\"40\" width=\"40\" stroke=\"#000000\" fill=\"#00ffff\" height=\"402\"/>
-        <rect x=\"52\" y=\"42\" width=\"36\" stroke=\"#777777\" fill=\"#777777\" height=\"{OUTh}\"/>
-        <rect x=\"100\" y=\"61\" width=\"93\"  height=\"38\" stroke=\"#ffffff\" fill=\"#ffffff\" />
-        <text x=\"150\" y=\"76\"  text-anchor=\"middle\">OUT: {isOUT:,.1f}</text>
-        <text x=\"150\" y=\"91\" text-anchor=\"middle\">[ pct ]</text>
-        <!-- yellow PV bar-->
-        <rect x=\"200\" y=\"40\" width=\"40\" stroke=\"#000000\" fill=\"#ffff00\" height=\"402\"/>
-        <rect x=\"202\" y=\"42\" width=\"36\" stroke=\"#777777\" fill=\"#777777\" height=\"{PVh}\"/>
-        <!-- PV value + EGU -->
-        <rect x=\"250\" y=\"61\" width=\"93\"  height=\"38\" stroke=\"#ffffff\" fill=\"#ffffff\" />
-        <!-- PV text background rectangle -->
-        <text x=\"300\" y=\"76\" text-anchor=\"middle\">PV: {isPV:,.1f}</text>
-        <text x=\"300\" y=\"91\" text-anchor=\"middle\">[ pct ]</text>
-        <!-- white SP bar-->
-        <rect x=\"350\" y=\"40\" width=\"40\" stroke=\"#000000\" fill=\"#ffffff\" height=\"402\"/>
-        <rect x=\"352\" y=\"42\" width=\"36\" stroke=\"#777777\" fill=\"#777777\" height=\"{SPh}\"/>
-        <!-- SP value + EGU -->
-        <rect x=\"400\" y=\"61\" width=\"93\"  height=\"38\" stroke=\"#ffffff\" fill=\"#ffffff\" />
-        <!-- PV text background rectangle -->
-        <text x=\"450\" y=\"76\" text-anchor=\"middle\">SP: {isSP:,.1f}</text>
-        <text x=\"450\" y=\"91\" text-anchor=\"middle\">[ pct ]</text>
-        <!-- MODE -->
-        <rect x=\"500\" y=\"161\" width=\"93\"  height=\"38\" stroke=\"#ffffff\" fill=\"#ffffff\" />
-        <!-- PV text background rectangle -->
-        <text x=\"550\" y=\"176\" text-anchor=\"middle\">
-        "MODE:</text>
-        <text x=\"550\" y=\"191\" font-size=\"18\" text-anchor=\"middle\">{MODEs}</text>
-        </g>
-        </svg>\n
-
-            </td>
-            <td width=\"10%\"></td>
-        </tr>
-        </table>\n
-
-        <table style="width:100%">
-            <tr>
-                <td>
-                    <form action="/data/form/OUT" method="post">
-                        OUT: <input type=number value={isOUT:,.2f} step=0.1 id="OUT" size="8" name="OUT" min="0" max="100" />
-                    </form>
-                </td>
-                <td>
-                    <form action="/data/form/SP" method="post">
-                        SP: <input type=number value={isSP:,.2f} step=0.1 id="SP" name="SP" size="8" min="0" max="100" />
-                    </form>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p>and go MANUAL MODE</p>
-                </td>
-                <td>
-                    <p>and go AUTO MODE</p>
-                </td>
-            </tr>
-        </table>
-
-        <hr>
-        <H1> last MQTT to broker:</H1>
-        <p>{mqtts}</p>
-        <hr>
-        <table style="width:100%">
-            <tr>
-                <th>
-                    <p><a href="http://kll.byethost7.com/kllfusion01/infusions/articles/articles.php?article_id=227" target="_blank" >
-                <b>kll engineering blog</b></a></p>
-                </th>
-                <th>
-                    <p>rev: {THIS_REVISION}</p>
-                </th>
-            </tr>
-            <tr>
-                <td>
-                    <p>{tnows}</p>
-                </td>
-                <td>
-                    <p>page auto refresh 30sec</p>
-                </td>
-            </tr>
-        </table>
-        <hr>
-
-    </body></html>
+<!DOCTYPE html><html><head>
+<title>KLL engineering Pico W</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<style>
+body {{font-family: "Times New Roman", Times, serif; background-color: lightgreen;
+display:inline-block; margin: 0px auto; text-align: center;}}
+h1 {{color: deeppink; word-wrap: break-word; padding: 1vh; font-size: 30px;}}
+p {{font-size: 1.5rem; word-wrap: break-word;}}
+p.dotted {{margin: auto; width: 75%; font-size: 25px; text-align: center;}}
+form {{font-size: 2rem; }}
+input[type=number] {{font-size: 2rem;}}
+</style>
+<meta http-equiv="refresh" content="30">
+</head><body>
+<hr>
+<H1> Analog I/O </H1>
+<H2>{datas}</H2>
+<hr>
+<H1> PID </H1>
+<H2>{pids}</H2>
+<H3>{get_pid_details}</H3>
+<table align=\"center\" style="width:100%">
+<tr>
+<td width=\"10%\"></td>
+<td>\n
+<svg width=\"{svgw}\" height=\"{svgh}\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\">
+<desc>show PID faceplate </desc>
+<!-- grey box with 3D style blue border-->")
+<rect x=\"1\" y=\"1\" width=\"{svgw}\" height=\"{svgh}\"  stroke=\"#000088\" stroke-width=\"1\" />
+<rect x=\"2\" y=\"2\" width=\"{svgw4}\" height=\"{svgh4}\"  stroke=\"#0000aa\" stroke-width=\"1\" />
+<rect x=\"3\" y=\"3\" width=\"{svgw6}\" height=\"{svgh6}\"  fill=\"#FFF8DC\" stroke=\"#0000ff\" stroke-width=\"1\" />
+<g id=\"faceplate\" style=\"visibility:visible; stroke-width:2; stroke=\"#000000\"; font-family=\"Verdana\"; font-size=\"16\";\" >
+<!-- cyan OUTPUT bar-->
+<rect x=\"50\" y=\"40\" width=\"40\" stroke=\"#000000\" fill=\"#00ffff\" height=\"402\"/>
+<rect x=\"52\" y=\"42\" width=\"36\" stroke=\"#777777\" fill=\"#777777\" height=\"{OUTh}\"/>
+<rect x=\"100\" y=\"61\" width=\"93\"  height=\"38\" stroke=\"#ffffff\" fill=\"#ffffff\" />
+<text x=\"150\" y=\"76\"  text-anchor=\"middle\">OUT: {isOUT:,.1f}</text>
+<text x=\"150\" y=\"91\" text-anchor=\"middle\">[ pct ]</text>
+<!-- yellow PV bar-->
+<rect x=\"200\" y=\"40\" width=\"40\" stroke=\"#000000\" fill=\"#ffff00\" height=\"402\"/>
+<rect x=\"202\" y=\"42\" width=\"36\" stroke=\"#777777\" fill=\"#777777\" height=\"{PVh}\"/>
+<!-- PV value + EGU -->
+<rect x=\"250\" y=\"61\" width=\"93\"  height=\"38\" stroke=\"#ffffff\" fill=\"#ffffff\" />
+<!-- PV text background rectangle -->
+<text x=\"300\" y=\"76\" text-anchor=\"middle\">PV: {isPV:,.1f}</text>
+<text x=\"300\" y=\"91\" text-anchor=\"middle\">[ pct ]</text>
+<!-- white SP bar-->
+<rect x=\"350\" y=\"40\" width=\"40\" stroke=\"#000000\" fill=\"#ffffff\" height=\"402\"/>
+<rect x=\"352\" y=\"42\" width=\"36\" stroke=\"#777777\" fill=\"#777777\" height=\"{SPh}\"/>
+<!-- SP value + EGU -->
+<rect x=\"400\" y=\"61\" width=\"93\"  height=\"38\" stroke=\"#ffffff\" fill=\"#ffffff\" />
+<!-- PV text background rectangle -->
+<text x=\"450\" y=\"76\" text-anchor=\"middle\">SP: {isSP:,.1f}</text>
+<text x=\"450\" y=\"91\" text-anchor=\"middle\">[ pct ]</text>
+<!-- MODE -->
+<rect x=\"500\" y=\"161\" width=\"93\"  height=\"38\" stroke=\"#ffffff\" fill=\"#ffffff\" />
+<!-- PV text background rectangle -->
+<text x=\"550\" y=\"176\" text-anchor=\"middle\">
+"MODE:</text>
+<text x=\"550\" y=\"191\" font-size=\"18\" text-anchor=\"middle\">{MODEs}</text>
+</g>
+</svg>\n
+</td>
+<td width=\"10%\"></td>
+</tr>
+</table>
+<table style="width:100%">
+<tr>
+<td>
+<form action="/data/form/OUT" method="post">
+OUT: <input type=number value={isOUT:,.2f} step=0.1 id="OUT" size="8" name="OUT" min="0" max="100" />
+</form>
+</td>
+<td>
+<form action="/data/form/SP" method="post">
+SP: <input type=number value={isSP:,.2f} step=0.1 id="SP" name="SP" size="8" min="0" max="100" />
+</form>
+</td>
+</tr>
+<tr>
+<td>
+<p>and go MANUAL MODE</p>
+</td>
+<td>
+<p>and go AUTO MODE</p>
+</td>
+</tr>
+</table>
+<hr>
+<H1> last MQTT to broker:</H1>
+<p>{mqtts}</p>
+<hr>
+<table style="width:100%">
+<tr>
+<th>
+<p><a href="http://kll.byethost7.com/kllfusion01/infusions/articles/articles.php?article_id=227" target="_blank" >
+<b>kll engineering blog</b></a></p>
+</th>
+<th>
+<p>rev: {THIS_REVISION}</p>
+</th>
+</tr>
+<tr>
+<td>
+<p>{tnows}</p>
+</td>
+<td>
+<p>page auto refresh 30sec</p>
+</td>
+</tr>
+</table>
+<hr>
+</body></html>
 """
 
 def setup_webserver() :
@@ -267,7 +261,7 @@ def setup_webserver() :
     show_time()
 
     # ____________________________________________________ make a WEB SERVER
-    server = Server(pool) #, debug=True)
+    server = Server(pool, "/static") #, debug=True)
 
     @server.route("/")
     def base(request):  # pylint: disable=unused-argument
