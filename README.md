@@ -5,14 +5,17 @@
 - analog in
 - digital out pwm
 - PID
-- MQTT to local broker (RPI4: there using Node-Red & SQLite for Current and Hist Trend ) 
+- MQTT to local broker
+
+## RPI4: MQTT broker & Node-Red & SQLite for Current and Hist Trend ) 
 
 see [phone browser](http://kll.byethost7.com/kllfusion01/downloads/PICOW_android_beowser_page.jpg)</br>
 see [V102 from PC](http://kll.byethost7.com/kllfusion01/downloads/PICOW_PID_datapage.png)</br>
+see [V110 NR&wwww](http://kll.byethost7.com/kllfusion01/downloads/PICOW_PID_WWW_NR_DASHpng.png)
 
 - v1.0.1b PreRelease
 - v1.0.2b Release
-- v1.1.0 MQTT ( no TLS ) running together with web-server
+- v1.1.0 MQTT ( no TLS )
 
 _______________________________
 
