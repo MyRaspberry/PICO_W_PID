@@ -21,8 +21,7 @@ see [V110 NR&wwww](http://kll.byethost7.com/kllfusion01/downloads/PICOW_PID_WWW_
 
 - v1.0.1b PreRelease
 - v1.0.2b Release
-- v1.1.0 MQTT ( no TLS ) in work, just take the ZIP from here
-
+- v1.1.0 MQTT ( no TLS ) Release
 _______________________________
 
 board: PICO W</br>
