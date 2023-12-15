@@ -9,7 +9,7 @@ from ipaddress import ip_address
 import wifi
 from adafruit_httpserver import Server, Request, Response, Redirect, GET, POST
 import micropython
-import gc # micropython garbage collection # use gc.mem_free() # use gc.collect
+#import gc # micropython garbage collection # use gc.mem_free() # use gc.collect
 import microcontroller # for board reboot
 
 from pico_w_io import get_datas, get_pids, get_PV, get_SP, set_SP, get_OUT, set_OUT, get_pid_details, get_pid_mode
@@ -21,13 +21,8 @@ isOUT=0.0
 
 from mqtt import mqtt_connect, get_mqtts # _____________________ file mqtt.py
 
-DIAG = True  # False
-DIAG = bool(os.getenv('DIAG')) # ______________________________ now get from settings.toml
-
-def dp(line=" ", ende="\n"):
-    if DIAG:
-        print(line, end=ende)
-
+# ________________________________________________________ expect file tools.py
+from tools import DIAG, dp, check_mem
 
 THIS_REVISION = os.getenv('THIS_REVISION')
 THIS_OS = os.getenv('THIS_OS')
@@ -266,7 +261,7 @@ def setup_webserver() :
     @server.route("/")
     def base(request):  # pylint: disable=unused-argument
         dp("\nwww served dynamic index.html")
-        gc.collect()
+        check_mem(info = "serve /",prints=False,coll=True)
         return Response(request,
             HTML_INDEX.format(
                 THIS_OS=THIS_OS,
@@ -278,7 +273,7 @@ def setup_webserver() :
     @server.route("/data")
     def data(request):  # pylint: disable=unused-argument
         dp("\nwww served dynamic data.html")
-        gc.collect()
+        check_mem(info = "serve /data",prints=False,coll=True)
         return Response(request,
             HTML_PID.format(
                 datas=get_datas(),
@@ -307,7 +302,7 @@ def setup_webserver() :
 
     @server.route("/data/form/SP", [GET, POST])
     def form(request):
-        gc.collect()
+        check_mem(info = "serve /data/form/SP",prints=False,coll=True)
         if request.method == POST:
             posted_SP_value = request.form_data.get("SP")
             dp(f"\nwww SP input: {posted_SP_value}")
@@ -321,7 +316,7 @@ def setup_webserver() :
 
     @server.route("/data/form/OUT", [GET, POST])
     def form(request):
-        gc.collect()
+        check_mem(info = "serve /data/form/OUT",prints=False,coll=True)
         if request.method == POST:
             posted_OUT_value = request.form_data.get("OUT")
             dp(f"\nwww OUT input: {posted_OUT_value}")
@@ -348,5 +343,5 @@ def run_webserver() :
 
     except OSError:
         print("ERROR server poll")
-        # _________________________________________________ here might later do a reboot
+        # _________________________________________________ here do a reboot
         microcontroller.reset()

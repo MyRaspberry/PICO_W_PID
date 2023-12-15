@@ -6,14 +6,12 @@ from adafruit_datetime import  datetime
 import adafruit_minimqtt.adafruit_minimqtt as MQTT
 from pico_w_io import get_PV, get_SP, get_OUT, get_pid_details, get_pid_mode, get_T0val
 
-DIAG = True  # False
-DIAG = bool(os.getenv('DIAG')) # __________________________ now get from settings.toml
+# _________________________________________________________ expect file tools.py
+from tools import DIAG, dp, check_mem
+
 
 useNTP = os.getenv('useNTP') # send timestamp
 
-def dp(line=" ", ende="\n"):
-    if DIAG:
-        print(line, end=ende)
 
 MQTT_count = 0
 MQTT_counts = '%d' % MQTT_count

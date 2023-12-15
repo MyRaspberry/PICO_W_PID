@@ -6,16 +6,11 @@ import pwmio
 from analogio import AnalogIn
 import microcontroller # __________________________________ needed for CPU temperature
 import time  # ____________________________________________ we use time.monotonic aka seconds in float, to control the loop and NO time.sleep() any more..
+# _________________________________________________________ expect file tools.py
+from tools import DIAG, dp, check_mem
+
 
 from pid import PID # _____________________________________ file pid.py
-
-DIAG = True  # False
-DIAG = bool(os.getenv('DIAG')) # __________________________ now get from settings.toml
-
-
-def dp(line=" ", ende="\n"):
-    if DIAG:
-        print(line, end=ende)
 
 # _________________________________________________________ PICOW_IO
 

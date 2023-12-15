@@ -2,9 +2,11 @@
 # 10.12.2023 V1.0.1b : >> GIT RELEASE
 # 12.12.2023 V1.0.2  : >> GIT RELEASE
 # 13.12.2023 V1.1.0  : add MQTT
+# 15.12.203 C1.1.1   : CP900a6
+
 DIAG=1  # __________________________________________ global print diagnostic on off
-THIS_REVISION = "v1.1.0"
-THIS_OS = " CP900a5++"
+THIS_REVISION = "v1.1.1"
+THIS_OS = " CP900a6"
 # __________________________________________________ LAN WIFI
 WIFI_SSID = "___SSID___"
 WIFI_PASSWORD = "___PASS___"
