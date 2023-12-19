@@ -1,19 +1,24 @@
-# TimerCheck Ain Aout CP900a5 PID MQTT
+#SH_T # please enable to break the code and allow REPL scroll UP for read and copy
+
+# TimerCheck Ain Aout CP900a5 PID MQTT // back to CP829
+import gc
 import os
 import time  # ___________________________________________ we use time.monotonic aka seconds in float, to control the loop and NO time.sleep() any more..
+# ________________________________________________________ expect file tools.py
+from tools import DIAG, DIAGM, dp, check_mem
+if ( DIAGM ) : print(f"\nFREE MEM report from code.py after imports\n+ import time {gc.mem_free()}")
 
 from pico_w_io import getAins, runPID, DO1ramp  # used from JOB1
 
-# ________________________________________________________ expect file tools.py
-from tools import DIAG, dp, check_mem
 
-dp("\n___ i am a PICO_W and run CP900-a6")
+dp("\n___ i am a PICO_W")
 dp("___ KLL project 1 sec Ain, Aout as DoutPWM, PID")
 
 from web_wifi import setup_webserver, run_webserver
 from mqtt import mqtt_send
 
 setup_webserver()  # ______________________________________ from file web_wifi.py
+if ( DIAGM ) : print(f"+ setup_webserver {gc.mem_free()}")
 
 
 # ________________________________________________________ multi job timer
@@ -48,9 +53,9 @@ def JOB1():
 
 def JOB2():
     mqtt_send()
-    check_mem(info = "JOB2 after mqtt_send",prints=True,coll=True)
+    check_mem(info = "JOB2 after mqtt_send",prints=DIAGM,coll=True)
 
-check_mem()
+check_mem(info = "startup",prints=DIAGM,coll=True)
 
 infos = "___ Main structure info: endless triple loop: \n___ loopM counts to "
 infos += f"{updateM:}"
@@ -64,15 +69,13 @@ dp(infos)
 while True:  # ___________________________________________ MAIN
     try:
         loopM += 1
-        if (
-            loopM >= updateM
-        ):  # _________________________ 1 million loop timer / reporter
+        if ( loopM >= updateM ):  # ______________________ 1 million loop timer / reporter
             loopM = 0
             Mloop_s = time.monotonic()
             if Mlooprep:
                 dp("\n___ 1Mloop: {:>5.3f} sec ".format((Mloop_s - last_Mloop_s)))
             last_Mloop_s = Mloop_s  # __________________ remember
-            check_mem(info = "loopM",prints=True,coll=True)
+            check_mem(info = "1Mloop",prints=DIAGM,coll=True)
 
         loop1 += 1
         if loop1 > loopt1:
@@ -122,3 +125,6 @@ while True:  # ___________________________________________ MAIN
 # 27.3 sec with html page open
 # use tools.py and CP900a6 and HTML open:
 # 28.1 sec mem 17300 / low mem 15800 after mqtt_send ( 60.0x sec ) / low mem 11500 after start incl mqtt hallo /
+# use CP829
+# 26.8 sec mem 26000
+

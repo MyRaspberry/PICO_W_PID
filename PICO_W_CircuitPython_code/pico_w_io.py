@@ -1,13 +1,25 @@
 # PICO_W_IO
+import gc # micropython garbage collection # use gc.mem_free() # use gc.collect
+Imp = (f"\nFREE MEM report from pico_w_io.py after imports\n+ import gc {gc.mem_free()}")
 import os
+Imp+=(f"+ import os {gc.mem_free()}\n")
 import board
+Imp+=(f"+ import board {gc.mem_free()}\n")
 import digitalio
+Imp+=(f"+ import digitalio {gc.mem_free()}\n")
 import pwmio
+Imp+=(f"+ import pwmio {gc.mem_free()}\n")
 from analogio import AnalogIn
+Imp+=(f"+ from analogio import AnalogIn {gc.mem_free()}\n")
 import microcontroller # __________________________________ needed for CPU temperature
+Imp+=(f"+ import microcontroller {gc.mem_free()}\n")
 import time  # ____________________________________________ we use time.monotonic aka seconds in float, to control the loop and NO time.sleep() any more..
+Imp+=(f"+ import time {gc.mem_free()}\n")
 # _________________________________________________________ expect file tools.py
-from tools import DIAG, dp, check_mem
+from tools import DIAG, DIAGM, dp, check_mem
+
+if ( DIAGM ) : print(Imp)
+del Imp # ________________________________________________ variable needed for boot only
 
 
 from pid import PID # _____________________________________ file pid.py

@@ -1,14 +1,21 @@
 # expect /lib/adafruit_minimqtt/
-
+import gc
+Imp=(f"\nFREE MEM report from mqtt.py after imports\n+ import gc {gc.mem_free()}\n")
 import os
+Imp+=(f"+ import os {gc.mem_free()}\n")
 import time
+Imp+=(f"+ import time {gc.mem_free()}\n")
 from adafruit_datetime import  datetime
+Imp+=(f"+ from adafruit_datetime import  datetime {gc.mem_free()}\n")
 import adafruit_minimqtt.adafruit_minimqtt as MQTT
+Imp+=(f"+ import adafruit_minimqtt.adafruit_minimqtt as MQTT {gc.mem_free()}\n")
 from pico_w_io import get_PV, get_SP, get_OUT, get_pid_details, get_pid_mode, get_T0val
 
 # _________________________________________________________ expect file tools.py
-from tools import DIAG, dp, check_mem
+from tools import DIAG, DIAGM, dp, check_mem
 
+if ( DIAGM ) : print(Imp)
+del Imp # ________________________________________________ variable needed for boot only
 
 useNTP = os.getenv('useNTP') # send timestamp
 

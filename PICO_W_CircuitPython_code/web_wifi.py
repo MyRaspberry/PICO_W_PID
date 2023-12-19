@@ -1,16 +1,28 @@
 # wifi
+import gc # micropython garbage collection # use gc.mem_free() # use gc.collect
+Imp=(f"\nFREE MEM report from web_wifi.py after imports\n+ import gc {gc.mem_free()}\n")
 import os
+Imp+=(f"+ import os {gc.mem_free()}\n")
 import time
+Imp+=(f"+ import time {gc.mem_free()}\n")
 from adafruit_datetime import  datetime
+Imp+=(f"+ from adafruit_datetime import  datetime {gc.mem_free()}\n")
 import rtc
+Imp+=(f"+ import rtc {gc.mem_free()}\n")
 import adafruit_ntp # V1.0.2 b use NTP time to set PICO W RTC
+Imp+=(f"+ import adafruit_ntp {gc.mem_free()}\n")
 import socketpool
+Imp+=(f"+ import socketpool {gc.mem_free()}\n")
 from ipaddress import ip_address
+Imp+=(f"+ from ipaddress import ip_address {gc.mem_free()}\n")
 import wifi
+Imp+=(f"+ import wifi {gc.mem_free()}\n")
 from adafruit_httpserver import Server, Request, Response, Redirect, GET, POST
+Imp+=(f"+ from adafruit_httpserver import Server, Request, Response, GET, POST {gc.mem_free()}\n")
 import micropython
-#import gc # micropython garbage collection # use gc.mem_free() # use gc.collect
+Imp+=(f"+ import micropython {gc.mem_free()}\n")
 import microcontroller # for board reboot
+Imp+=(f"+ import microcontroller {gc.mem_free()}\n")
 
 from pico_w_io import get_datas, get_pids, get_PV, get_SP, set_SP, get_OUT, set_OUT, get_pid_details, get_pid_mode
 datas="Ain data from pico_w_io"
@@ -22,7 +34,10 @@ isOUT=0.0
 from mqtt import mqtt_connect, get_mqtts # _____________________ file mqtt.py
 
 # ________________________________________________________ expect file tools.py
-from tools import DIAG, dp, check_mem
+from tools import DIAG,DIAGM , dp, check_mem
+
+if ( DIAGM ) : print(Imp)
+del Imp # ________________________________________________ variable needed for boot only
 
 THIS_REVISION = os.getenv('THIS_REVISION')
 THIS_OS = os.getenv('THIS_OS')
@@ -84,6 +99,8 @@ def get_MODEs():
     else:
         return "MAN"
 
+
+if ( DIAG ) : print(f"+ before declare HTML's {gc.mem_free()}")
 
 # ______________________________ at the HTML STYLE section i had to escape the { , } by {{ , }}
 HTML_INDEX = """
@@ -235,6 +252,8 @@ SP: <input type=number value={isSP:,.2f} step=0.1 id="SP" name="SP" size="8" min
 <hr>
 </body></html>
 """
+
+if ( DIAG ) : print(f"+ after declare HTML's {gc.mem_free()}")
 
 def setup_webserver() :
     global server, pool, datas, pids
