@@ -24,6 +24,7 @@ see [V110 NR&wwww](http://kll.byethost7.com/kllfusion01/downloads/PICOW_PID_WWW_
 - v1.1.0 MQTT ( no TLS ) Release
 - v1.1.1 update to CP900a6 work on PICO_W code
 - v1.1.2 back to CP829 and use mem_free report for each import "DIAGM" in settings.toml
+- v1.1.3 delete datetime lib use time lib only ( +26kB mem )
 _______________________________
 
 board: PICO W</br>

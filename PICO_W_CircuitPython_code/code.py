@@ -1,6 +1,6 @@
 #SH_T # please enable to break the code and allow REPL scroll UP for read and copy
 
-# TimerCheck Ain Aout CP900a5 PID MQTT // back to CP829
+# TimerCheck Ain Aout PID WebServer MQTT // CP900a5 back to CP829
 import gc
 import os
 import time  # ___________________________________________ we use time.monotonic aka seconds in float, to control the loop and NO time.sleep() any more..
@@ -72,10 +72,10 @@ while True:  # ___________________________________________ MAIN
         if ( loopM >= updateM ):  # ______________________ 1 million loop timer / reporter
             loopM = 0
             Mloop_s = time.monotonic()
-            if Mlooprep:
-                dp("\n___ 1Mloop: {:>5.3f} sec ".format((Mloop_s - last_Mloop_s)))
+            Mloopts = ""
+            if Mlooprep: Mloopts = " {:>5.3f} sec ".format((Mloop_s - last_Mloop_s))
             last_Mloop_s = Mloop_s  # __________________ remember
-            check_mem(info = "1Mloop",prints=DIAGM,coll=True)
+            check_mem(info = "1Mloop "+Mloopts,prints=DIAGM,coll=True)
 
         loop1 += 1
         if loop1 > loopt1:

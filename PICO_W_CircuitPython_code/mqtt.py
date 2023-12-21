@@ -5,8 +5,8 @@ import os
 Imp+=(f"+ import os {gc.mem_free()}\n")
 import time
 Imp+=(f"+ import time {gc.mem_free()}\n")
-from adafruit_datetime import  datetime
-Imp+=(f"+ from adafruit_datetime import  datetime {gc.mem_free()}\n")
+#   from adafruit_datetime import  datetime
+#   Imp+=(f"+ from adafruit_datetime import  datetime {gc.mem_free()}\n")
 import adafruit_minimqtt.adafruit_minimqtt as MQTT
 Imp+=(f"+ import adafruit_minimqtt.adafruit_minimqtt as MQTT {gc.mem_free()}\n")
 from pico_w_io import get_PV, get_SP, get_OUT, get_pid_details, get_pid_mode, get_T0val
@@ -17,7 +17,15 @@ from tools import DIAG, DIAGM, dp, check_mem
 if ( DIAGM ) : print(Imp)
 del Imp # ________________________________________________ variable needed for boot only
 
-useNTP = os.getenv('useNTP') # send timestamp
+useNTP = bool(os.getenv('useNTP')) # send timestamp
+
+def time_now(): # ______________________________________ use time and NOT datetime
+    if useNTP :
+        now = time.localtime()
+        nows = f"{now.tm_year}-{now.tm_mon:02}-{now.tm_mday:02} {now.tm_hour:02}:{now.tm_min:02}:{now.tm_sec:02}"
+        return nows
+    else:
+        return ""
 
 
 MQTT_count = 0
@@ -118,16 +126,7 @@ MQTT_JSON_string = """{{ \"id\": {MQTT_counts}, \"dev\":\"{MQTT_dtopic}\", \"dat
 def mqtt_send(): # ________________________________________ from code JOB2
     global MQTT_count, MQTT_counts, mqtt_client, MQTT_dtopic, mqtt_topic, MQTTok, mqtts
 
-    #dp("mqtt publish last dataset")
-    if  (useNTP == 1 ) :
-        #dp("make a timestamp for mqtt record")
-        tnow = datetime.now()
-        tnows = tnow.isoformat()
-        tnows = tnows.replace("T"," ")
-        #dp(tnows)
-    else:
-        tnows = ""
-
+    tnows = time_now()
 
     MQTT_counts = '%d' % MQTT_count
     #dp(MQTT_counts)

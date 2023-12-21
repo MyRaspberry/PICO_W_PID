@@ -3,10 +3,11 @@ import gc # micropython garbage collection # use gc.mem_free() # use gc.collect
 Imp=(f"\nFREE MEM report from web_wifi.py after imports\n+ import gc {gc.mem_free()}\n")
 import os
 Imp+=(f"+ import os {gc.mem_free()}\n")
+THIS_OS = f" This is a {os.uname().machine} with CP{os.uname().version} "
 import time
 Imp+=(f"+ import time {gc.mem_free()}\n")
-from adafruit_datetime import  datetime
-Imp+=(f"+ from adafruit_datetime import  datetime {gc.mem_free()}\n")
+#   from adafruit_datetime import  datetime
+#   Imp+=(f"+ from adafruit_datetime import  datetime {gc.mem_free()}\n")
 import rtc
 Imp+=(f"+ import rtc {gc.mem_free()}\n")
 import adafruit_ntp # V1.0.2 b use NTP time to set PICO W RTC
@@ -40,7 +41,7 @@ if ( DIAGM ) : print(Imp)
 del Imp # ________________________________________________ variable needed for boot only
 
 THIS_REVISION = os.getenv('THIS_REVISION')
-THIS_OS = os.getenv('THIS_OS')
+#THIS_OS = os.getenv('THIS_OS')
 
 WIFI_SSID = os.getenv('WIFI_SSID')
 WIFI_PASSWORD = os.getenv('WIFI_PASSWORD')
@@ -48,10 +49,10 @@ WIFI_PASSWORD = os.getenv('WIFI_PASSWORD')
 WIFI_IP = os.getenv('WIFI_IP')
 
 TZ_OFFSET = os.getenv('TZ_OFFSET') # for NTP to RTC
-useNTP = os.getenv('useNTP')
+useNTP = bool(os.getenv('useNTP'))
 
 def get_network_time():
-    if ( useNTP == 1 ) :
+    if useNTP :
         try:
             print("___ get NTP to RTC")
             ntp = adafruit_ntp.NTP(pool, tz_offset=TZ_OFFSET)
@@ -59,17 +60,13 @@ def get_network_time():
         except:
             print("failed")
 
-def show_time(lDIAG=True):
-    if  (useNTP == 1 ) :
-        #print(time.localtime())
-        tnow = datetime.now()
-        tnows = tnow.isoformat()
-        tnows = tnows.replace("T"," ")
-        if lDIAG:
-            dp(tnows)
-        return tnows
-    else :
-        return " "
+def time_now(): # ______________________________________ use time and NOT datetime
+    if useNTP :
+        now = time.localtime()
+        nows = f"{now.tm_year}-{now.tm_mon:02}-{now.tm_mday:02} {now.tm_hour:02}:{now.tm_min:02}:{now.tm_sec:02}"
+        return nows
+    else:
+        return ""
 
 
 # ______________________________ some SVG scale and formatting functions used in HTML_PID.format()
@@ -105,7 +102,7 @@ if ( DIAG ) : print(f"+ before declare HTML's {gc.mem_free()}")
 # ______________________________ at the HTML STYLE section i had to escape the { , } by {{ , }}
 HTML_INDEX = """
 <!DOCTYPE html><html><head>
-<title>KLL engineering Pico W</title>
+<title>KLL engineering</title>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <style>
 body {{font-family: "Times New Roman", Times, serif; background-color: lightgreen;
@@ -117,7 +114,7 @@ form {{font-size: 2rem; }}
 input[type=number] {{font-size: 2rem;}}
 </style>
 </head><body>
-<h1>Pico W Web Server from Circuit Python {THIS_OS} </h1>
+<h1>{THIS_OS} Web-server</h1>
 <img src="https://www.raspberrypi.com/documentation/microcontrollers/images/picow-pinout.svg" >
 <hr>
 <a href="/data" target="_blank" ><b>data</b></a>
@@ -272,7 +269,7 @@ def setup_webserver() :
     pool = socketpool.SocketPool(wifi.radio)
 
     get_network_time() # _________________________________ get network time to RTC
-    show_time()
+    dp(time_now())
 
     # ____________________________________________________ make a WEB SERVER
     server = Server(pool, "/static") #, debug=True)
@@ -280,7 +277,7 @@ def setup_webserver() :
     @server.route("/")
     def base(request):  # pylint: disable=unused-argument
         dp("\nwww served dynamic index.html")
-        check_mem(info = "serve /",prints=False,coll=True)
+        check_mem(info = "serve /",prints=DIAGM,coll=True)
         return Response(request,
             HTML_INDEX.format(
                 THIS_OS=THIS_OS,
@@ -292,7 +289,7 @@ def setup_webserver() :
     @server.route("/data")
     def data(request):  # pylint: disable=unused-argument
         dp("\nwww served dynamic data.html")
-        check_mem(info = "serve /data",prints=False,coll=True)
+        check_mem(info = "serve /data",prints=DIAGM,coll=True)
         return Response(request,
             HTML_PID.format(
                 datas=get_datas(),
@@ -312,7 +309,7 @@ def setup_webserver() :
                 SPh=get_SPh(),
                 isMODE = get_pid_mode(),
                 MODEs=get_MODEs(),
-                tnows=show_time(False),
+                tnows=time_now(),
                 mqtts=get_mqtts(),
                 THIS_REVISION=THIS_REVISION,
                 ),
