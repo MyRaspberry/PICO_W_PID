@@ -15,6 +15,7 @@
 - Node ( v20.10.0 )
 - Node-Red ( v3.1.0 )
 
+## project info
 see [phone browser](http://kll.byethost7.com/kllfusion01/downloads/PICOW_android_beowser_page.jpg)</br>
 see [V102 from PC](http://kll.byethost7.com/kllfusion01/downloads/PICOW_PID_datapage.png)</br>
 see [V110 NR&wwww](http://kll.byethost7.com/kllfusion01/downloads/PICOW_PID_WWW_NR_DASHpng.png)
