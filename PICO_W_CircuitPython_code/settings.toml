@@ -12,8 +12,8 @@ DIAGM=1 # __________________________________________ memory reporting
 THIS_REVISION = "v1.1.3"
 # THIS_OS = " CP829" # now read back from board
 # __________________________________________________ LAN WIFI
-WIFI_SSID = "kll-wlan_2.4G"
-WIFI_PASSWORD = "WELOVEKOH-SAMUI"
+WIFI_SSID = "___SSID___"
+WIFI_PASSWORD = "___PASS___"
 WIFI_IP = "192.168.1.215" # ________________________ LOCAL WEB SERVER & 'data'
 # __________________________________________________ LOCATION TIME ZONE
 useNTP = 1 # _______________________________________ try NTP to RTC update
