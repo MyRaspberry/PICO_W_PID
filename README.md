@@ -25,7 +25,7 @@ new  ( 3.1.2024 )
 see [phone browser](http://kll.byethost7.com/kllfusion01/downloads/PICOW_android_beowser_page.jpg)</br>
 see [V102 from PC](http://kll.byethost7.com/kllfusion01/downloads/PICOW_PID_datapage.png)</br>
 see [V110 NR&wwww](http://kll.byethost7.com/kllfusion01/downloads/PICOW_PID_WWW_NR_DASHpng.png)</br>
-see [ESP32-S3 Arduino IDE](http://kll.byethost7.com/kllfusion01/downloads/ESP32S3_PID_MQTT.png)</br>
+see [ESP32-S3 Arduino IDE](http://kll.byethost7.com/kllfusion01/downloads/ESP32_Arduino_PID_faceplate.png)</br>
 
 - v1.0.1b PreRelease
 - v1.0.2b Release
