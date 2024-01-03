@@ -1,5 +1,11 @@
 
-## PICO_W PID-project
+## PID-project
+# PICO W Circuit Python
+
+new  ( 3.1.2024 )
+
+# PICO W Arduino IDE 2.2.1
+# ESP32-S3 Arduino IDE 2.2.1
 
 - webserver ( RTC from NTP )
 - analog in
