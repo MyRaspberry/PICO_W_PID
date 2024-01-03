@@ -1,4 +1,4 @@
-Board: PICOP W
+Board: PICO W
 
 SYS: Arduino Ide 2.2.1
 
@@ -43,7 +43,7 @@ still last step to feed the HTML string to server is again translate it to CHAR<
 - - date time</br>
 - - UpTime</br>
 
-**picow_io.ino**
+**pico_w_io.ino**
 
 - read analog in A0 A1 A2 T0 by 15 sec job and make string for HTML show</br>
 - DO1 pwm output</br>
