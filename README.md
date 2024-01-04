@@ -7,6 +7,11 @@ new  ( 3.1.2024 )
 # PICO W Arduino IDE 2.2.1
 # ESP32-S3 Arduino IDE 2.2.1
 
+( add sideproject: </br>
+# ESP-32-S3 PoorManScope1W
+
+)
+
 - webserver ( RTC from NTP )
 - analog in
 - digital out pwm

@@ -4,8 +4,8 @@
 // __________________________________________________ TOPIC publish local broker
 
 #ifndef STASSID
-#define STASSID "kll-wlan_2.4G"
-#define STAPSK "WELOVEKOH-SAMUI"
+#define STASSID "___SSID___"
+#define STAPSK "___PASS___"
 #define REV "v1.0.0"
 #define FIXIP {192,168,1,215}
 #define PORT 1234
