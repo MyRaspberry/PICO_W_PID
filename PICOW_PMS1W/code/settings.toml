@@ -1,0 +1,13 @@
+THIS_REVISION = "v1.2.6b"
+THIS_OS = " CP829 "
+# __________________________________________________ LAN WIFI
+WIFI_SSID = "___SSID___"
+WIFI_PASSWORD = "___PASS___"
+# __________________________________________________ LOCATION TIME ZONE
+useNTP = 1 # _______________________________________ try NTP to RTC update
+TZ_OFFSET = 7 # ____________________________________ LOCATION TIME ZONE
+# __________________________________________________ LOCAL WEB SERVER & 'data'
+WIFI_IP = "192.168.1.215"
+WIFI_PORT = 1234
+DIAG=1  # __________________________________________ global print diagnostic on off !! overwritten by menu !!
+TESTPWM=1 # ________________________________________ pin21 GP16 PWMA0 enable ( 1000Hz, 50% duty cycle)

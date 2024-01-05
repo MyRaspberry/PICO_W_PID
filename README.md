@@ -7,24 +7,25 @@ new  ( 3.1.2024 )
 # PICO W Arduino IDE 2.2.1
 # ESP32-S3 Arduino IDE 2.2.1
 
-( add sideproject: </br>
-# ESP-32-S3 PoorManScope1W
-
-)
-
 - webserver ( RTC from NTP )
 - analog in
 - digital out pwm
 - PID
 - MQTT to local broker
 
-## RPI4: MQTT broker & Node-Red & SQLite for Current and Hist Trend
+# RPI4: MQTT broker & Node-Red & SQLite for Current and Hist Trend
 
 - fix IP 192.168.1.4 on ethernet port / cable
 - Mosquitto MQTT broker ( no TLS / password protected ) ( v2.0.11 )
 - SQLite3 ( v3.40.1 )
 - Node ( v20.10.0 )
 - Node-Red ( v3.1.0 )
+
+add sideproject: </br>
+## PMS1W PoorManScope 1channel  WiFi
+# PICO W CP829
+# ESP-32-S3 PoorManScope1W Arduino
+# PICO W PoorManScope1W Arduino
 
 ## project info
 see [phone browser](http://kll.byethost7.com/kllfusion01/downloads/PICOW_android_beowser_page.jpg)</br>
