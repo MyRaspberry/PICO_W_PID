@@ -1,11 +1,11 @@
 
-## PID-project
-# PICO W Circuit Python
+# PID-project
+## PICO W Circuit Python
 
 new  ( 3.1.2024 )
 
-# PICO W Arduino IDE 2.2.1
-# ESP32-S3 Arduino IDE 2.2.1
+## PICO W Arduino IDE 2.2.1
+## ESP32-S3 Arduino IDE 2.2.1
 
 - webserver ( RTC from NTP )
 - analog in
@@ -13,7 +13,7 @@ new  ( 3.1.2024 )
 - PID
 - MQTT to local broker
 
-# RPI4: MQTT broker & Node-Red & SQLite for Current and Hist Trend
+## RPI4: MQTT broker & Node-Red & SQLite for Current and Hist Trend
 
 - fix IP 192.168.1.4 on ethernet port / cable
 - Mosquitto MQTT broker ( no TLS / password protected ) ( v2.0.11 )
@@ -22,16 +22,18 @@ new  ( 3.1.2024 )
 - Node-Red ( v3.1.0 )
 
 add sideproject: </br>
-## PMS1W PoorManScope 1channel  WiFi
-# PICO W CP829
-# ESP-32-S3 PoorManScope1W Arduino
-# PICO W PoorManScope1W Arduino
+# PMS1W PoorManScope 1channel  WiFi
+## PICO W CP829
+## ESP-32-S3 Arduino
+## PICO W Arduino
 
-## project info
+# project info
 see [phone browser](http://kll.byethost7.com/kllfusion01/downloads/PICOW_android_beowser_page.jpg)</br>
 see [V102 from PC](http://kll.byethost7.com/kllfusion01/downloads/PICOW_PID_datapage.png)</br>
 see [V110 NR&wwww](http://kll.byethost7.com/kllfusion01/downloads/PICOW_PID_WWW_NR_DASHpng.png)</br>
 see [ESP32-S3 Arduino IDE](http://kll.byethost7.com/kllfusion01/downloads/ESP32_Arduino_PID_faceplate.png)</br>
+
+see [PICOW CP829 PMS1W](http://kll.byethost7.com/kllfusion01/downloads/PICO_W_CP289_PMS1W.png)</br>
 see [ESP32-S3 PMS1W](http://kll.byethost7.com/kllfusion01/downloads/esp32-s3_PMS1W_RAW_In.png)</br>
 
 - v1.0.1b PreRelease
