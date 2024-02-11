@@ -5,13 +5,14 @@
 new  ( 3.1.2024 )
 
 ## PICO W Arduino IDE 2.2.1
-## ESP32-S3 Arduino IDE 2.2.1
+## ESP32-S3 Arduino IDE 2.3
 
 - webserver ( RTC from NTP )
 - analog in
 - digital out pwm
 - PID
 - MQTT to local broker
++ + MQTT with Secure Server and MQTT lib v2.5.2 to HIVEMQ with TLS
 
 ## RPI4: MQTT broker & Node-Red & SQLite for Current and Hist Trend
 
